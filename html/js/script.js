@@ -7,4 +7,16 @@ $(function(){
       onOpen: function(el) { /* Do Stuff */ }, // A function to be called when sideNav is opened
       onClose: function(el) { /* Do Stuff */ }, // A function to be called when sideNav is closed
     });
+
+
+
+	 $(".nav-bar-dropdown").hover(function(){
+	 	var containerID = $(this).data("target");
+	 	$(".dropdown-menu-container").hide();
+	 	$("#"+containerID).fadeIn(300);
+	 },function(){
+	 	console.log("out");
+		$(".dropdown-menu-container").hide();
+	 });
+
 });

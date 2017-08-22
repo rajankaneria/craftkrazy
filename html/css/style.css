@@ -68,23 +68,24 @@ nav ul a:hover
     position: absolute;
     top: 64px;
     left: 5%;
-    width: 90%;
+    width: 100%;
     height: auto;
     z-index: 200;
     background: #fff;
     padding: 30px;
-    border-top: 3px solid #e0e0e0;
+    border-top: 3px solid rgb(33, 150, 243);
 }
 
 .main-cat-container {
-    min-width: 210px;
+    min-width: calc(33.33% - 30px);
     float: left;
     margin: 15px;
     margin-top: 0px;
 }
 
 .main-cat-title {
-    margin-bottom: 10px;
+	line-height: 25px;
+	margin-bottom: 10px;
     padding-bottom: 5px;
     border-bottom: 2px solid #ccc;
     color: #6b6b6b;
@@ -93,6 +94,7 @@ nav ul a:hover
 }
 
 .sub-cat-name {
+	line-height: 22px;
     color: #7b7b7b;
     font-size: 13px;
 }
