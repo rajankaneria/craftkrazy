@@ -29,12 +29,10 @@ class Product_model extends CI_Model{
         // get main category details
 
     }
-
     public function getAllMainCat(){
         $query=$this->db->query("select * from main_category where mc_status = 1");
-        $result=$query->result_array();
+        $result=$query->result_array();        
         return $result;
-
     }
 
     public function getParentCatDetails($parentCatID){
