@@ -110,3 +110,6 @@ nav ul a:hover
     color: #2b2b2b;
     cursor: pointer;
 }
+.dropdown-menu-container{
+	display: none;
+}
