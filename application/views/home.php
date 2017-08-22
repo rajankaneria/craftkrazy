@@ -15,7 +15,7 @@
 <!--  Slider Over here -->
 
 <!--  categoriy starts here -->
-<div class="row">
+<div class="row cat-img-box">
 	<img src="<?php echo base_url(); ?>html/images/m1.jpg" class="col s6 m3 home-cat-box">
 	<img src="<?php echo base_url(); ?>html/images/m2.jpg" class="col s6 m3 home-cat-box">
 	<img src="<?php echo base_url(); ?>html/images/m3.jpg" class="col s6 m3 home-cat-box">
