@@ -1,1 +1,65 @@
 /* global style sheet */
+/*====================
+	Main Navigation 
+=====================*/
+a.main-logo
+{
+	position: relative;
+    height: 100%;
+}
+.main-logo img
+{
+	height: 100%;
+	padding: 5px 0px;
+}
+.dropdown-content{
+	top: 4.25rem !important;
+}
+nav ul a
+{
+	color: #848688;
+}
+.side-nav .collapsible-header, .side-nav.fixed .collapsible-header
+{
+	padding: 0px 32px !important;
+}
+.side-nav .collapsible-body li a, .side-nav.fixed .collapsible-body li a
+{
+	padding: 0 23.5px 0 50px !important;
+}
+.side-nav .user-view .background, .side-nav .userView .background
+{
+	position: relative;
+}
+.mobile-logo
+{
+	width: 250px;
+    padding: 25px;
+}
+nav .button-collapse
+{
+	color: #1B7BC5;
+}
+
+nav ul a:hover 
+{
+    background-color: rgb(33, 150, 243);
+    color: #fff;
+}
+
+/*
+.mega
+{
+	position: absolute !important;
+	width: 800px !important;
+	margin: 0px auto !important;
+
+}
+*/
+/**=======================
+	Page main content
+==========================*/
+.main
+{
+	min-height: 350px;
+}

@@ -7,14 +7,14 @@ class Home extends CI_Controller {
 	public function index()
 	{		
 		$headerData = array(
-			"pageTitle" => "Dashboard",
-			"stylesheet" => array("dashboard.css")
+			"pageTitle" => "Home",
+			"stylesheet" => array("home.css")
 		);
 		$footerData = array(
-			"jsFiles" => array("dashboard.js")
+			"jsFiles" => array("home.js")
 		);
 		$viewData = array(
-			"viewName" => "dashboard",
+			"viewName" => "home",
             "viewData" => array(),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
