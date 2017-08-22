@@ -44,24 +44,39 @@ class Product_model extends CI_Model{
         return $result;
     }
     public function getAllParentCat(){
-        $query=$this->db->query("select * from parent_category");
+        $query=$this->db->query("select * from parent_category where pc_status=1");
         $result=$query->result_array();
         return $result;
 
     }
-    public function getChildCat($childCatID){
-        $query=$this->db->query("select * from child_category where pc_id ='$childCatID' ");
+
+    public function getAllParentCatByMainCat($mainCatID){
+        $query=$this->db->query("select * from parent_category where pc_status=1 and mc_id='$mainCatID'");
         $result=$query->result_array();
+        return $result;
+
+    }
+
+    public function getChildCat($childCatID){
+        $query=$this->db->query("select * from child_category where pc_id ='$childCatID' and cc_status=1 ");
+        $result=$query->row_array();
         return$result;
     }
     public function getChildAll(){
 
-        $query=$this->db->query("select * from child_category");
+        $query=$this->db->query("select * from child_category where cc_status=1");
         $result=$query->result_array();
         return $result;
     }
 
-
-
+    public function getProductByMainCat($mainCatID){
+        $query = $this->db->query("select * from product_details where mc_id='$mainCatID'");
+        $result = $query->result_array();
+        foreach($result as $key=>$productRow){
+            $productImages = $this->getProductImage($productRow["product_id"]);
+            $result[$key]["productImageArray"] = $productImages;
+        }
+        return $result;
+    }
 
 }

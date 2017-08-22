@@ -65,6 +65,16 @@ class Product extends CI_Controller {
 		var_dump($output);
 	}
 
+	public function productNav(){
+		$this->load->model("product_model");
+		$allCats = $this->product_model->getAllMainCat();
+		foreach ($allCats as $key => $catRow) {
+			$subCats = $this->product_model->getAllParentCatByMainCat($catRow["mc_id"]);
+			$allCats[$key]["subCategory"] = $subCats;
+		}
+			var_dump($allCats);
+	}
+
 
 
 }
