@@ -68,7 +68,7 @@ nav ul a:hover
 .dropdown-menu-container {
     position: absolute;
     top: 64px;
-    left: 5%;
+    left: 0%;
     width: 100%;
     height: auto;
     z-index: 200;
@@ -107,9 +107,5 @@ nav ul a:hover
 .dropdown-menu-container{
 	display: none;
 }
-.home-cat-box
-{
-	margin-top: 25px;
 
-}
 
