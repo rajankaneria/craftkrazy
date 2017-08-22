@@ -23,7 +23,7 @@ class Product_model extends CI_Model{
     }
 
     public function getMainCatDetails($mainCatID){
-        $query=$this->db->query("select * from  main_category where mc_id='$mainCatID'");
+        $query=$this->db->query("select * from  main_category where mc_id='$mainCatID' and mc_status=1 ");
         $result=$query->row_array();
         return $result;
         // get main category details
@@ -31,15 +31,34 @@ class Product_model extends CI_Model{
     }
 
     public function getAllMainCat(){
+        $query=$this->db->query("select * from main_category where mc_status = 1");
+        $result=$query->result_array();
+        return $result;
 
     }
 
     public function getParentCatDetails($parentCatID){
         // get parent category details
+        $query=$this->db->query("select * from parent_category where mc_id ='$parentCatID' and pc_status = 1");
+        $result=$query->row_array();
+        return $result;
     }
+    public function getAllParentCat(){
+        $query=$this->db->query("select * from parent_category");
+        $result=$query->result_array();
+        return $result;
 
-    public function getAllParentCat($mainCatID){
+    }
+    public function getChildCat($childCatID){
+        $query=$this->db->query("select * from child_category where pc_id ='$childCatID' ");
+        $result=$query->result_array();
+        return$result;
+    }
+    public function getChildAll(){
 
+        $query=$this->db->query("select * from child_category");
+        $result=$query->result_array();
+        return $result;
     }
 
 

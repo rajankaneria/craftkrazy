@@ -27,10 +27,41 @@ class Product extends CI_Controller {
 		$output = $this->product_model->getProductDetails($productID);
 		var_dump($output);
 	}
-	public function mainCatDeatails($mainCatID)
+	public function mainCatDetails($mainCatID)
 	{
-		$this->load->modal("product_model");
-		$output = $this->product_model->getMainCatDetails($mainCatID);
+		$this->load->model("product_model");
+		$output=$this->product_model->getMainCatDetails($mainCatID);
+		var_dump($output);
+	}
+	public function mainCatAllDetails()
+	{
+		$this->load->model("product_model");
+		$output=$this->product_model->getAllMainCat();
+		var_dump($output);
+	}
+	public function parentCatDetails($parentCatID)
+	{
+		$this->load->model("product_model");
+		$output=$this->product_model->getParentCatDetails($parentCatID);
+		var_dump($output);
+
+	}
+	public function parentCatAllDetails()
+	{	
+		$this->load->model("product_model");
+		$output=$this->product_model->getAllParentCat();
+		var_dump($output);
+	}
+	public function childCateDetails($childCatID)
+	{
+		$this->load->model("product_model");
+		$output=$this->product_model->getChildCat($childCatID);
+		var_dump($output);
+	}
+	public function childCatAllDetails()
+	{
+		$this->load->model("product_model");
+		$output=$this->product_model->getChildAll();
 		var_dump($output);
 	}
 
