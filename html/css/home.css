@@ -34,3 +34,12 @@
 
 
 /* page specific stylesheet */
+
+/**==============================
+	Products Area Start Here
+=================================*/
+.recent-post-title {
+    color: #fff;
+    text-shadow: 0px 0px 1px #aaa;
+    font-family: 'Muli', sans-serif;
+}

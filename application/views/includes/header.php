@@ -19,6 +19,7 @@
     <link href="<?php echo base_url(); ?>html/css/style.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Muli|Lora|Raleway" rel="stylesheet">
     
     <script src="<?php echo base_url(); ?>html/js/script.js"></script>
     <?php foreach($stylesheet as $fileName){ ?>
