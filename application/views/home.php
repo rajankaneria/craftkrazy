@@ -24,4 +24,18 @@
 
 <!--  categoriy Over here -->
 
+<!--==========  Satrt Products Area  Here  =============-->
+
+<div class="row recent-post-box">
+  <div class="col s4 m3">
+    <div class="card-panel blue">
+      <h5 class="recent-post-title">Recent Post</h5>
+    </div>
+  </div>
+</div>
+            
+
+<!--========== Over Product Area Here    ===============-->
+
+
 </div>
