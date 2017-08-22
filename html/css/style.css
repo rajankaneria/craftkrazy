@@ -64,15 +64,6 @@ nav ul a:hover
 	min-height: 350px;
 }
 
-
-
-
-
-
-
-
-
-
 .dropdown-menu-container {
     position: absolute;
     top: 64px;
@@ -112,4 +103,9 @@ nav ul a:hover
 }
 .dropdown-menu-container{
 	display: none;
+}
+.home-cat-box
+{
+	margin-top: 25px;
+
 }
