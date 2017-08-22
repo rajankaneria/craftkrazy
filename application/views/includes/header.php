@@ -87,3 +87,7 @@
   </div>
 </nav>
 </header>
+
+<div class="dropdown-menu-container" id="productCategories">
+  <?php echo $productNav; ?>
+</div>

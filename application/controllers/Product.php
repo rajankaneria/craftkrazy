@@ -72,7 +72,7 @@ class Product extends CI_Controller {
 			$subCats = $this->product_model->getAllParentCatByMainCat($catRow["mc_id"]);
 			$allCats[$key]["subCategory"] = $subCats;
 		}
-			var_dump($allCats);
+		return $allCats;
 	}
 
 
