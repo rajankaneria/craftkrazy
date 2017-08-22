@@ -51,35 +51,23 @@
     </li>
 
       <li><a href="#!">Home</a></li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header">Products<i class="material-icons right">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="#!">First</a></li>
-                <li><a href="#!">Second</a></li>
-                <li><a href="#!">Third</a></li>
-                <li><a href="#!">Fourth</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
+      <li><a href="#!">Products</a></li>
+
       <li><a href="#!">Raw Materials</a></li>
       <li><a href="#!">Contact</a></li>
     </ul>
     <ul class="right hide-on-med-and-down">
       <li><a href="#!">Home</a></li>
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Products<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li class="nav-bar-dropdown" data-target="productCategories">
+        <a href="#!">Products<i class="material-icons right">arrow_drop_down</i></a>
+        <div class="dropdown-menu-container z-depth-2" id="productCategories">
+          <?php echo $productNav; ?>
+        </div>
+      </li>
+
       <li><a href="#!">Raw Materials</a></li>
       <li><a href="#!">Contact</a></li>
-      <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="#!">First</a></li>
-        <li><a href="#!">Second</a></li>
-        <li><a href="#!">Third</a></li>
-        <li><a href="#!">Fourth</a></li>
-      </ul>
+      
     </ul>
 
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -88,6 +76,3 @@
 </nav>
 </header>
 
-<div class="dropdown-menu-container" id="productCategories">
-  <?php echo $productNav; ?>
-</div>
