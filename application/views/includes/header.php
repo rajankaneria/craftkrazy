@@ -15,6 +15,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
           
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
     <link href="<?php echo base_url(); ?>html/css/style.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
@@ -29,8 +30,29 @@
 </head>
 <body>
 
-<header>
 
+<div class="blue top-header">
+  <div class="container">
+    <ul>
+      <li><a href="#!"><span class="fa fa-facebook-square" aria-hidden="true"></span></a></li>
+      <li><a href="#!"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
+      <li><a href="#!"><span class="fa fa-youtube-play" aria-hidden="true"></span></a></li>
+      <li><a href="#!"><span class="fa fa-pinterest-square" aria-hidden="true"></span></a></li>
+      <li class="right">
+      <span class="search-area">
+          <form action="" class="search">
+            <div class="field">
+              <input type="text" class="input-search" id="input-search" name="input-search" required>
+              <label for="input-search"><span class="fa fa-search"></span>&nbsp;Search</label>
+            </div> <!-- /field -->
+          </form>
+      </span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<header>
   
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content mega">
@@ -39,6 +61,7 @@
   <li class="divider"></li>
   <li><a href="#!">three</a></li>
 </ul>
+
 <nav class="white">
   <div class="nav-wrapper container">
     <a href="#!" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
@@ -50,7 +73,6 @@
             </div>
         </div>
     </li>
-
       <li><a href="#!">Home</a></li>
       <li><a href="#!">Products</a></li>
 
@@ -68,7 +90,6 @@
 
       <li><a href="#!">Raw Materials</a></li>
       <li><a href="#!">Contact</a></li>
-      
     </ul>
 
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
