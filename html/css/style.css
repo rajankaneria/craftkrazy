@@ -96,6 +96,9 @@ nav ul
 nav ul a
 {
 	color: #848688;
+      padding: 20px 15px !important;
+    cursor: pointer;
+    margin-top: -24px !important;
 }
 .side-nav .collapsible-header, .side-nav.fixed .collapsible-header
 {
