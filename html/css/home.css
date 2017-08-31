@@ -50,10 +50,10 @@
 }
 
 .recentPost-box {
-   height: 100%;
+    height: 100%;
     margin: auto;
-    padding: 25px 0px;
-    min-height: 170px;
+    padding: 10px 0px;
+    /* min-height: 170px; */
     border-bottom: 1px dashed #fff; 
 }
 .recentPost-box:last-child
@@ -63,8 +63,8 @@
     box-shadow: 0 0.31px 0 0 #fff;*/
 }
 h5.product_name {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 0.5;
     padding: 0px;
     color: #fff;
 }
@@ -102,7 +102,6 @@ span.badge.new:after{
 .col.m3.productBox
 {
   width: 33.33%;
-  margin-top: 15px;
 }
 .carousel-item.white-text.row.product-area
 {
@@ -122,21 +121,258 @@ span.badge.new:after{
     margin-top: -15px;
     border-bottom: 1px dashed #ddd;
 }
+.prodcut-image img{
+    border: 0;
+    height: 200px;
+    width: auto;
+}
 
+div#PaperCraft-Slider {
+    height: 320px !important;
+}
+div#MixedMedia-Slider{
+    height: 320px !important;
+}
 .prodcut-image {
-    height: 150px;
     position: relative;
     overflow: hidden;
+    width: auto;
+    height: 200px;
+}
+@media(max-width: 768px){
+  .prodcut-image{
+    height: 200px !important;
+  }
 }
 .prodcut-name {
     color: #000;
     font-size: 18px;
+    line-height: 2rem;
+    margin-top: 10px;
 }
 
 .prodcut-price {
     color: green;
     font-size: 15px;
+    line-height: 2rem;
 }
+
+span.proce-strick {
+    text-decoration: line-through;
+    color: darkred;
+}
+
+.add-to-cart {
+    border-radius: 100px;
+    width: 50%;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    margin: 10px 10px;
+}
+.add-to-cart:hover{
+    border-radius: 100px;
+    width: 50%;
+    background: rgba(255,255,255,0.9) !important;
+    color: #2196f3 !important;
+    border: 1px solid;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    -webkit-box-shadow:inset 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+    box-shadow:inset 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+}
+
+.add-to-wishlist {
+    border-radius: 100px;
+    width: 35%;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    margin: 10px 0px;
+}
+.add-to-wishlist:hover{
+    border-radius: 100px;
+    width: 35%;
+    background: rgba(255,255,255,0.9) !important;
+    color: #2196f3 !important;
+    border: 1px solid;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    -webkit-box-shadow:inset 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+    box-shadow:inset 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+}
+
+.product-badge-new {
+    background: red;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000000;
+    top: 0;
+    float: left !important;
+    border-radius: 5px;
+    margin-left: 20px;
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.14), 2px 1px 10px 0 rgba(0,0,0,0.12), 1px 2px 4px -1px rgba(0,0,0,0.3);
+    text-shadow: 0px 0px 10px #000;
+}
+
+.product-badge-off {
+    background: green;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000000;
+    top: 0;
+    float: left !important;
+    border-radius: 5px;
+    margin-left: 20px;
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.14), 2px 1px 10px 0 rgba(0,0,0,0.12), 1px 2px 4px -1px rgba(0,0,0,0.3);
+    text-shadow: 0px 0px 10px #000;
+}
+
+
+
+/*==== Effective Buttons 
+=====*/
+figure.snip1033 {
+  color: #fff;
+ 
+}
+figure.snip1033 img {
+  opacity: 1;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip1033 .center {
+  border-radius: 5px;
+  display: block;
+  content: '';
+  position: absolute;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  height: 70px;
+  width: 70px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+figure.snip1033 .center i {
+  font-size: 38px;
+  padding: 6px;
+  color: #ffffff;
+  line-height: 70px;
+  opacity: 0.3;
+}
+figure.snip1033 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+figure.snip1033 figcaption > div {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  width: 50%;
+  position: relative;
+}
+figure.snip1033 figcaption a {
+  opacity: 0.7;
+}
+figure.snip1033 figcaption a:hover {
+  opacity: 1;
+}
+figure.snip1033 figcaption h3 {
+  background-color: #222;
+  word-spacing: -0.1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1em;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+  transition: opacity 0.45s,-webkit-transform 0.45s,-moz-transform 0.45s,-o-transform 0.45s,transform 0.45s;
+}
+figure.snip1033 figcaption .left h3 {
+  border-radius: 5px 0 0 5px;
+  top: 50%;
+  padding: 4px 35px 4px 10px;
+  right: 0;
+  -webkit-transform: translate(100%, 0px);
+  transform: translate(100%, 0px);
+}
+figure.snip1033 figcaption .right h3 {
+  border-radius: 0 5px 5px 0;
+  bottom: 50%;
+  padding: 4px 10px 4px 35px;
+  padding-left: 30px;
+  -webkit-transform: translate(-100%, 0px);
+  transform: translate(-100%, 0px);
+}
+figure.snip1033 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+figure.snip1033 .red {
+  background-color: #8c212a;
+}
+figure.snip1033 .yellow {
+  background-color: #945600;
+}
+figure.snip1033 .white {
+  background-color: #ffffff;
+  color: #444444;
+}
+figure.snip1033:hover img,
+figure.snip1033.hover img {
+  opacity: 0.5;
+}
+figure.snip1033:hover figcaption .left h3,
+figure.snip1033.hover figcaption .left h3 {
+  opacity: 1;
+  -webkit-transform: translate(0%, 0px);
+  transform: translate(0%, 0px);
+}
+figure.snip1033:hover figcaption .right h3,
+figure.snip1033.hover figcaption .right h3 {
+  opacity: 1;
+  -webkit-transform: translate(0%, 0px);
+  transform: translate(0%, 0px);
+}
+figure.snip1033:hover .center,
+figure.snip1033.hover .center {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+figure.snip1033:hover .center i,
+figure.snip1033.hover .center i {
+  -webkit-transform: translate(0%, -10px);
+  transform: translate(0%, -10px);
+  color: #fff;
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
 
 .product-area-mobile
 {
@@ -174,6 +410,79 @@ span.badge.new:after{
     color: #8a8b8d;
 }
 .prevProduct:hover {
+     box-shadow: inset 0px 0px 2px rgba(55,55,55,0.2);
+    background: #2196f3 !important;
+    z-index: 100000;
+    color: #fff !important;
+    border: 1px solid rgba(55,55,55,0.2);
+    line-height: 2rem;
+}
+
+
+/*============= Paper Crfat Slider =================*/
+
+.nextProduct_paperCraft {
+    box-shadow: inset 0px 0px 2px #8a8b8d;
+    background: rgba(55,55,55,0.2);
+    z-index: 100000;
+    border: 1px solid #8a8b8d;
+    line-height: 2rem;
+    color: #8a8b8d;
+}
+.nextProduct_paperCraft:hover {
+    box-shadow: inset 0px 0px 2px rgba(55,55,55,0.2);
+    background: #2196f3  !important;
+    z-index: 100000;
+    color: #fff !important;
+    border: 1px solid rgba(55,55,55,0.2);
+    line-height: 2rem;
+}
+.prevProduct_paperCraft {
+    box-shadow: inset 0px 0px 2px #8f8f8f;
+    background: rgba(55,55,55,0.2);
+    z-index: 100000;
+    border: 1px solid #8f8f8f;
+    line-height: 2rem;
+    color: #8a8b8d;
+}
+.prevProduct_paperCraft:hover {
+     box-shadow: inset 0px 0px 2px rgba(55,55,55,0.2);
+    background: #2196f3 !important;
+    z-index: 100000;
+    color: #fff !important;
+    border: 1px solid rgba(55,55,55,0.2);
+    line-height: 2rem;
+}
+
+
+
+/*============= Paper Crfat Slider =================*/
+
+.nextProduct_MixedMedia {
+    box-shadow: inset 0px 0px 2px #8a8b8d;
+    background: rgba(55,55,55,0.2);
+    z-index: 100000;
+    border: 1px solid #8a8b8d;
+    line-height: 2rem;
+    color: #8a8b8d;
+}
+.nextProduct_MixedMedia:hover {
+    box-shadow: inset 0px 0px 2px rgba(55,55,55,0.2);
+    background: #2196f3  !important;
+    z-index: 100000;
+    color: #fff !important;
+    border: 1px solid rgba(55,55,55,0.2);
+    line-height: 2rem;
+}
+.prevProduct_MixedMedia {
+    box-shadow: inset 0px 0px 2px #8f8f8f;
+    background: rgba(55,55,55,0.2);
+    z-index: 100000;
+    border: 1px solid #8f8f8f;
+    line-height: 2rem;
+    color: #8a8b8d;
+}
+.prevProduct_MixedMedia:hover {
      box-shadow: inset 0px 0px 2px rgba(55,55,55,0.2);
     background: #2196f3 !important;
     z-index: 100000;

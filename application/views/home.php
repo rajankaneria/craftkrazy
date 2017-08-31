@@ -1,7 +1,7 @@
 <div class="main">
 
 <!--  Slider starts here -->
-<div class="carousel carousel-slider center" data-indicators="true">
+<div id="mainSlider" class="carousel carousel-slider center" data-indicators="true">
     <div class="carousel-item red white-text" href="#one!">
       <img src="<?php echo BASE_url();?>html/images/banner01.jpg">
     </div>
@@ -77,92 +77,278 @@
   <div class="product-area-title">
   	<h5>Paper Craft</h5>
   <div class="right arrowButtons">
-		<button class="next btn btn-next white center nextProduct">
+		<button class="next btn btn-prev white center prevProduct_paperCraft">
 			<i class="fa fa-chevron-left fa-lg"></i></button>
-		<button class="next btn btn-prev white center prevProduct">
-			<i class="fa fa-chevron-right fa-lg "></i></button>
+    <button class="next btn btn-next white center nextProduct_paperCraft">
+      <i class="fa fa-chevron-right fa-lg "></i></button>
 	</div>
   </div>
 
-  <div class="carousel carousel-slider center product-area" data-indicators="true">
+  <div id="PaperCraft-Slider" class="carousel carousel-slider center product-area" data-indicators="true" style="height: 400px !important;">
     <div class="carousel-item white-text row" href="#one!">
       <div class="col s8 m3 productBox">
 		    <div class="prodcut-image">
-		    <img src="http://lorempixel.com/250/250/nature/2" width="200" height="200"></div>
-		<div class="prodcut-name">hellow</div>
-		<div class="prodcut-price">256</div>
-		</div>
-      <div class="col s8 m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
-      <div class="col s8 m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
+		    <img src="<?php base_url(); ?>html/images/paper-craft.jpg" class="z-depth-3">
+        <div class="product-badge-new">New</div>
+        </div>
+    		<div class="prodcut-name">Product Name</div>
+    		<div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
+        <div>
+          <button class="btn blue white-text add-to-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+          <button class="btn-floating waves-effect waves-light red">
+            <i class="fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </div>
+	    </div>
+      <div class="col s8 m3 productBox">
+        <div class="prodcut-image">
+        <img src="<?php base_url(); ?>html/images/paper-craft.jpg" class="z-depth-3">
+        <div class="product-badge-off">20% Off</div></div>
+        <div class="prodcut-name">Product Name</div>
+        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
+        <div>
+          <button class="btn blue white-text add-to-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+          <button class="btn-floating waves-effect waves-light red">
+            <i class="fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col s8 m3 productBox">
+        <div class="prodcut-image">
+        <img src="<?php base_url(); ?>html/images/paper-craft.jpg" class="z-depth-3">
+        <div class="product-badge-new">New</div></div>
+        <div class="prodcut-name">Product Name</div>
+        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
+        <div>
+          <button class="btn blue white-text add-to-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+         <button class="btn-floating waves-effect waves-light red">
+            <i class="fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
     </div>
     <div class="carousel-item white-text row" href="#two!">
-      <div class="col m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
-      <div class="col m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
-      <div class="col m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
+      <div class="col s8 m3 productBox">
+        <div class="prodcut-image">
+        <img src="http://lorempixel.com/250/250/nature/2" class="z-depth-3">
+        <div class="product-badge-off">15% Off</div></div>
+        <div class="prodcut-name">Product Name</div>
+        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
+        <div>
+          <button class="btn blue white-text add-to-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+         <button class="btn-floating waves-effect waves-light red">
+            <i class="fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col s8 m3 productBox">
+        <div class="prodcut-image">
+        <img src="http://lorempixel.com/250/250/nature/2" class="z-depth-3">
+        <div class="product-badge-off">50% Off</div></div>
+        <div class="prodcut-name">Product Name</div>
+        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
+        <div>
+          <button class="btn blue white-text add-to-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+         <button class="btn-floating waves-effect waves-light red">
+            <i class="fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col s8 m3 productBox">
+        <div class="prodcut-image">
+        <img src="http://lorempixel.com/250/250/nature/2" class="z-depth-3">
+        <div class="product-badge-new">New</div></div>
+        <div class="prodcut-name">Product Name</div>
+        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
+        <div>
+          <button class="btn blue white-text add-to-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+        <button class="btn-floating waves-effect waves-light red">
+            <i class="fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item white-text row" href="#three!">
-      <div class="col m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
-      <div class="col m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
-      <div class="col m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
     </div>
-   </div>
   </div>
 
    <div class="col s8 m9 container product-area card-panel hide-on-med-and-down">
   <div class="product-area-title">
   	<h5>Mixed Media</h5>
   <div class="right arrowButtons">
-		<button class="next btn btn-next white center nextProduct">
+		<button class="next btn btn-prev white center prevProduct_MixedMedia">
 			<i class="fa fa-chevron-left fa-lg"></i></button>
-		<button class="next btn btn-prev white center prevProduct">
-			<i class="fa fa-chevron-right fa-lg "></i></button>
+    <button class="next btn btn-next white center nextProduct_MixedMedia">
+      <i class="fa fa-chevron-right fa-lg "></i></button>
 	</div>
   </div>
 
-  <div class="carousel carousel-slider center product-area" data-indicators="true">
+  <div id="MixedMedia-Slider" class="carousel carousel-slider center product-area" data-indicators="true">
     <div class="carousel-item white-text row" href="#one!">
-      <div class="col s8 m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
-      <div class="col s8 m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
-      <div class="col s8 m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
+      <div class="col s8 m3 productBox">
+        <div class="prodcut-image">
+        <img src="<?php base_url(); ?>html/images/paper-craft.jpg" class="z-depth-3">
+        <div class="product-badge-new">New</div>
+        </div>
+        <div class="prodcut-name">Product Name</div>
+        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
+        <div>
+          <button class="btn blue white-text add-to-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+          <button class="btn-floating waves-effect waves-light red">
+            <i class="fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col s8 m3 productBox">
+        <div class="prodcut-image">
+        <img src="<?php base_url(); ?>html/images/paper-craft.jpg" class="z-depth-3">
+        <div class="product-badge-off">20% Off</div></div>
+        <div class="prodcut-name">Product Name</div>
+        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
+        <div>
+          <button class="btn blue white-text add-to-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+        <button class="btn-floating waves-effect waves-light red">
+            <i class="fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col s8 m3 productBox">
+        <div class="prodcut-image">
+        <img src="<?php base_url(); ?>html/images/paper-craft.jpg" class="z-depth-3">
+        <div class="product-badge-new">New</div></div>
+        <div class="prodcut-name">Product Name</div>
+        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
+        <div>
+          <button class="btn blue white-text add-to-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+         <button class="btn-floating waves-effect waves-light red">
+            <i class="fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
     </div>
     <div class="carousel-item white-text row" href="#two!">
-      <div class="col m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
-      <div class="col m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
-      <div class="col m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
+      <div class="col s8 m3 productBox">
+        <div class="prodcut-image">
+        <img src="http://lorempixel.com/250/250/nature/2" class="z-depth-3">
+        <div class="product-badge-off">15% Off</div></div>
+        <div class="prodcut-name">Product Name</div>
+        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
+        <div>
+          <button class="btn blue white-text add-to-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+       <button class="btn-floating waves-effect waves-light red">
+            <i class="fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col s8 m3 productBox">
+        <div class="prodcut-image">
+        <img src="http://lorempixel.com/250/250/nature/2" class="z-depth-3">
+        <div class="product-badge-off">50% Off</div></div>
+        <div class="prodcut-name">Product Name</div>
+        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
+        <div>
+          <button class="btn blue white-text add-to-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+         <button class="btn-floating waves-effect waves-light red">
+            <i class="fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col s8 m3 productBox">
+        <div class="prodcut-image">
+        <img src="http://lorempixel.com/250/250/nature/2" class="z-depth-3">
+        <div class="product-badge-new">New</div></div>
+        <div class="prodcut-name">Product Name</div>
+        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
+        <div>
+          <button class="btn blue white-text add-to-cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+         <button class="btn-floating waves-effect waves-light red">
+            <i class="fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item white-text row" href="#three!">
-      <div class="col m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
-      <div class="col m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
-      <div class="col m3 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
     </div>
-   </div>
+  </div>
+
    
-  </div>
 
   <div class="col s12 container product-area card-panel show-on-medium-and-down product-area-mobile hide-on-large-only">
-  <div class="carousel carousel-slider center product-area" data-indicators="true">
+  <div id="PaperCraft-Slider" class="show-on-medium-and-down carousel carousel-slider center product-area" data-indicators="true">
     <div class="carousel-item white-text row" href="#one!">
-      <div class="col s12 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
+      <div class="col s12 productBox">
+        <div class="prodcut-image col s12">
+        <img src="http://lorempixel.com/250/250/nature/2"></div>
+        <span class="col s12"><div class="prodcut-name">hellow</div>
+        <div class="prodcut-price">256</div>
+      </div>
     </div>
     <div class="carousel-item white-text row" href="#two!">
-      <div class="col s12 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
+      <div class="col s12 productBox">
+        <div class="prodcut-image col s12">
+        <img src="http://lorempixel.com/250/250/nature/2"></div>
+        <span class="col s12"><div class="prodcut-name">hellow</div>
+        <div class="prodcut-price">256</div>
+      </div>
     </div>
     <div class="carousel-item white-text row" href="#three!">
-      <div class="col s12 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
+      <div class="col s12 productBox">
+        <div class="prodcut-image col s12">
+        <img src="http://lorempixel.com/250/250/nature/2"></div>
+        <span class="col s12"><div class="prodcut-name">hellow</div>
+        <div class="prodcut-price">256</div>
+      </div>
     </div>
    </div>
   </div>
 
   <div class="col s12 container product-area card-panel show-on-medium-and-down product-area-mobile hide-on-large-only">
-  <div class="carousel carousel-slider center product-area" data-indicators="true">
+  <div id="MixedMedia-Slider" class="carousel carousel-slider center product-area" data-indicators="true">
     <div class="carousel-item white-text row" href="#one!">
-      <div class="col s12 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
+      <div class="col s12 productBox">
+        <div class="prodcut-image col s12">
+        <img src="http://lorempixel.com/250/250/nature/2"></div>
+        <span class="col s12"><div class="prodcut-name">hellow</div>
+        <div class="prodcut-price">256</div>
+      </div>
     </div>
     <div class="carousel-item white-text row" href="#two!">
-      <div class="col s12 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
+      <div class="col s12 productBox">
+        <div class="prodcut-image col s12">
+        <img src="http://lorempixel.com/250/250/nature/2"></div>
+        <span class="col s12"><div class="prodcut-name">hellow</div>
+        <div class="prodcut-price">256</div>
+      </div>
     </div>
     <div class="carousel-item white-text row" href="#three!">
-      <div class="col s12 productBox"><img src="http://lorempixel.com/250/250/nature/2"></div>
+      <div class="col s12 productBox">
+        <div class="prodcut-image col s12">
+        <img src="http://lorempixel.com/250/250/nature/2"></div>
+        <span class="col s12"><div class="prodcut-name">hellow</div>
+        <div class="prodcut-price">256</div>
+      </div>
     </div>
    </div>
   </div>
