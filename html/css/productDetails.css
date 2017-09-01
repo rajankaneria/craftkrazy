@@ -1,0 +1,94 @@
+.product-details {
+    padding: 25px;
+}
+.mainPoduct-area{
+	background: #fff;
+	padding: 25px !important;
+}
+.productDescription-area{
+
+}
+.productName{
+
+}
+
+.product-seller{
+	border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+.seller-name{
+    color: #000;
+    font-size: 16px;
+    min-width: 20%;
+    padding-left: 0px !important;
+    font-weight: 500;
+}
+.produce-price
+{
+	font-size: 16px;
+    font-weight: 500;
+    float: left;
+    width: 20%;
+}
+.price-amount {
+    font-size: 16px;
+    float: left;
+}
+.seller-name-view{
+	padding-left: 0px !important;
+	font-size: 16px;
+	color: #5a5a5a;
+}
+.product-brief-highlight{
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+.product-brief-highlight h5 {
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+}
+.product-brief-highlight li {
+    padding-left: 25px;
+    color: #5a5a5a;
+    float: left;
+    text-align: justify;
+}
+.product-brief-highlight li :last-child {
+    padding-left: 25px;
+    color: #5a5a5a;
+    float: none !important;
+    text-align: justify;
+}
+.product-description-content{
+	float: left;
+	border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+.product-description-content h5{
+	font-size: 16px;
+	color: #000;
+	font-weight: 500;
+}
+.product-highlight-details{
+
+}
+.review-tabs{
+	padding: 0px !important;
+}
+.overview-content{
+	min-height: 200px !important;
+	background: #fff;
+	padding: 25px !important;
+}
+.review-content{
+	min-height: 200px !important;
+	background: #fff;
+	padding: 25px !important;
+}
+.related-product
+{
+	border-bottom: 1px dashed #ddd;
+    line-height: 2.7rem;
+    padding-bottom: 10px;
+}

@@ -63,7 +63,7 @@
   <div class="col m9">
     <div class="product-view">
       <div class="filter-area">
-        daskdhkasdkj
+        this is for filter area.
       </div>
       <div class="product-content-area">
         
@@ -86,8 +86,15 @@
                 <h2 class="name"><a href="javascript:void(0)">Product Name</a></h2>
                 <div class="price">$40.05</div>
                 <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
               </div>
               <span class="sale">sale</span>
+             
               <!-- <i class="fa fa-shopping-cart btn btn-add-cart" aria-hidden="true"></i>
               <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
             </div>
@@ -108,6 +115,12 @@
                 <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
                 <div class="price">$40.05</div>
                 <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
               </div>
               <span class="sale">sale</span>
               <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
@@ -130,6 +143,12 @@
                 <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
                 <div class="price">$40.05</div>
                 <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
               </div>
               <span class="new">sale</span>
               <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
@@ -153,6 +172,12 @@
                 <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
                 <div class="price">$40.05</div>
                 <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
               </div>
               <span class="new z-depth-3">sale</span>
               <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
