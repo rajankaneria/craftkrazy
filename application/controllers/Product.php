@@ -6,15 +6,29 @@ class Product extends CI_Controller {
 	
 	public function index()
 	{		
+
+		$this->load->model("product_model");
+		$allCats = $this->product_model->getAllMainCat();
+		foreach ($allCats as $key => $catRow) {
+			$subCats = $this->product_model->getAllParentCatByMainCat($catRow["mc_id"]);
+			$allCats[$key]["subCategory"] = $subCats;
+		}
+		$productNavHtml = "";
+		foreach ($allCats as $key => $catRow) {
+			$productNavHtml .= $this->load->view("mainCatBox",$catRow,TRUE);
+		}
+
+
 		$headerData = array(
-			"pageTitle" => "Dashboard",
-			"stylesheet" => array("dashboard.css")
+			"pageTitle" => "Product",
+			"stylesheet" => array(),
+			"productNav" => $productNavHtml
 		);
 		$footerData = array(
-			"jsFiles" => array("dashboard.js")
+			"jsFiles" => array('products.js')
 		);
 		$viewData = array(
-			"viewName" => "dashboard",
+			"viewName" => "products",
             "viewData" => array(),
 			"headerData" => $headerData,
 			"footerData" => $footerData	

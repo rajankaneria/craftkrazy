@@ -86,7 +86,127 @@
 
   <div id="PaperCraft-Slider" class="carousel carousel-slider center product-area" data-indicators="true" style="height: 400px !important;">
     <div class="carousel-item white-text row" href="#one!">
-      <div class="col s8 m3 productBox">
+    <div class="uimax-block-section-26 pdt-80 pdb-80">
+    <div class="row">
+        <div class="product-list">
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477590599/product/fashion-1636868_1280.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#000"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Product Name</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="sale">sale</span>
+              <!-- <i class="fa fa-shopping-cart btn btn-add-cart" aria-hidden="true"></i>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477770452/watch-1592164_1280_chinyq.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#2196F3"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="sale">sale</span>
+              <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477770452/necktie-1209416_1280_k8hmwv.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#2196F3"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="new">sale</span>
+              <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477593286/product/beauty-725094_1280.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#2196F3"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="new z-depth-3">sale</span>
+              <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+      <!-- <div class="col s8 m3 productBox">
 		    <div class="prodcut-image">
 		    <img src="<?php base_url(); ?>html/images/paper-craft.jpg" class="z-depth-3">
         <div class="product-badge-new">New</div>
@@ -101,88 +221,132 @@
             <i class="fa fa fa-heart" aria-hidden="true"></i>
           </button>
         </div>
-	    </div>
-      <div class="col s8 m3 productBox">
-        <div class="prodcut-image">
-        <img src="<?php base_url(); ?>html/images/paper-craft.jpg" class="z-depth-3">
-        <div class="product-badge-off">20% Off</div></div>
-        <div class="prodcut-name">Product Name</div>
-        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
-        <div>
-          <button class="btn blue white-text add-to-cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </button>
-          <button class="btn-floating waves-effect waves-light red">
-            <i class="fa fa fa-heart" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-      <div class="col s8 m3 productBox">
-        <div class="prodcut-image">
-        <img src="<?php base_url(); ?>html/images/paper-craft.jpg" class="z-depth-3">
-        <div class="product-badge-new">New</div></div>
-        <div class="prodcut-name">Product Name</div>
-        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
-        <div>
-          <button class="btn blue white-text add-to-cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </button>
-         <button class="btn-floating waves-effect waves-light red">
-            <i class="fa fa fa-heart" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-    </div>
+	    </div> -->
+      
     <div class="carousel-item white-text row" href="#two!">
-      <div class="col s8 m3 productBox">
-        <div class="prodcut-image">
-        <img src="http://lorempixel.com/250/250/nature/2" class="z-depth-3">
-        <div class="product-badge-off">15% Off</div></div>
-        <div class="prodcut-name">Product Name</div>
-        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
-        <div>
-          <button class="btn blue white-text add-to-cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </button>
-         <button class="btn-floating waves-effect waves-light red">
-            <i class="fa fa fa-heart" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-      <div class="col s8 m3 productBox">
-        <div class="prodcut-image">
-        <img src="http://lorempixel.com/250/250/nature/2" class="z-depth-3">
-        <div class="product-badge-off">50% Off</div></div>
-        <div class="prodcut-name">Product Name</div>
-        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
-        <div>
-          <button class="btn blue white-text add-to-cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </button>
-         <button class="btn-floating waves-effect waves-light red">
-            <i class="fa fa fa-heart" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-      <div class="col s8 m3 productBox">
-        <div class="prodcut-image">
-        <img src="http://lorempixel.com/250/250/nature/2" class="z-depth-3">
-        <div class="product-badge-new">New</div></div>
-        <div class="prodcut-name">Product Name</div>
-        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
-        <div>
-          <button class="btn blue white-text add-to-cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </button>
-        <button class="btn-floating waves-effect waves-light red">
-            <i class="fa fa fa-heart" aria-hidden="true"></i>
-          </button>
+      <div class="uimax-block-section-26 pdt-80 pdb-80">
+    <div class="row">
+        <div class="product-list">
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477590599/product/fashion-1636868_1280.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#000"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Product Name</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="sale">sale</span>
+              <!-- <i class="fa fa-shopping-cart btn btn-add-cart" aria-hidden="true"></i>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477770452/watch-1592164_1280_chinyq.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#2196F3"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="sale">sale</span>
+              <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477770452/necktie-1209416_1280_k8hmwv.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#2196F3"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="new">sale</span>
+              <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477593286/product/beauty-725094_1280.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#2196F3"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="new z-depth-3">sale</span>
+              <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
     </div>
-  </div>
+   </div></div>
 
+   <!-- Second Slide Mixed Media -->
    <div class="col s8 m9 container product-area card-panel hide-on-med-and-down">
   <div class="product-area-title">
   	<h5>Mixed Media</h5>
@@ -196,102 +360,250 @@
 
   <div id="MixedMedia-Slider" class="carousel carousel-slider center product-area" data-indicators="true">
     <div class="carousel-item white-text row" href="#one!">
-      <div class="col s8 m3 productBox">
-        <div class="prodcut-image">
-        <img src="<?php base_url(); ?>html/images/paper-craft.jpg" class="z-depth-3">
-        <div class="product-badge-new">New</div>
-        </div>
-        <div class="prodcut-name">Product Name</div>
-        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
-        <div>
-          <button class="btn blue white-text add-to-cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </button>
-          <button class="btn-floating waves-effect waves-light red">
-            <i class="fa fa fa-heart" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-      <div class="col s8 m3 productBox">
-        <div class="prodcut-image">
-        <img src="<?php base_url(); ?>html/images/paper-craft.jpg" class="z-depth-3">
-        <div class="product-badge-off">20% Off</div></div>
-        <div class="prodcut-name">Product Name</div>
-        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
-        <div>
-          <button class="btn blue white-text add-to-cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </button>
-        <button class="btn-floating waves-effect waves-light red">
-            <i class="fa fa fa-heart" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-      <div class="col s8 m3 productBox">
-        <div class="prodcut-image">
-        <img src="<?php base_url(); ?>html/images/paper-craft.jpg" class="z-depth-3">
-        <div class="product-badge-new">New</div></div>
-        <div class="prodcut-name">Product Name</div>
-        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
-        <div>
-          <button class="btn blue white-text add-to-cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </button>
-         <button class="btn-floating waves-effect waves-light red">
-            <i class="fa fa fa-heart" aria-hidden="true"></i>
-          </button>
+      <div class="uimax-block-section-26 pdt-80 pdb-80">
+    <div class="row">
+        <div class="product-list">
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477590599/product/fashion-1636868_1280.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#000"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Product Name</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="sale">sale</span>
+              <!-- <i class="fa fa-shopping-cart btn btn-add-cart" aria-hidden="true"></i>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477770452/watch-1592164_1280_chinyq.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#2196F3"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="sale">sale</span>
+              <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477770452/necktie-1209416_1280_k8hmwv.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#2196F3"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="new">sale</span>
+              <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477593286/product/beauty-725094_1280.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#2196F3"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="new z-depth-3">sale</span>
+              <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+             </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="carousel-item white-text row" href="#two!">
-      <div class="col s8 m3 productBox">
-        <div class="prodcut-image">
-        <img src="http://lorempixel.com/250/250/nature/2" class="z-depth-3">
-        <div class="product-badge-off">15% Off</div></div>
-        <div class="prodcut-name">Product Name</div>
-        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
-        <div>
-          <button class="btn blue white-text add-to-cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </button>
-       <button class="btn-floating waves-effect waves-light red">
-            <i class="fa fa fa-heart" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-      <div class="col s8 m3 productBox">
-        <div class="prodcut-image">
-        <img src="http://lorempixel.com/250/250/nature/2" class="z-depth-3">
-        <div class="product-badge-off">50% Off</div></div>
-        <div class="prodcut-name">Product Name</div>
-        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
-        <div>
-          <button class="btn blue white-text add-to-cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </button>
-         <button class="btn-floating waves-effect waves-light red">
-            <i class="fa fa fa-heart" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-      <div class="col s8 m3 productBox">
-        <div class="prodcut-image">
-        <img src="http://lorempixel.com/250/250/nature/2" class="z-depth-3">
-        <div class="product-badge-new">New</div></div>
-        <div class="prodcut-name">Product Name</div>
-        <div class="prodcut-price">RS. 256 &nbsp; <span class="proce-strick">Rs. 300</span></div>
-        <div>
-          <button class="btn blue white-text add-to-cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </button>
-         <button class="btn-floating waves-effect waves-light red">
-            <i class="fa fa fa-heart" aria-hidden="true"></i>
-          </button>
+      <div class="uimax-block-section-26 pdt-80 pdb-80">
+    <div class="row">
+        <div class="product-list">
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477590599/product/fashion-1636868_1280.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#000"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Product Name</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="sale">sale</span>
+              <!-- <i class="fa fa-shopping-cart btn btn-add-cart" aria-hidden="true"></i>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477770452/watch-1592164_1280_chinyq.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#2196F3"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="sale">sale</span>
+              <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477770452/necktie-1209416_1280_k8hmwv.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#2196F3"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="new">sale</span>
+              <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="product-item">
+              <div class="pic-wrapper">
+                <a href="javascript:void(0)" class="inner">
+                  <img src="https://res.cloudinary.com/vuvit03/image/upload/v1477593286/product/beauty-725094_1280.jpg" alt="" class="pic" />
+                </a>
+                <!-- <div class="pic-color">
+                  <a href="javascript:void(0)" class="pick active" style="background-color:#2196F3"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#FFFFFF;"></a>
+                  <a href="javascript:void(0)" class="pick" style="background-color:#323A45"></a>
+                </div> -->
+              </div>
+              <div class="product-desc">
+                <h2 class="name"><a href="javascript:void(0)">Slouchy Pullover Sweatshirt</a></h2>
+                <div class="price">$40.05</div>
+                <div class="old-price">$45.06</div>
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+               <button class="btn-floating waves-effect waves-light red">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="new z-depth-3">sale</span>
+              <!-- <a href="javascript:void(0)" class="btn btn-add-cart">addcart</a>
+              <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
     </div>
   </div>
+</div>
 
    
 
