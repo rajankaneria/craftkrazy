@@ -40,7 +40,7 @@ $(function(){
   		function autoplay() 
   		{
     		$('#PaperCraft-Slider').carousel('next');
-    		setTimeout(autoplay, 7000);
+    		//setTimeout(autoplay, 7000);
      	}
 
 
@@ -72,7 +72,7 @@ $(document).ready(function(){
   		function autoplay() 
   		{
     		$('#MixedMedia-Slider').carousel('next');
-    		setTimeout(autoplay, 7000);
+    		//setTimeout(autoplay, 7000);
      	}
 
 
@@ -95,37 +95,14 @@ $(document).ready(function(){
 	    });
 		  
 /*================= All responsive Slider Home page ==============*/
-
-	/*$('#MixedMedia-Slider').carousel({fullWidth: true, padding:200},setTimeout(autoplay, 7000));*/
-	$('.carousel.carousel-slider').carousel({fullWidth: true, padding:200},setTimeout(autoplay, 7000));
-  		
-  		function autoplay() 
-  		{
-    		$('.carousel.carousel-slider').carousel('next');
-    		setTimeout(autoplay, 7000);
-     	}
+});
 
 
-$(document).ready(function(){
-	      $('.carousel.carousel-slider').carousel({
-	            dist:0,
-	            shift:0,
-	            padding:50,
-	            indicators: false
-	      });
-
-	      //$('.slider').slider('pause');
-
-			/*$('.nextProduct_MixedMedia').click(function() {
-			 $('#MixedMedia-Slider').carousel('next');
-			});
-			$('.prevProduct_MixedMedia').click(function() {
-			 $('#MixedMedia-Slider').carousel('prev');
-			});*/
-	    });
-		  
-
-
-
-
+$(function(){
+	$('.carousel.carousel-slider').carousel({
+	    dist:0,
+	    shift:0,
+	    padding:50,
+	    indicators: false
+	});
 });

@@ -39,7 +39,7 @@ class Product extends CI_Controller {
 	public function productDetails($productID){
 		$this->load->model("product_model");
 		$output = $this->product_model->getProductDetails($productID);
-		var_dump($output);
+		print_r($output);
 	}
 	public function mainCatDetails($mainCatID)
 	{
@@ -87,6 +87,12 @@ class Product extends CI_Controller {
 			$allCats[$key]["subCategory"] = $subCats;
 		}
 		return $allCats;
+	}
+
+	public function productList(){
+		$this->load->model("product_model");
+		$categoryList = $this->product_model->allProducts();
+		var_dump($categoryList);
 	}
 
 

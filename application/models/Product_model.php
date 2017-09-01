@@ -77,4 +77,26 @@ class Product_model extends CI_Model{
         return $result;
     }
 
+
+    public function getNonEmptyCategories(){
+        $query = $this->db->query("select distinct mc_id from product_details");
+        $result = $query->result_array();
+        $output = [];
+        foreach ($result as $key => $categoryRow) {
+            $output[] = $this->getMainCatDetails($categoryRow["mc_id"]);
+        }
+        return $output;        
+    }
+
+    public function allProducts(){
+        $categoryList = $this->getNonEmptyCategories();
+        foreach ($categoryList as $key => $categoryRow) {
+            $mcID = $categoryRow["mc_id"];
+            $productList = $this->getProductByMainCat($mcID);
+            $categoryList[$key]["product_list"] = $productList;
+        }
+        return $categoryList;
+    }
+
+
 }
