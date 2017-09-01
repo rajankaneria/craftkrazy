@@ -227,6 +227,285 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
 
 }
 */
+
+/*==================================
+      Producta Area and Product 
+  =================================*/
+
+
+.home-cat-box
+{
+  margin-top: 25px;
+}
+.row.cat-img-box 
+{
+    padding: 0px 10px;
+}
+.cat-img-box img
+{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+  -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+}
+.cat-img-box img:hover
+{
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+    filter: grayscale(0%);
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+  /*-webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);*/
+}
+
+
+/* page specific stylesheet */
+
+/**==============================
+  Products Area Start Here
+=================================*/
+.recent-post-title {
+    color: #fff;
+    text-shadow: 0px 0px 1px #aaa;
+    font-family: 'Muli', sans-serif;
+    text-shadow: 0px 0px 1px #000;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    line-height: 2rem;
+}
+
+.recentPost-box {
+    height: 100%;
+    margin: auto;
+    padding: 10px 0px;
+    /* min-height: 170px; */
+    border-bottom: 1px dashed #fff; 
+}
+.recentPost-box:last-child
+{
+    border-bottom: none;
+    /*-webkit-box-shadow: 0 1px 0 0 #fff;
+    box-shadow: 0 0.31px 0 0 #fff;*/
+}
+h5.product_name {
+    font-size: 14px;
+    line-height: 0.5;
+    padding: 0px;
+    color: #fff;
+}
+.productBadge
+{
+  margin:0px auto; 
+}
+span.badge
+{
+  margin: 0 auto;
+}
+span.badge.new{
+  font-weight: 500;
+}
+span.badge.new:after{
+  content: '';
+  font-weight: 500;
+}
+
+
+
+
+
+.carousel-item.white-text.row.product-area
+{
+    border: 2px solid #2196f3;
+    border-radius: 2px;
+}
+.right.arrowButtons {
+    margin-top: -55px;
+}
+.product-area-title h5 {
+    color: #8a8b8d;
+    text-shadow: 0px 0px 0px #000;
+    font-family: 'Muli', sans-serif;
+    font-weight: 100;
+    line-height: 3rem;
+    font-weight: bold;
+    margin-top: -15px;
+    border-bottom: 1px dashed #ddd;
+}
+.prodcut-image img{
+    border: 0;
+    height: 200px;
+    width: auto;
+}
+
+div#PaperCraft-Slider {
+    height: 320px !important;
+}
+div#MixedMedia-Slider{
+    height: 320px !important;
+}
+.prodcut-image {
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    height: 200px;
+}
+@media(max-width: 768px){
+  .prodcut-image{
+    height: 200px !important;
+  }
+}
+.prodcut-name {
+    color: #000;
+    font-size: 18px;
+    line-height: 2rem;
+    margin-top: 10px;
+}
+
+.prodcut-price {
+    color: green;
+    font-size: 15px;
+    line-height: 2rem;
+}
+
+span.proce-strick {
+    text-decoration: line-through;
+    color: darkred;
+}
+
+.add-to-cart {
+    border-radius: 100px;
+    width: 50%;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    margin: 10px 10px;
+}
+.add-to-cart:hover{
+    border-radius: 100px;
+    width: 50%;
+    background: rgba(255,255,255,0.9) !important;
+    color: #2196f3 !important;
+    border: 1px solid;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    -webkit-box-shadow:inset 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+    box-shadow:inset 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+}
+
+.add-to-wishlist {
+    border-radius: 100px;
+    width: 35%;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    margin: 10px 0px;
+}
+.add-to-wishlist:hover{
+    border-radius: 100px;
+    width: 35%;
+    background: rgba(255,255,255,0.9) !important;
+    color: #2196f3 !important;
+    border: 1px solid;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    -webkit-box-shadow:inset 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+    box-shadow:inset 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+}
+
+.product-badge-new {
+    background: red;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000000;
+    top: 0;
+    float: left !important;
+    border-radius: 5px;
+    margin-left: 20px;
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.14), 2px 1px 10px 0 rgba(0,0,0,0.12), 1px 2px 4px -1px rgba(0,0,0,0.3);
+    text-shadow: 0px 0px 10px #000;
+}
+
+.product-badge-off {
+    background: green;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000000;
+    top: 0;
+    float: left !important;
+    border-radius: 5px;
+    margin-left: 20px;
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.14), 2px 1px 10px 0 rgba(0,0,0,0.12), 1px 2px 4px -1px rgba(0,0,0,0.3);
+    text-shadow: 0px 0px 10px #000;
+}
+
+
+
+
+.product-area-mobile
+{
+  margin: 25px auto !important;
+  padding: 25px !important;
+}
+
+.col.s12.center.arrowButtons
+{
+    margin-top: 15px !important;
+    margin-bottom: -10px !important;
+}
+.nextProduct {
+    box-shadow: inset 0px 0px 2px #8a8b8d;
+    background: rgba(55,55,55,0.2);
+    z-index: 100000;
+    border: 1px solid #8a8b8d;
+    line-height: 2rem;
+    color: #8a8b8d;
+}
+.nextProduct:hover {
+    box-shadow: inset 0px 0px 2px rgba(55,55,55,0.2);
+    background: #2196f3  !important;
+    z-index: 100000;
+    color: #fff !important;
+    border: 1px solid rgba(55,55,55,0.2);
+    line-height: 2rem;
+}
+.prevProduct {
+    box-shadow: inset 0px 0px 2px #8f8f8f;
+    background: rgba(55,55,55,0.2);
+    z-index: 100000;
+    border: 1px solid #8f8f8f;
+    line-height: 2rem;
+    color: #8a8b8d;
+}
+.prevProduct:hover {
+     box-shadow: inset 0px 0px 2px rgba(55,55,55,0.2);
+    background: #2196f3 !important;
+    z-index: 100000;
+    color: #fff !important;
+    border: 1px solid rgba(55,55,55,0.2);
+    line-height: 2rem;
+}
+  
+
+
+
+
+
+
 /**=======================
 	Page main content
 ==========================*/
