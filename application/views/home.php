@@ -74,9 +74,11 @@
 
   </div>
 
+<div class="col s8 m9 hide-on-med-and-down">
 
 <?php foreach ($catList as $key => $catData) { ?>
-<div class="col s8 m9 container product-area card-panel hide-on-med-and-down">
+<div class="row">
+<div class="col s12 m12 container product-area card-panel hide-on-med-and-down">
   <div class="product-area-title">
     <h5><?php echo $catData["mc_name"]; ?></h5>
     <div class="right arrowButtons">
@@ -100,7 +102,10 @@
       </div>
     </div>
   </div>
+  </div>
   <?php } ?>
+
+  </div>
 
 
 
