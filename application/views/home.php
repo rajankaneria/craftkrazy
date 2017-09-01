@@ -28,22 +28,28 @@
 <div class="row recent-post-box">
   <div class="col s4 m3 hide-on-med-and-down">
     <div class="card-panel side-bar-card white" style="margin-left: 10px;">
-      <h5 class="recent-post-title blue-text">Recent Post</h5>
+      <h5 class="recent-post-title blue-text recent-title z-depth-1">Recent Post</h5>
 	      <div class="recentPost-box row">
 	      	<div class="col s6 m6"><img src="<?php echo base_url(); ?>html/images/products/quilling.jpg" class="responsive-img" width="200"></div>
-	      	<div class="col s6 m6">
-	      	<h5 class="product_name">Product Name</h5>
-	      	<p class="product-price">Rs. 135</p>
+	      	<div class="col s6 m6 ">
+	      	<h5 class="product_name pro-name">Product Name</h5>
+	      	<p class="product-price">INR 135</p>
 	      	<p class="left productBadge"><span class="new badge white blue-text z-depth-2">25% off</span></p>
+          <button class="btn blue white-text add-to-cart shop-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
 	      	</div>
 	      </div>
 
 	      <div class="recentPost-box row">
 	      	<div class="col s6 m6"><img src="<?php echo base_url(); ?>html/images/products/calligraphy.jpg" class="responsive-img" width="200"></div>
 	      	<div class="col s6 m6">
-	      	<h5 class="product_name">Product Name</h5>
-	      	<p class="product-price">Rs. 135</p>
+	      	<h5 class="product_name pro-name">Product Name</h5>
+	      	<p class="product-price">INR 135</p>
 	      	<p class="left productBadge"><span class="new badge white blue-text z-depth-2">25% off</span></p>
+          <button class="btn blue white-text add-to-cart shop-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
 	      	</div>
 	      </div>
 	</div>
@@ -56,7 +62,7 @@
 	      	<div class="col s6 m6"><img src="<?php echo base_url(); ?>html/images/products/glass-art-22.jpg" class="responsive-img" width="200"></div>
 	      	<div class="col s6 m6">
 	      	<h5 class="product_name">Product Name</h5>
-	      	<p class="product-price">Rs. 135</p>
+	      	<p class="product-price">INR 135</p>
 	      	<p class="left productBadge"><span class="new badge white blue-text z-depth-2">25% off</span></p>
 	      	</div>
 	      </div>
@@ -65,7 +71,7 @@
 	      	<div class="col s6 m6"><img src="<?php echo base_url(); ?>html/images/products/glass painting.jpg" class="responsive-img" width="200"></div>
 	      	<div class="col s6 m6">
 	      	<h5 class="product_name">Product Name</h5>
-	      	<p class="product-price">Rs. 135</p>
+	      	<p class="product-price">INR 135</p>
 	      	<p class="left productBadge"><span class="new badge white blue-text z-depth-2">25% off</span></p>
 	      	</div>
 	      </div>
