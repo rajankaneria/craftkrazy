@@ -25,7 +25,7 @@ class Product extends CI_Controller {
 	public function productDetails($productID){
 		$this->load->model("product_model");
 		$output = $this->product_model->getProductDetails($productID);
-		var_dump($output);
+		print_r($output);
 	}
 	public function mainCatDetails($mainCatID)
 	{
