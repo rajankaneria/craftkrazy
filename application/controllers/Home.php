@@ -18,6 +18,8 @@ class Home extends CI_Controller {
 			$productNavHtml .= $this->load->view("mainCatBox",$catRow,TRUE);
 		}
 
+		$productList = $this->product_model->allProducts();
+
 
 		$headerData = array(
 			"pageTitle" => "Home",
@@ -29,7 +31,7 @@ class Home extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "home",
-            "viewData" => array(),
+            "viewData" => array("catList"=>$productList),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);

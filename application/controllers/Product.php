@@ -89,6 +89,12 @@ class Product extends CI_Controller {
 		return $allCats;
 	}
 
+	public function productList(){
+		$this->load->model("product_model");
+		$categoryList = $this->product_model->allProducts();
+		var_dump($categoryList);
+	}
+
 
 
 }
