@@ -30,7 +30,7 @@
     <div class="card-panel side-bar-card white" style="margin-left: 10px;">
       <h5 class="recent-post-title blue-text">Recent Post</h5>
 	      <div class="recentPost-box row">
-	      	<div class="col s6 m6"><img src="<?php echo base_url(); ?>html/images/image_placeholder.png" class="responsive-img" width="200"></div>
+	      	<div class="col s6 m6"><img src="<?php echo base_url(); ?>html/images/products/quilling.jpg" class="responsive-img" width="200"></div>
 	      	<div class="col s6 m6">
 	      	<h5 class="product_name">Product Name</h5>
 	      	<p class="product-price">Rs. 135</p>
@@ -39,7 +39,7 @@
 	      </div>
 
 	      <div class="recentPost-box row">
-	      	<div class="col s6 m6"><img src="<?php echo base_url(); ?>html/images/image_placeholder.png" class="responsive-img" width="200"></div>
+	      	<div class="col s6 m6"><img src="<?php echo base_url(); ?>html/images/products/calligraphy.jpg" class="responsive-img" width="200"></div>
 	      	<div class="col s6 m6">
 	      	<h5 class="product_name">Product Name</h5>
 	      	<p class="product-price">Rs. 135</p>
@@ -53,7 +53,7 @@
 	<div class="card-panel blue" style="margin-left: 10px;">
       <h5 class="recent-post-title">Top Sellers</h5>
 	      <div class="recentPost-box row">
-	      	<div class="col s6 m6"><img src="<?php echo base_url(); ?>html/images/image_placeholder.png" class="responsive-img" width="200"></div>
+	      	<div class="col s6 m6"><img src="<?php echo base_url(); ?>html/images/products/glass-art-22.jpg" class="responsive-img" width="200"></div>
 	      	<div class="col s6 m6">
 	      	<h5 class="product_name">Product Name</h5>
 	      	<p class="product-price">Rs. 135</p>
@@ -62,7 +62,7 @@
 	      </div>
 
 	      <div class="recentPost-box row">
-	      	<div class="col s6 m6"><img src="<?php echo base_url(); ?>html/images/image_placeholder.png" class="responsive-img" width="200"></div>
+	      	<div class="col s6 m6"><img src="<?php echo base_url(); ?>html/images/products/glass painting.jpg" class="responsive-img" width="200"></div>
 	      	<div class="col s6 m6">
 	      	<h5 class="product_name">Product Name</h5>
 	      	<p class="product-price">Rs. 135</p>
