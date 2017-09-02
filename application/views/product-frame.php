@@ -1,6 +1,6 @@
-      <div class="item">
+      <div class="item pro-item-new">
         <div class="product-item">
-          <div class="pic-wrapper">
+          <div class="pic-wrapper pro-wrapper">
                 <a href="javascript:void(0)" class="inner">
                   <img src="<?php echo base_url(); ?>html/images/products/<?php echo $product_image; ?>" alt="<?php echo $product_name; ?>" class="pic">
                 </a>
@@ -17,7 +17,7 @@
                 <button class="btn blue white-text add-to-cart">
                   <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 </button>
-               <button class="btn-floating waves-effect waves-light red">
+               <button  class=" wishlist-btn btn-floating waves-effect waves-light red">
                   <i class="fa fa fa-heart" aria-hidden="true"></i>
                 </button>
               </div>
