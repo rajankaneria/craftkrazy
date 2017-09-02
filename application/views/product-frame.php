@@ -11,7 +11,7 @@
                 </div> -->
               </div>
               <div class="product-desc">
-                <h2 class="name"><a href="javascript:void(0)"><?php echo $product_name; ?></a></h2>
+                <h2 class="name"><a href="<?php echo base_url(); ?>product/productDetails/<?php echo $product_id; ?>"><?php echo $product_name; ?></a></h2>
                 <div class="price">INR <?php echo $discounted_price; ?></div>
                 <div class="old-price">INR <?php echo $price; ?></div>
                 <button class="btn blue white-text add-to-cart">
