@@ -1,7 +1,7 @@
 /* Set rates + misc */
 var taxRate = 2.0;
-var shippingRate = 15.00; 
-var fadeTime = 250;
+var shippingRate = 25.00; 
+var fadeTime = 200;
 
 
 /* Assign actions */
@@ -25,8 +25,8 @@ function recalculateCart()
   });
   
   /* Calculate totals */
-  var tax = subtotal * taxRate;
-  var shipping = (subtotal > 0 ? shippingRate : 0);
+  var tax = subtotal * taxRate / 100;
+  var shipping = (subtotal > 100 ? shippingRate : 0);
   var total = subtotal + tax + shipping;
   
   /* Update totals display */

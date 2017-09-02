@@ -144,12 +144,20 @@ label {
 .column-labels label {
 /*  padding-bottom: 15px;
   margin-bottom: 15px;
-*/  border-bottom: 1px solid #eee;
+*/ /* border-bottom: 1px solid #eee;*/
   text-align: center;
+      font-family: "HelveticaNeue-Medium",sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 .column-labels .product-image, .column-labels .product-details, .column-labels .product-removal {
   /*text-indent: -9999px;*/
   text-align: center;
+  font-family: "HelveticaNeue-Medium",sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 /* Product entries */
@@ -340,11 +348,30 @@ label {
     margin: 25px 0px;
     font-weight: bolder;
     text-shadow: 0px 2px 3px rgba(84, 84, 84, 0.6);
+    padding: 0 0.5rem;
+}
+@media(max-width: 768px){
+  .checkout-btn {
+    background: #2196f3;
+    width: 100%;
+    margin: 10px 0px;
+    font-weight: bolder;
+    text-shadow: 0px 2px 3px rgba(84, 84, 84, 0.6);
+    padding:0px  2rem;
+
 }
 .checkout-btn:hover,.checkout-btn:focus 
 {
   background: #90caf9;
   color: rgba(25,25,25,0.9);
+  font-weight: bolder;
+  text-shadow: 0px 2px 3px rgba(84, 84, 84, 0.6);
+}
+
+.checkout-btn:hover,.checkout-btn:focus 
+{
+  background: #90caf9 !important;
+  color: rgba(25,25,25,0.9) !important;
   font-weight: bolder;
   text-shadow: 0px 2px 3px rgba(84, 84, 84, 0.6);
 }
