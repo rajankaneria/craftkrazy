@@ -20,9 +20,31 @@
 <div class="product-details"> 
   <div class="row">
     <div class="col m4">
-      <span class='zoom' id='zoom1'>
+    <div class="row">
+      <div class="col m12">
+         <span class='zoom' id='zoom1'>
       <img src='<?php echo  base_url(); ?>html/images/products/<?php echo $productData["product_image"]; ?>' class="responsive-img" alt='Baby Wallper'/>
       </span>
+      </div>
+      <div class="col m12">
+        <div class="col m4">
+          <span class='zoom inner-zoom' id='zoom1'>
+      <img src='<?php echo  base_url(); ?>html/images/products/<?php echo $productData["product_image"]; ?>' class="responsive-img" alt='Baby Wallper'/>
+      </span>
+        </div>
+         <div class="col m4">
+          <span class='zoom inner-zoom' id='zoom1'>
+          <img src='<?php echo  base_url(); ?>html/images/products/<?php echo $productData["product_image"]; ?>' class="responsive-img" alt='Baby Wallper'/>
+      </span>
+        </div>
+         <div class="col m4">
+          <span class='zoom inner-zoom' id='zoom1'>
+      <img src='<?php echo  base_url(); ?>html/images/products/<?php echo $productData["product_image"]; ?>' class="responsive-img" alt='Baby Wallper'/>
+      </span>
+        </div>
+      </div>
+    </div>
+     
     </div>
     <div class="col m8 mainPoduct-area">
       <div class="productDescription-area">

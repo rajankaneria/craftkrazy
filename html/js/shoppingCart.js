@@ -13,7 +13,6 @@ $('.product-removal button').click( function() {
   removeItem(this);
 });
 
-
 /* Recalculate cart */
 function recalculateCart()
 {

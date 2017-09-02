@@ -53,3 +53,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     -webkit-box-shadow: 0 1px 0 0 #2196f3;
     box-shadow: 0 1px 0 0 #2196f3;
 }
+.inner-zoom img {
+    display: block;
+    padding: 7px !important;
+}
