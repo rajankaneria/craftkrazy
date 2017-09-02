@@ -25,8 +25,8 @@ function recalculateCart()
   });
   
   /* Calculate totals */
-  var tax = subtotal * taxRate;
-  var shipping = (subtotal > 0 ? shippingRate : 0);
+  var tax = subtotal * taxRate / 100;
+  var shipping = (subtotal < 100 ? shippingRate : 0);
   var total = subtotal + tax + shipping;
   
   /* Update totals display */
