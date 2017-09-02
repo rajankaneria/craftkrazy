@@ -12,9 +12,9 @@
 <div class="shopping-cart">
 
   <div class="column-labels cartArea-header">
-    <label class="product-image">Image</label>
-    <label class="product-details">Product</label>
-    <label class="product-price">Price</label>
+    <label class="product-image">Product</label>
+    <label class="product-details">Product Name &  Description</label>
+    <label class="product-price" style="text-align: right;">Price</label>
     <label class="product-quantity">Quantity</label>
     <label class="product-removal">Remove</label>
     <label class="product-line-price">Total</label>
@@ -72,7 +72,7 @@
     </div>
     <div class="totals-item">
       <label>Tax (5%)</label>
-      <div class="totals-value" id="cart-tax">2.00</div>
+      <div class="totals-value" id="cart-tax">00.00</div>
     </div>
     <div class="totals-item">
       <label>Shipping</label>
@@ -87,6 +87,7 @@
       <button class="btn waves-effect waves-light checkout-btn" type="submit" name="action"><i class="material-icons left">shopping_basket</i> Procced to Checkout
       <i class="material-icons right">shopping_basket</i>
       </button>
+      
     </div>
   </div> 
   </div> 
