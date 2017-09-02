@@ -330,7 +330,7 @@ span.badge.new:after{
     margin-top: -55px;
 }
 .product-area-title h5 {
-    color: #8a8b8d;
+    color:#2196f3;
     text-shadow: 0px 0px 0px #000;
     font-family: 'Muli', sans-serif;
     font-weight: 100;
@@ -381,16 +381,16 @@ span.proce-strick {
 
 .add-to-cart {
     border-radius: 100px;
-    width: 50%;
+    width: 65%;
     -webkit-transition:all 0.3s ease-in-out;
     -moz-transition:all 0.3s ease-in-out;
     -o-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
-    margin: 5px 10px;
+    margin: 11px 10px;
 }
 .add-to-cart:hover{
     border-radius: 100px;
-    width: 50%;
+    width: 65%;
     background: rgba(255,255,255,0.9) !important;
     color: #2196f3 !important;
     border: 1px solid;
@@ -703,7 +703,7 @@ i.fa.fa-chevron-down {
   margin-bottom: 5px;
 }
 .uimax-block-section-26 .product-list .product-item .product-desc .name {
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 10px;
     line-height: 0.9;
     font-weight: 500;
@@ -1021,11 +1021,58 @@ margin-bottom: 4px;
 color: #636363;
 }
 .shop-cart{
-width: 72%;
+width:63%;
 margin: 0;
 margin-top: 10px;
 }
+.top-panel{padding: 10px !important}
+.pro-img{border-radius:5px}
+.wishlist-btn {
+    background: transparent !important;
+    box-shadow: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 
+.wishlist-btn
+ i {
+    color: #F44336;
+    font-size: 20px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.wishlist-btn
+:hover {
+    background: #f44336;
+    box-shadow: initial;
+}
+
+
+.wishlist-btn:hover i {
+     color: #fff !important;
+    font-size: 15px !important;
+}
+.wishlist-btn {
+    width: 33px !important;
+    height: 33px !important;
+    line-height: 33px !important
+  }
+  .wishlist-btn i {line-height: 33px;}
+.pro-panel{margin: 0.5rem 5px 1rem 11px !important; }
+
+.product-area-title h5 {margin: -1.18rem 0 .656rem 0 !important;}
+a.inner img {
+    height: 200px !important;
+    width: 200px !important;
+    overflow: hidden;
+}
+.pro-wrapper{max-width: 210px !important;max-height: 210px !important;margin: 0 auto !important;}
+.pro-item-new{margin-top: 20px !important}
 
 
 
