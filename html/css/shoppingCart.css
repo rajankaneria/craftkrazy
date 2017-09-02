@@ -11,6 +11,7 @@
 
 .shopping-cart-area {
     padding: 25px;
+    padding-bottom: 0px;
 }
 @media(max-width: 798px){
   .shopping-cart-area{
@@ -162,13 +163,13 @@ label {
 
 /* Product entries */
 .product {
-  margin-bottom: 20px;
+  border-bottom: 1px dashed #ddd;
   padding-bottom: 10px;
   background: #fff;
   padding: 25px 0px;
 }
 .product:last-child {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   padding-bottom: 10px;
   border-bottom: 0px dashed #ddd;
 }
@@ -358,7 +359,7 @@ label {
     font-weight: bolder;
     text-shadow: 0px 2px 3px rgba(84, 84, 84, 0.6);
     padding:0px  2rem;
-
+  }
 }
 .checkout-btn:hover,.checkout-btn:focus 
 {
@@ -374,4 +375,11 @@ label {
   color: rgba(25,25,25,0.9) !important;
   font-weight: bolder;
   text-shadow: 0px 2px 3px rgba(84, 84, 84, 0.6);
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly])
+{
+    border-bottom: 0px solid #2196f3 !important;
+    -webkit-box-shadow: 0 0px 0 0 #2196f3 !important;
+    box-shadow: 0 0px 0 0 #2196f3 !important;
 }
