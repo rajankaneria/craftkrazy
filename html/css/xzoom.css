@@ -1,0 +1,55 @@
+.zoom {
+display:inline-block;
+position: relative;
+padding: 25px;
+background: #fff;
+}
+.zoom img {
+display: block;
+padding: 25px;
+}
+.zoom img::selection { background-color: transparent; padding: 25px;}
+
+/***************************
+ Star Ratings Directive CSS
+***************************/
+.star {
+  display: inline-block;
+  padding: 0 5px;
+  cursor: pointer;
+  font-size: 32px;
+  color: #2196f3;
+}
+.star:after {
+	content: '\2606';
+}
+.star.filled:after {
+	content: '\2605';
+}
+.star-rating:not(.readonly) .star.hoverEmpty:after {
+	content: '\2606';
+}
+.star-rating:not(.readonly) .star.hoverFill:after {
+	content: '\2605';
+}
+.star:first-of-type {
+	padding-left: 0;
+}
+.star:last-of-type {
+	padding-right: 0;
+}
+.star-rating {
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+.star-rating.readonly .star {
+	cursor: default;
+}
+
+/*====== form focus ========*/
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly])
+{
+	border-bottom: 1px solid #2196f3;
+    -webkit-box-shadow: 0 1px 0 0 #2196f3;
+    box-shadow: 0 1px 0 0 #2196f3;
+}
