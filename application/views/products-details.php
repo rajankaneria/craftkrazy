@@ -94,20 +94,23 @@
       
     </div>
       <div class="review-form">
-           <div class="row">
-            <form class="col m6">
+            <form class="form-review">
+             <div class="row">
                 <div class="input-field">
-                  <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                  <label for="first_name">Your Name</label>
+                  <input id="last_name" type="text" class="validate">
+                  <label for="last_name">Full Name</label>
                 </div>
                 <div class="input-field">
                       <div class="input-field">
-                          <textarea id="textarea1" class="materialize-textarea"></textarea>
-                          <label for="textarea1">Give Your Review</label>
+                          <textarea id="textarea" class="materialize-textarea"></textarea>
+                          <label for="textarea1"><wbr>Write Your Review</label>
                       </div>
                 </div>
-                <div class="col m6">
-                  <button class="btn blue"> Send</button>
+              </div>
+                <div class="row">
+                  <button class="btn waves-effect waves-light blue" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
                 </div>
               </div>
             </form>

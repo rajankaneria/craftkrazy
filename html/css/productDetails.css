@@ -73,6 +73,24 @@
 .product-highlight-details{
 
 }
+
+.tabs{
+    background: #2196f3;
+    border: 2px solid #2196f3;
+    border-bottom: none; 
+}
+.tabs .indicator{
+    height: 0px;
+}
+.tabs .tab a{color: ghostwhite;}
+.tabs .tab a:hover, .tabs .tab a.active{
+    background-color: white;
+    color: #2196f3;
+    border-bottom: none;
+    .tabs{
+        border-bottom: none; 
+    }
+}
 .review-tabs{
 	padding: 0px !important;
 }
@@ -80,15 +98,30 @@
 	min-height: 200px !important;
 	background: #fff;
 	padding: 25px !important;
+	border: 2px solid #2196f3;
+    border-top: none;
 }
 .review-content{
 	min-height: 200px !important;
 	background: #fff;
 	padding: 25px !important;
+	border: 2px solid #2196f3;
+    border-top: none;
 }
 .related-product
 {
 	border-bottom: 1px dashed #ddd;
     line-height: 2.7rem;
     padding-bottom: 10px;
+}
+
+/*Form - Review*/
+form.form-review {
+    width: 50%;
+}
+@media(max-width: 768px){
+	form.form-review 
+	{
+    	width: 100% !important;
+	}
 }
