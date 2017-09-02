@@ -9,11 +9,12 @@ class Product_model extends CI_Model{
     }
 
     public function getProductDetails($product_id){
-        $query = $this->db->query("select * from product_details where product_id='$product_id'");
+        $query = $this->db->query("select product_details.*,seller.contact_person   from product_details  JOIN seller  ON product_details.seller_id=seller.seller_id where product_id='$product_id'");
         $result = $query->row_array();
         $productImages = $this->getProductImage($product_id);
         $result["productImageArray"] = $productImages;
         return $result;
+
     }
 
     public function getProductImage($product_id){

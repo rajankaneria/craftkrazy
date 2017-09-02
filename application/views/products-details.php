@@ -21,30 +21,25 @@
   <div class="row">
     <div class="col m4">
       <span class='zoom' id='zoom1'>
-      <img src='<?php base_url(); ?>html/images/product-Image.jpeg' class="responsive-img" alt='Baby Wallper'/>
+      <img src='<?php echo  base_url(); ?>html/images/products/<?php echo $productData["product_image"]; ?>' class="responsive-img" alt='Baby Wallper'/>
       </span>
     </div>
     <div class="col m8 mainPoduct-area">
       <div class="productDescription-area">
         <div class="productName">
-          <h5> Analog-Digital Watch - For Men</h5>
+          <h5> <?php echo $productData["product_name"]; ?></h5>
           <span class="row">
-          <p class="produce-price">Price :</p><p class="price-amount"> Rs. 1500</p>
+          <p class="produce-price">Price :</p><p class="price-amount"><?php echo $productData["discounted_price"]; ?></p>
           </span>
         </div>
         <div class="product-seller row">
           <h5 class="seller-name col m2">SELLER NAME : </h5>
-          <h5 class="seller-name-view col m6"> Im SELLER</h5>
+          <h5 class="seller-name-view col m6"><?php echo $productData["contact_person"]; ?></h5>
         </div>
-        <div class="product-brief-highlight row">
-          <h5>HIGHLIGHT : </h5>
-          <li>Water Resistant (30 m)</li>
-          <li>Display Type: Analog-Digital</li>
-          <li>Strap: Black, Rubber</li>
-        </div>
+     
         <div class="product-description-content row">
         <h5>DESCRIPTION :</h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <p><?php echo $productData["description"]; ?></p>
         </div>
         <div class="product-highlight-details">
           

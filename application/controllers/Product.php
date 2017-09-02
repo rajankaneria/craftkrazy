@@ -18,7 +18,6 @@ class Product extends CI_Controller {
 			$productNavHtml .= $this->load->view("mainCatBox",$catRow,TRUE);
 		}
 
-
 		$headerData = array(
 			"pageTitle" => "Product",
 			"stylesheet" => array(),
@@ -35,11 +34,39 @@ class Product extends CI_Controller {
 		);
 		$this->load->view('template',$viewData);
 	}
-
 	public function productDetails($productID){
 		$this->load->model("product_model");
 		$output = $this->product_model->getProductDetails($productID);
-		print_r($output);
+
+
+		$this->load->model("product_model");
+		$allCats = $this->product_model->getAllMainCat();
+		foreach ($allCats as $key => $catRow) {
+			$subCats = $this->product_model->getAllParentCatByMainCat($catRow["mc_id"]);
+			$allCats[$key]["subCategory"] = $subCats;
+		}
+		$productNavHtml = "";
+		foreach ($allCats as $key => $catRow) {
+			$productNavHtml .= $this->load->view("mainCatBox",$catRow,TRUE);
+		}
+
+
+		$headerData = array(
+			"pageTitle" => "Product Details",
+			"stylesheet" => array('xzoom.css', 'ProductDetails.css'),
+			"productNav" => $productNavHtml
+		);
+		$footerData = array(
+			"jsFiles" => array('xzoom.js', 'products.js')
+		);
+		
+		$viewData = array(
+			"viewName" => "products-details",
+            "viewData" => array("productData"=>$output),
+			"headerData" => $headerData,
+			"footerData" => $footerData	
+		);
+		$this->load->view('template',$viewData);
 	}
 	public function mainCatDetails($mainCatID)
 	{
@@ -78,7 +105,6 @@ class Product extends CI_Controller {
 		$output=$this->product_model->getChildAll();
 		var_dump($output);
 	}
-
 	public function productNav(){
 		$this->load->model("product_model");
 		$allCats = $this->product_model->getAllMainCat();
@@ -88,13 +114,9 @@ class Product extends CI_Controller {
 		}
 		return $allCats;
 	}
-
 	public function productList(){
 		$this->load->model("product_model");
 		$categoryList = $this->product_model->allProducts();
 		var_dump($categoryList);
 	}
-
-
-
 }
