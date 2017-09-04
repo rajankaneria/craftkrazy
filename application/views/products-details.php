@@ -23,25 +23,24 @@
     <div class="row">
       <div class="col m12">
          <span class='zoom' id='zoom1'>
-      <img src='<?php echo  base_url(); ?>html/images/products/<?php echo $productData["product_image"]; ?>' class="responsive-img" alt='Baby Wallper'/>
+      <img  id="mainProductImage"  src='<?php echo  base_url(); ?>html/images/products/<?php echo $productData["product_image"]; ?>' class="responsive-img" alt='Baby Wallper' style="height: 340px !important"/>
       </span>
       </div>
-      <div class="col m12">
+      <div class="col m12" style="padding: 0px;">
+      
+     <?php  foreach ($productData["productImageArray"] as $pro_image) {
+      ?>
         <div class="col m4">
-          <span class='zoom inner-zoom' id='zoom1'>
-      <img src='<?php echo  base_url(); ?>html/images/products/<?php echo $productData["product_image"]; ?>' class="responsive-img" alt='Baby Wallper'/>
-      </span>
+            <span class='zoom inner-zoom' id='zoom1'>
+        <img  src='<?php echo  base_url(); ?>html/images/products/<?php echo $pro_image["image_name"]; ?>' class="responsive-img product-thumbnail" alt='Baby Wallper' style="cursor: pointer;"/>
+        </span>
         </div>
-         <div class="col m4">
-          <span class='zoom inner-zoom' id='zoom1'>
-          <img src='<?php echo  base_url(); ?>html/images/products/<?php echo $productData["product_image"]; ?>' class="responsive-img" alt='Baby Wallper'/>
-      </span>
-        </div>
-         <div class="col m4">
-          <span class='zoom inner-zoom' id='zoom1'>
-      <img src='<?php echo  base_url(); ?>html/images/products/<?php echo $productData["product_image"]; ?>' class="responsive-img" alt='Baby Wallper'/>
-      </span>
-        </div>
+
+      <?php     
+     }?>
+     
+
+
       </div>
     </div>
      

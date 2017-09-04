@@ -230,3 +230,129 @@ figure.snip1033.hover .center i {
     border: 1px solid rgba(55,55,55,0.2);
     line-height: 2rem;
 }
+
+
+/* home page product frame */ 
+.product-frame {
+    width: 25%;
+    float: left;
+    padding: 25px;
+    /* border: 1px solid #000; */
+}
+
+.product-list {
+    position: relative;
+}
+
+.product-image-container {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    /* text-align: center; */
+    margin: 0 auto;
+}
+
+.product-image-container img.pic {
+    width: 100%;
+    /* display: block; */
+    /* margin: 0 auto; */
+    /* float: none; */
+}
+
+.product-desc-container {
+    color: #000;
+}
+
+.product-image-container {
+    overflow: hidden;
+}
+
+.product-price-container {
+    overflow: hidden;
+}
+.product-name {
+    color: #2196f3;
+    margin-top: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+} 
+
+.price {
+    float: left;
+    width: 50%;
+}
+
+.discount-percent {
+    float: left;
+    width: 50%;
+}
+
+span.original-price {
+    display: block;
+}
+
+span.discounted-price {
+    display: block;
+}
+
+.price {
+    border-right: 1px solid #ccc;
+}
+
+span.original-price {
+   text-decoration: line-through;
+    color: #868585;
+    font-weight: 300;
+    line-height: 15px;
+    text-align: right;
+    margin-right: 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+span.discounted-price {
+        font-size: 25px;
+    color: #175f2a;
+    line-height: 22px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+span.discounted-price i {
+    font-size: 15px;
+    /* color: #ccc; */
+}
+
+span.original-price i {
+   font-size: 11px;
+   color: #868585;
+}
+
+.product-price-container {
+    margin-top: 10px;
+}
+.discount-percent span {
+    display: block;
+}
+
+.discount-percent .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 12px;
+    color:#737b76;
+    text-align: left;
+    margin-left: 20px;
+}
+
+
+.discount-percent .value {
+    font-size: 25px;
+    line-height: 26px;
+    color: #286b3a;
+    text-align: left;
+    margin-left: 20px;
+}
+.product-cart-btn {
+    margin-top: 18px;
+}

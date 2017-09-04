@@ -331,7 +331,7 @@ span.badge.new:after{
     margin-top: -55px;
 }
 .product-area-title h5 {
-    color: #8a8b8d;
+    color:#2196f3;
     text-shadow: 0px 0px 0px #000;
     font-family: 'Muli', sans-serif;
     font-weight: 100;
@@ -702,7 +702,7 @@ i.fa.fa-chevron-down {
 .uimax-block-section-26 .product-list .product-item .product-desc {
 /*  padding: 15px;*/
   text-align: center;
-  margin-top: -15px;
+  margin-top: -20px;
   margin-bottom: 5px;
 }
 .uimax-block-section-26 .product-list .product-item .product-desc .name {
@@ -1028,7 +1028,14 @@ width: 72%;
 margin: 0;
 margin-top: 10px;
 }
-
+.wishlist-btn {background: #fff !important;box-shadow: none;}
+.wishlist-btn i{color: red;}
+.wishlist-btn :hover{background: red;-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+box-shadow:red;
+}
+.wishlist-btn:hover i{color: #fff;font-size: 19px}
 
 
 
