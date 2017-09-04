@@ -17,6 +17,7 @@
 <!--  categoriy Over here -->
 
 <!--==========  Satrt Products Area  Here  =============-->
+<?php var_dump($productData); ?>
 <div class="product-details"> 
   <div class="row">
     <div class="col m4">
@@ -98,6 +99,7 @@
       
     </div>  
   </div> 
+  </div>
 
   <div class="row">
     <div class="col s12 review-tabs">
@@ -134,12 +136,11 @@
                     <i class="material-icons right">send</i>
                   </button>
                 </div>
-              </div>
             </form>
           </div>
       </div>
     </div>
-  </div>
+  
   
 
  <!-- Related Products -->       
@@ -148,9 +149,9 @@
 <div class="col m12">
   <h4 class="related-product">Related Products :</h4>
 </div>
-<div>
-  <div class="uimax-block-section-26 pdt-80 pdb-80 container">
-    <div class="row">
+<div><div class="row">
+  <div class="uimax-block-section-26 pdt-80 pdb-80 related-product">
+    
         <div class="product-list">
           <div class="item">
             <div class="product-item">
@@ -269,13 +270,12 @@
         </div>
       </div>
     </div>
-</div>
-  
-</div>
-
-</div>
+  </div>
+ </div> 
 <!-- Over Main Class here-->
 </div>
+
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
