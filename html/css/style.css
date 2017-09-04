@@ -328,8 +328,10 @@ span.badge.new:after{
     border-radius: 2px;
 }
 .right.arrowButtons {
-    margin-top: -55px;
+    margin-top: 10px;
 }
+.product-area-title {overflow:hidden;border-bottom: 1px solid #ececec;
+    margin-left: 10px;}
 .product-area-title h5 {
     color:#2196f3;
     text-shadow: 0px 0px 0px #000;
@@ -337,7 +339,10 @@ span.badge.new:after{
     font-weight: 100;
     line-height: 3rem;
     font-weight: bold;    
-    border-bottom: 1px dashed #ddd;
+    line-height: 34px;  
+    border: none;    
+    float: left;
+
 }
 .prodcut-image img{
     border: 0;

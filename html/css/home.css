@@ -161,32 +161,28 @@ figure.snip1033.hover .center i {
 
 /*============= Paper Crfat Slider =================*/
 
-.nextProduct_paperCraft {
-    box-shadow: inset 0px 0px 2px #8a8b8d;
+.nextProduct_paperCraft {    
     background: rgba(55,55,55,0.2);
     z-index: 100000;
-    border: 1px solid #8a8b8d;
+    border: 1px solid #cec9c9;
     line-height: 2rem;
     color: #8a8b8d;
 }
-.nextProduct_paperCraft:hover {
-    box-shadow: inset 0px 0px 2px rgba(55,55,55,0.2);
+.nextProduct_paperCraft:hover {   
     background: #2196f3  !important;
     z-index: 100000;
     color: #fff !important;
     border: 1px solid rgba(55,55,55,0.2);
     line-height: 2rem;
 }
-.prevProduct_paperCraft {
-    box-shadow: inset 0px 0px 2px #8f8f8f;
+.prevProduct_paperCraft {  
     background: rgba(55,55,55,0.2);
     z-index: 100000;
-    border: 1px solid #8f8f8f;
+    border: 1px solid #cec9c9;
     line-height: 2rem;
     color: #8a8b8d;
 }
-.prevProduct_paperCraft:hover {
-     box-shadow: inset 0px 0px 2px rgba(55,55,55,0.2);
+.prevProduct_paperCraft:hover {    
     background: #2196f3 !important;
     z-index: 100000;
     color: #fff !important;
@@ -356,3 +352,4 @@ span.original-price i {
 .product-cart-btn {
     margin-top: 18px;
 }
+.pro-panel{padding: 11px !important;padding-top: 1px !important;margin: 0.5rem 6px 1rem 9px !important}
