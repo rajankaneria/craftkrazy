@@ -27,4 +27,15 @@
   }
   
   var accordion = new Accordion($('.accordion-menu'), false);
+
+
+
+  $(".product-thumbnail").on("click",function(){
+    var imageSrc = $(this).attr("src");
+    $("#mainProductImage").attr("src",imageSrc);
+    $('#zoom1').zoom();
+  });
+
+
+
 })

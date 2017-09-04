@@ -106,8 +106,9 @@
                 <img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy" class="responsive-img mobile-log">
             </div>
         </div>
-      </li>
-      <li><a href="#!">Home</a></li>
+
+    </li>
+      <li><a href="<?php echo base_url(); ?>home">Home</a></li>
       <li><a href="#!">Products</a></li>
       <li><a href="#!">Raw Materials</a></li>
       <li><a href="#!">Contact</a></li>

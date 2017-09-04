@@ -1,3 +1,4 @@
+      <?php /*
       <div class="item pro-item-new">
         <div class="product-item">
           <div class="pic-wrapper pro-wrapper">
@@ -17,7 +18,7 @@
                 <button class="btn blue white-text add-to-cart">
                   <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 </button>
-               <button  class=" wishlist-btn btn-floating waves-effect waves-light red">
+               <button  class="btn-floating waves-effect waves-light red wishlist-btn">
                   <i class="fa fa fa-heart" aria-hidden="true"></i>
                 </button>
               </div>
@@ -26,3 +27,31 @@
               <a href="javascript:void(0)" class="btn btn-wishlist">Wishlist</a> -->
             </div>
           </div>
+
+           */ ?>
+
+<div class="product-frame">
+  <div class="product-image-container">
+    <img src="<?php echo base_url(); ?>html/images/products/<?php echo $product_image; ?>" alt="<?php echo $product_name; ?>" class="pic">
+  </div>
+  <div class="product-desc-container">
+    <div class="product-name"><a href="<?php echo base_url(); ?>product/productDetails/<?php echo $product_id; ?>"><?php echo $product_name; ?></a></div>
+    <div class="product-price-container">
+      <div class="price">
+       <span class="original-price"><i class="fa fa-inr" aria-hidden="true"></i><?php echo $price; ?></span>
+        <span class="discounted-price"><i class="fa fa-inr" aria-hidden="true"></i><?php echo $discounted_price; ?></span>
+       
+      </div>      
+      <div class="discount-percent"><span class="label">Off</span><span class="value">50%</span></div>
+    </div>
+    <div class="product-action">
+      <div class="product-cart-btn">
+                <button class="btn blue white-text add-to-cart">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </button>
+                <button  class="btn-floating waves-effect waves-light red wishlist-btn">
+                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                </button></div>
+    </div>
+  </div>
+</div>
