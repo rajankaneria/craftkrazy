@@ -1,8 +1,8 @@
-$("#login").on("click",function(){
+$("#Login").on("click",function(){
 var baseurl=$("#baseurl").val();
 var data={
-	"email":$("$email").val(),
-	"passwod":$("$passwod").val()
+	"a_name":$("$a_name").val(),
+	"a_pass":$("$a_pass").val()
 };
 $.post(baseurl+"Seller/login",{data:data},function(){
 	var data=$.parseJSON(data);
@@ -11,7 +11,7 @@ $.post(baseurl+"Seller/login",{data:data},function(){
 		window.location.href="#!";
 	}
 	else if(data.status="fail"){
-		alert("Login Fial...");
+		alert("Login Fail...");
 		window.location.href="#!";
 	}
 	else{console.log(data);}
