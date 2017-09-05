@@ -1303,3 +1303,14 @@ nav.navigation-menu-area {
 #mainSlider{
   z-index: -1;
 }
+
+.single-category {
+    width: 300px;
+}
+
+.single-category .main-cat-container {
+    width: calc(100% - 30px);
+}
+.single-category-item {
+    position: relative;
+}
