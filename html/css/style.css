@@ -362,13 +362,20 @@ input[type=text]:not(.browser-default):focus:not([readonly])
     text-shadow: none;
 
 }
+
+textarea.materialize-textarea:focus:not([readonly]){
+      border-bottom: 1px solid #2669b6;
+    -webkit-box-shadow: 0 1px 0 0 #2669b6;
+    box-shadow: 0 1px 0 0 #2669b6;
+}
+
 input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea
 {
     margin: 0 auto !important;
 }
 input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label
 {
-    color: #2196f3 !important;
+    color: #2669b6 ;
     font-weight: 500;
 }
 .search .input-search:focus + label, .search .input-search:valid + label {
@@ -1203,6 +1210,18 @@ i.fa.fa-user-circle-o {
     position: relative;
     top: 35px;
     float: left !important;
+}
+
+label.active{
+  top: 10px !important;
+}
+
+
+
+/**============ footer area  ====================*/
+
+.page-footer{
+  background-color: #2669b6 !important;
 }
 
 /*=================================== Mobile Responsive =============================================*/

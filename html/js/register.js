@@ -13,7 +13,7 @@ $("#register").on("click",function(){
 		"gcm_id":$("#gcm_id").val(),
 	};
 	
-	$.post(baseurl+"Seller/register",{data:data},function(data){
+	$.post(baseurl+"Seller/register/",{data:data},function(data){
 		var data=$.parseJSON(data);
 		console.log(data.status);
 		if (data.status=="ok") {
@@ -60,7 +60,15 @@ $("#test2 input").val(""); $("#login").val("Login");
 
 });
 
+/*==================================*/
 
+$('.toggle').on('click', function() {
+  $('.container').stop().addClass('active');
+});
+
+$('.close').on('click', function() {
+  $('.container').stop().removeClass('active');
+});
 
 
 

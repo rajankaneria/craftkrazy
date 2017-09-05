@@ -9,6 +9,9 @@ class Seller_model extends CI_Model
 	{
 		$data["password"] = md5($data["password"]);
 		print_r($data);
+
+
+		
 		$query=$this->db->insert("seller",$data);
 
 		if($query){

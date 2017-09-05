@@ -110,4 +110,116 @@ class Product extends CI_Controller {
 		$categoryList = $this->product_model->allProducts();
 		var_dump($categoryList);
 	}
+
+
+	/* Seller add/edit/delete/products */
+	public function addProduct()
+	{
+		$result=array(
+					"mc_id"=>$_POST["mc_id"],
+					"pc_id"=>$_POST["pc_id"],
+					"mc_id"=>$_POST["mc_id"],
+					"cc_id"=>$_POST["cc_id"],
+					"sc_id"=>$_POST["sc_id"],
+					"product_name"=>$_POST["product_name"],
+					"product_code"=>$_POST["product_code"],					
+					"discounted_price"=>$_POST["discounted_price"],
+					"description"=>$_POST["description"],
+					"quantity"=>$_POST["quantity"],
+					"seller_id"=>$_POST["seller_id"],
+					"created_by"=>$_POST["created_by"],
+					"creater_id"=>$_POST["creater_id"]					
+			);
+
+		$proID = $this->product_model->addBlog($result);
+
+		//Define the file names with blog id with same extension which has been uploaded
+		$product_image = $proID."_product.".pathinfo($_FILES['product_image']['name'], PATHINFO_EXTENSION);		
+		$updateData = array(
+			"product_image" => $product_image			
+		);
+
+		// update the name of the images in the database
+		$this->product_model->updateProduct($updateData,$proID);
+
+
+		//set configuration for the upload library
+		$config['upload_path'] = 'C:\xampp\htdocs\labouradda\html\images\blog';
+	    $config['allowed_types'] = 'gif|jpg|png';
+	    $config['overwrite'] = TRUE;
+	    $config['encrypt_name'] = FALSE;
+	    $config['remove_spaces'] = TRUE;
+	    
+	    //set name in the config file for the feature image
+	    $config['file_name'] = $proID."_product";
+	    $this->load->library('upload', $config);
+	    $this->upload->do_upload('product_image');
+}
+	public function updateProduct()
+	{
+		$proID=$_POST['product_id'];
+		$this->load->model('product_model');
+		
+
+		$product_image = $blogID."_product.".pathinfo($_FILES['product_image']['name'], PATHINFO_EXTENSION);
+
+		$result=array(
+					"mc_id"=>$_POST["mc_id"],
+					"pc_id"=>$_POST["pc_id"],
+					"mc_id"=>$_POST["mc_id"],
+					"cc_id"=>$_POST["cc_id"],
+					"sc_id"=>$_POST["sc_id"],
+					"product_name"=>$_POST["product_name"],
+					"product_code"=>$_POST["product_code"],					
+					"discounted_price"=>$_POST["discounted_price"],
+					"description"=>$_POST["description"],
+					"quantity"=>$_POST["quantity"],
+					"seller_id"=>$_POST["seller_id"],
+					"created_by"=>$_POST["created_by"],
+					"creater_id"=>$_POST["creater_id"],
+					"product_image"	=>$product_image				
+			);
+		$this->product_model->updateProduct($result,$proID);
+
+
+			//set configuration for the upload library
+		$config['upload_path'] = 'C:\xampp\htdocs\labouradda\html\images\blog';
+	    $config['allowed_types'] = 'gif|jpg|png';
+	    $config['overwrite'] = TRUE;
+	    $config['encrypt_name'] = FALSE;
+	    $config['remove_spaces'] = TRUE;
+	    
+	    //set name in the config file for the feature image
+	    $config['file_name'] = $blogID."_product";
+	    $this->load->library('upload', $config);
+	    $this->upload->do_upload('product_image');	
+
+	}
+
+	public function deleteProduct($proID)
+	{
+		$this->load->model("product_model");
+		$this->product_model->deleteProduct($proID);
+	}
+	public function allProducts()
+	{
+		$this->load->model("product_model");
+		$result=$this->product_model->allProducts();
+		echo json_encode($result);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
