@@ -1,2 +1,31 @@
 .reg-container{padding-top: 50px}
-.border-bottom{border-bottom:2px solid #0b99dd;}
+.tabs .indicator {background-color:#2196f3 !important}
+.back-tab{background-color:#228ee4}
+.tabs .indicator {{ 
+right: 482px;
+left: 0px;
+height: 5px;
+background-color: rgb(24, 108, 175);
+}
+.tab-backgroud{background: rgb(255, 255, 255);}
+div#test1 form {
+    padding: 50px;
+    padding-top: 20px;
+}
+
+a.active {
+    color: #fff !important;
+}
+
+/*
+.reg-container .tab a {
+    color: #95c8f1 !important;
+}
+
+.reg-container  .tab:hover a {
+    color: #fff !important;
+}
+*/
+.container.reg-container .tab a {
+    color: #fff !important;
+}
