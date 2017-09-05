@@ -44,19 +44,30 @@
     <div class="col m8 mainPoduct-area">
       <div class="productDescription-area">
         <div class="productName">
-          <div class="signle-product-name"><?php echo $productData["product_name"]; ?></div>
-          <span class="row">
-          <p class="produce-price">Price :</p><p class="price-amount"><?php echo $productData["discounted_price"]; ?></p>
-          </span>
+          <div class="product-main-detail">
+          <span class="signle-product-name"><div class="product-text"><?php echo $productData["product_name"]; ?></div></span>
+          <div class="product-seller"><div class="label">Seller</div><div class="seller-name"><?php echo $productData["contact_person"]; ?></div></div>  
+          </div>
+         <div class="product-category-list">Paper Craft > Quilling > Earings</div>
+          <div class="row" style="margin-bottom: 0px; margin-top: 10px;">
+            <div class="left">
+              <p class="produce-price">Price</p><p class="price-amount"><i class="fa fa-inr" aria-hidden="true"></i><?php echo $productData["discounted_price"]; ?></p>
+            </div>
+            <div class="left">
+              <p class="product-original-price"><i class="fa fa-inr" aria-hidden="true"></i><?php echo $productData["price"]; ?></p>
+            </div>
+
+            <div class="left">
+              <p class="product-discount">%<?php echo round(100*($productData["price"] - $productData["discounted_price"])/$productData["price"]) ; ?> off</p>
+            </div>
+            
+          </div>
         </div>
-        <div class="product-seller row">
-          <h5 class="seller-name col m2">SELLER NAME : </h5>
-          <h5 class="seller-name-view col m6"><?php echo $productData["contact_person"]; ?></h5>
-        </div>
+
      
         <div class="product-description-content row">
-        <h5>DESCRIPTION :</h5>
-          <p><?php echo $productData["description"]; ?></p>
+          <div class="description-label">Description</div>
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<?php echo $productData["description"]; ?></p>
         </div>
         <div class="product-highlight-details">
           
@@ -95,7 +106,7 @@
   </div> 
   </div>
 
-  <div class="row">
+  <div class="row review-container">
     <div class="col s12 review-tabs">
       <ul class="tabs">
         <li class="tab col s3 m2"><a class="active" href="#test1">Overview</a></li>
