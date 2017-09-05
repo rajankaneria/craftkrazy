@@ -99,10 +99,6 @@ class Product_model extends CI_Model{
         return $categoryList;
     }
 
-
-
-
-
     /* Seller add/edit delete products */
     public function addProduct($pro_data)
     {

@@ -9,7 +9,6 @@ class Category_model extends CI_Model{
 		}
 		return $result;
 	}
-
 	public function getMainCategoryAfter($from){
 		$totalCat = $this->mainCatCount();
 		$query = $this->db->query("select * from main_category order by mc_id limit $from,$totalCat");

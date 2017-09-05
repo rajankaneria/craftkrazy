@@ -10,8 +10,6 @@ class ProductDetails extends CI_Controller {
 		$this->load->model("category_model");
 		$this->load->model("product_model");
 		$categoryList = $this->category_model->generateNavBar(7);
-
-
 		$headerData = array(
 			"pageTitle" => "Product Details",
 			"stylesheet" => array('xzoom.css', 'ProductDetails.css'),
