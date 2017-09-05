@@ -115,6 +115,26 @@
     </ul>
     
     <ul class="left hide-on-med-and-down desktop-menu">
+
+      <?php foreach ($categoryList["catList"] as $key => $mainCatRow) { ?>
+      <li class="nav-bar-dropdown single-category-item" data-target="category-<?php echo $mainCatRow['mc_id']; ?>">
+        <a href="#!"><?php echo $mainCatRow["mc_name"]; ?></a>
+        <div class="dropdown-menu-container single-category z-depth-2" id="category-<?php echo $mainCatRow['mc_id']; ?>">
+          <?php $this->load->view("mainCatBox",$mainCatRow); ?>
+        </div>
+      </li>
+
+
+      <?php } ?>
+      <li class="nav-bar-dropdown" data-target="moreCategories">
+        <a href="#!">More<i class="material-icons right">expand_more</i></a>
+        <div class="dropdown-menu-container z-depth-2" id="moreCategories">
+          <?php foreach($categoryList["moreList"] as $key => $mainCatRow){ ?>
+          <?php $this->load->view("mainCatBox",$mainCatRow); ?>
+          <?php } ?>
+        </div>
+      </li>
+      <!--
       <li><a href="#!">Home</a></li>
       <li class="nav-bar-dropdown" data-target="productCategories">
         <a href="#!">Products<i class="material-icons right">expand_more</i></a>
@@ -124,8 +144,8 @@
       </li>
       <li><a href="#!">Raw Materials</a></li>
       <li><a href="#!">Contact</a></li>
+      -->
     </ul>
-   
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
   </div>
 </nav>
