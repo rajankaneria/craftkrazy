@@ -7,7 +7,7 @@ class Seller extends CI_Controller
 	public function index(){
 		$headerData = array(
 			"pageTitle" => "Sign Up",
-			"stylesheet" => array()			
+			"stylesheet" => array('seller.css')			
 		);
 		$footerData = array(
 			"jsFiles" => array('register.js')
@@ -18,7 +18,7 @@ class Seller extends CI_Controller
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
-		$this->load->view('template',$viewData);
+		$this->load->view('seller-template',$viewData);
 	}
 	public function register()
 	{
