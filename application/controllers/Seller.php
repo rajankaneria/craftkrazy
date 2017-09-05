@@ -6,19 +6,19 @@ class Seller extends CI_Controller
 {
 	public function index(){
 		$headerData = array(
-			"pageTitle" => "Product",
-			"stylesheet" => array()			
+			"pageTitle" => "Sign Up",
+			"stylesheet" => array('seller.css')			
 		);
 		$footerData = array(
-			"jsFiles" => array('products.js')
+			"jsFiles" => array('register.js')
 		);
 		$viewData = array(
-			"viewName" => "register",
+			"viewName" => "register-login",
             "viewData" => array(),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
-		$this->load->view('template',$viewData);
+		$this->load->view('seller-template',$viewData);
 	}
 	public function register()
 	{
@@ -28,12 +28,12 @@ class Seller extends CI_Controller
 		echo json_encode($output);
 
 	}
-}
-public function login(){
-	$data=$_POST["data"];
-	$this->load->model("Seller_model");
-	$result=$this->Seller_model->login($data);
-	echo json_encode($result);
-}
 
+	public function login(){
+		$data=$_POST["data"];
+		$this->load->model("Seller_model");
+		$result=$this->Seller_model->login($data);
+		echo json_encode($result);
+	}
+}
 ?>
