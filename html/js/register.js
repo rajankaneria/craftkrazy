@@ -60,7 +60,15 @@ $("#test2 input").val(""); $("#login").val("Login");
 
 });
 
+/*==================================*/
 
+$('.toggle').on('click', function() {
+  $('.container').stop().addClass('active');
+});
+
+$('.close').on('click', function() {
+  $('.container').stop().removeClass('active');
+});
 
 
 
