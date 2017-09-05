@@ -94,7 +94,7 @@
   </div>
 </nav>
 
-<nav class="navigation-menu-area">
+<nav class="navigation-menu-area  z-depth-1">
   <div class="nav-wrapper container">
 
   <a href="#!" class="main-logo hide-on-med-and-up"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
@@ -114,7 +114,7 @@
       <li><a href="#!">Contact</a></li>
     </ul>
     
-    <ul class="left hide-on-med-and-down">
+    <ul class="left hide-on-med-and-down desktop-menu">
       <li><a href="#!">Home</a></li>
       <li class="nav-bar-dropdown" data-target="productCategories">
         <a href="#!">Products<i class="material-icons right">expand_more</i></a>
