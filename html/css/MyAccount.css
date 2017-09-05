@@ -1,0 +1,29 @@
+.myAccount-Area {
+    padding: 25px;
+    width: 70%;
+}
+.myAccount-content-Area {
+    min-height: 300px !important;
+    background: #fff;
+    height: 300px;
+    padding: 25px !important;
+}
+.tab-header{
+	height: 55px;
+}
+.tab-header a{
+	line-height: 5rem;
+}
+.tabs .indicator{
+	background-color: #2669b6;
+}
+.tab span{
+    font-size: 2.7em;
+    color: #888 ;
+    line-height: 50px !important;
+}
+.tab .active span{
+    font-size: 2.7em;
+    color: #2669b6;
+    line-height: 50px !important;
+}
