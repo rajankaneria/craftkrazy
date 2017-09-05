@@ -1,11 +1,11 @@
 .reg-container{padding-top: 50px}
 .tabs .indicator {background-color:#2196f3 !important}
 .back-tab{background-color:#228ee4}
-.tabs .indicator {{ 
+.tabs .indicator {
 right: 482px;
 left: 0px;
 height: 5px;
-background-color: rgb(24, 108, 175);
+background-color: #1969a9 !important;
 }
 .tab-backgroud{background: rgb(255, 255, 255);}
 div#test1 form {
@@ -13,19 +13,16 @@ div#test1 form {
     padding-top: 20px;
 }
 
-a.active {
+.tab a.active {
     color: #fff !important;
 }
 
-/*
-.reg-container .tab a {
-    color: #95c8f1 !important;
+.tab a {
+    color:rgb(20, 98, 158)!important;
 }
 
-.reg-container  .tab:hover a {
+.tab:hover a {
     color: #fff !important;
 }
-*/
-.container.reg-container .tab a {
-    color: #fff !important;
-}
+.tabs{overflow: hidden !important; }
+
