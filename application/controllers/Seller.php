@@ -31,11 +31,11 @@ class Seller extends CI_Controller
 
 	}
 
-public function login(){
-	$data=$_POST["data"];
-	$this->load->model("Seller_model");
-	$result=$this->Seller_model->login($data);
-	echo json_encode($result);
-}
+	public function login(){
+		$data=$_POST["data"];
+		$this->load->model("Seller_model");
+		$result=$this->Seller_model->login($data);
+		echo json_encode($result);
+	}
 }
 ?>

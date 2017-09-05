@@ -1,10 +1,6 @@
 <div class="main">
 <!-- <script type="text/javascript" src="https://cdn.rawgit.com/jackmoore/zoom/master/jquery.zoom.min.js"></script> -->
-<!--  Slider starts here -->
-<div class="row">
-      <img src="<?php echo BASE_url();?>html/images/productDetails.jpg" class="responsive-img">
-</div>      
-<!--  Slider Over here -->
+
 
 <!--  categoriy starts here -->
 <!-- <div class="row cat-img-box">
@@ -48,7 +44,7 @@
     <div class="col m8 mainPoduct-area">
       <div class="productDescription-area">
         <div class="productName">
-          <h5> <?php echo $productData["product_name"]; ?></h5>
+          <div class="signle-product-name"><?php echo $productData["product_name"]; ?></div>
           <span class="row">
           <p class="produce-price">Price :</p><p class="price-amount"><?php echo $productData["discounted_price"]; ?></p>
           </span>
