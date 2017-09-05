@@ -1,0 +1,60 @@
+.checkout-area{
+  padding: 25px;
+}
+
+/**form data  */
+input[type=text]:not(.browser-default):focus:not([readonly]){
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    border-bottom: 1px solid #2669b6;
+    -webkit-box-shadow: 0 1px 0 0 #2669b6;
+    box-shadow: 0 1px 0 0 #2669b6;
+}
+input[type=password]:not(.browser-default):focus:not([readonly]){
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    border-bottom: 1px solid #2669b6;
+    -webkit-box-shadow: 0 1px 0 0 #2669b6;
+    box-shadow: 0 1px 0 0 #2669b6;
+}
+
+.collapsible-body{
+  background: ghostwhite;
+  margin-bottom: 0px;
+}
+.collapsible-body p{
+  color: #666666;
+}
+.collapsible-body h6{
+  margin: 1rem 0 .4rem 0;
+  color: #666666;
+}
+.collapsible-body li{
+  color: #848688;
+}
+.collapsible-body hr{
+    color: #848688;
+    border-top: 1px dashed rgba(132, 134, 136, 0.36);
+    border-bottom: none;
+    padding-left: 15px;
+}
+
+input[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after{
+  background-color: #2669b6;
+}
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after
+{
+      border: 2px solid #2669b6;
+}
