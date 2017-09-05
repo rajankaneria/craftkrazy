@@ -7,21 +7,14 @@ class Product extends CI_Controller {
 	public function index()
 	{		
 
+		$this->load->model("category_model");
 		$this->load->model("product_model");
-		$allCats = $this->product_model->getAllMainCat();
-		foreach ($allCats as $key => $catRow) {
-			$subCats = $this->product_model->getAllParentCatByMainCat($catRow["mc_id"]);
-			$allCats[$key]["subCategory"] = $subCats;
-		}
-		$productNavHtml = "";
-		foreach ($allCats as $key => $catRow) {
-			$productNavHtml .= $this->load->view("mainCatBox",$catRow,TRUE);
-		}
+		$categoryList = $this->category_model->generateNavBar(7);
 
 		$headerData = array(
 			"pageTitle" => "Product",
 			"stylesheet" => array(),
-			"productNav" => $productNavHtml
+			"categoryList" =>$categoryList
 		);
 		$footerData = array(
 			"jsFiles" => array('products.js')
@@ -36,25 +29,15 @@ class Product extends CI_Controller {
 	}
 	public function productDetails($productID){
 		$this->load->model("product_model");
+		$this->load->model("category_model");
+
 		$output = $this->product_model->getProductDetails($productID);
-
-
-		$this->load->model("product_model");
-		$allCats = $this->product_model->getAllMainCat();
-		foreach ($allCats as $key => $catRow) {
-			$subCats = $this->product_model->getAllParentCatByMainCat($catRow["mc_id"]);
-			$allCats[$key]["subCategory"] = $subCats;
-		}
-		$productNavHtml = "";
-		foreach ($allCats as $key => $catRow) {
-			$productNavHtml .= $this->load->view("mainCatBox",$catRow,TRUE);
-		}
-
+		$categoryList = $this->category_model->generateNavBar(7);
 
 		$headerData = array(
 			"pageTitle" => "Product Details",
 			"stylesheet" => array('xzoom.css', 'ProductDetails.css'),
-			"productNav" => $productNavHtml
+			"categoryList" =>$categoryList
 		);
 		$footerData = array(
 			"jsFiles" => array('xzoom.js', 'products.js')
@@ -68,18 +51,21 @@ class Product extends CI_Controller {
 		);
 		$this->load->view('template',$viewData);
 	}
+
 	public function mainCatDetails($mainCatID)
 	{
 		$this->load->model("product_model");
 		$output=$this->product_model->getMainCatDetails($mainCatID);
 		var_dump($output);
 	}
+
 	public function mainCatAllDetails()
 	{
 		$this->load->model("product_model");
 		$output=$this->product_model->getAllMainCat();
 		var_dump($output);
 	}
+
 	public function parentCatDetails($parentCatID)
 	{
 		$this->load->model("product_model");
@@ -87,24 +73,28 @@ class Product extends CI_Controller {
 		var_dump($output);
 
 	}
+
 	public function parentCatAllDetails()
 	{	
 		$this->load->model("product_model");
 		$output=$this->product_model->getAllParentCat();
 		var_dump($output);
 	}
+
 	public function childCateDetails($childCatID)
 	{
 		$this->load->model("product_model");
 		$output=$this->product_model->getChildCat($childCatID);
 		var_dump($output);
 	}
+
 	public function childCatAllDetails()
 	{
 		$this->load->model("product_model");
 		$output=$this->product_model->getChildAll();
 		var_dump($output);
 	}
+
 	public function productNav(){
 		$this->load->model("product_model");
 		$allCats = $this->product_model->getAllMainCat();
@@ -114,6 +104,7 @@ class Product extends CI_Controller {
 		}
 		return $allCats;
 	}
+	
 	public function productList(){
 		$this->load->model("product_model");
 		$categoryList = $this->product_model->allProducts();
