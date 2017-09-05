@@ -49,7 +49,6 @@
   $("#sendProductData").on('click',function(){
     var productData=new FormData($("#addProductForm")[0]);
     $.ajax({
-
           url:baseurl+"product/addProduct",
           type:'POST',
           processData:false,

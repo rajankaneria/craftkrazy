@@ -123,9 +123,8 @@
           <?php $this->load->view("mainCatBox",$mainCatRow); ?>
         </div>
       </li>
-
-
       <?php } ?>
+      
       <li class="nav-bar-dropdown" data-target="moreCategories">
         <a href="#!">More<i class="material-icons right">expand_more</i></a>
         <div class="dropdown-menu-container z-depth-2" id="moreCategories">
