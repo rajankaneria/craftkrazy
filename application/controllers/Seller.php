@@ -24,6 +24,8 @@ class Seller extends CI_Controller
 	{
 		$data=$_POST["data"];
 		$this->load->model("Seller_model");
+
+
 		$output=$this->Seller_model->register($data);
 		echo json_encode($output);
 

@@ -17,7 +17,6 @@
 <!--  categoriy Over here -->
 
 <!--==========  Satrt Products Area  Here  =============-->
-<?php var_dump($productData); ?>
 <div class="product-details"> 
   <div class="row">
     <div class="col m4">

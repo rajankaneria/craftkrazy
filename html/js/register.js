@@ -13,7 +13,7 @@ $("#register").on("click",function(){
 		"gcm_id":$("#gcm_id").val(),
 	};
 	
-	$.post(baseurl+"Seller/register",{data:data},function(data){
+	$.post(baseurl+"Seller/register/",{data:data},function(data){
 		var data=$.parseJSON(data);
 		console.log(data.status);
 		if (data.status=="ok") {

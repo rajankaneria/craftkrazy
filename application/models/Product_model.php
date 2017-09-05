@@ -100,4 +100,31 @@ class Product_model extends CI_Model{
     }
 
 
+
+
+
+    /* Seller add/edit delete products */
+    public function addProduct($pro_data)
+    {
+        $query=$this->db->insert("product_details",$pro_data);
+    }
+    public function updateProduct($pro_data,$pro_id)
+    {
+        $this->db->where('product_id',$pro_id);
+        $this->db->update("product_details",$pro_data);
+    }
+    public function deleteProduct($pro_id)
+    {
+        $this->db->where('product_id',$pro_id);
+        $this->db->delete("product_details");
+    }
+    public function allProduct()
+    {
+        $query=$this->db->query("select * from product_details");
+        $result=$query->result_array();
+        return $result;
+    }
+
+
+
 }
