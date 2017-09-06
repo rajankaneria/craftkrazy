@@ -50,14 +50,16 @@ class Seller extends CI_Controller
         }
 	}
 
-	public function parentcatAjax(){		
-		$con=mysqli_connect("localhost","root","","craftzae_craftcrazy");
+	public function parentcatAjax(){				
 		$parentData = $_POST['parentcatId'];
+		$this->load->model("product_model");
+		$childcatData=$this->product_model->getChildCat($parentData);
+		var_dump($childcatData);
 		echo "<option>Select Parent Category</option>";
-		$res1=mysqli_query($con,"select * from `child_category`  WHERE `pc_id` = '$parentData'"); 
-        while($data1=mysqli_fetch_array($res1))
+		
+        foreach($childcatData as $key=> $chilcatRow)
         {
-       		echo "<option value='".$data1['cc_id']."'>".$data1['cc_name']."</option>" ;
+       		echo "<option value='".$chilcatRow['cc_id']."'>".$chilcatRow['cc_name']."</option>" ;
             
         }
 	}
