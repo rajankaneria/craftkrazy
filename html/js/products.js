@@ -1,53 +1,65 @@
-
-  $(function() {
-    var baseurl=$("#base_url").val();
-     $('#mc_id').on("change",function () {
+function initMainCat(){
+  var baseurl=$("#base_url").val();
+    $('.main-category').off("change");
+    $('.main-category').on("change",function () {
         var maincatId = $(this).find('option:selected').val();
         $.ajax({
             url: baseurl+"seller/maicatAjax",
             type: "POST",
             data: "maincatId="+maincatId,
             success: function (response) {
-               $("#pc_id").html(response);
+               $(".parent-category").html(response);
                 $('select').material_select();
             },
         });
     }); 
+}
 
-     /* Parent Category*/
-          $('#pc_id').on("change",function () {
+function initParentCat(){
+  var baseurl=$("#base_url").val();
+   /* Parent Category*/
+   $('.parent-category').off("change");
+    $('.parent-category').on("change",function () {
         var parentcatId = $(this).find('option:selected').val();      
         $.ajax({
             url: baseurl+"seller/parentcatAjax",
             type: "POST",
             data: "parentcatId="+parentcatId,
             success: function (response) {
-               $("#cc_id").html(response);
+               $(".child-category").html(response);
                 $('select').material_select();
             },
         });
     });
 
      /*End*/
+}
 
-       /* Child Category*/
-          $('#cc_id').on("change",function () {
+function initChildCat(){
+  var baseurl=$("#base_url").val();
+   /* Child Category*/
+        $('.child-category').off("change");
+        $('.child-category').on("change",function () {
         var childcatId = $(this).find('option:selected').val();      
         $.ajax({
             url: baseurl+"seller/childcatAjax",
             type: "POST",
             data: "childcatId="+childcatId,
             success: function (response) {
-               $("#sc_id").html(response);
+               $(".sub-category").html(response);
                 $('select').material_select();
             },
         });
     });
+}
 
+
+  $(function() {
+    var baseurl=$("#base_url").val();
+    initMainCat();
+    initParentCat();
+    initChildCat();
      /*End*/
-
-
-    
     $('.modal').modal();
 
   $(document).ready(function() {
@@ -144,6 +156,9 @@
     $.post(baseurl+"product/getProduct/"+proID,function(data){
       $("#editModal .modal-content").html(data);
       Materialize.updateTextFields();$('select').material_select();
+       initMainCat();
+      initParentCat();
+      initChildCat();
     });
     
   });

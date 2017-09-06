@@ -50,28 +50,30 @@ class Seller extends CI_Controller
         }
 	}
 
-	public function parentcatAjax(){		
-		$con=mysqli_connect("localhost","root","","craftzae_craftcrazy");
+	public function parentcatAjax(){				
 		$parentData = $_POST['parentcatId'];
+		$this->load->model("product_model");
+		$childcatData=$this->product_model->getChildCat($parentData);
+		var_dump($childcatData);
 		echo "<option>Select Parent Category</option>";
-		$res1=mysqli_query($con,"select * from `child_category`  WHERE `pc_id` = '$parentData'"); 
-        while($data1=mysqli_fetch_array($res1))
+		
+        foreach($childcatData as $key=>$chilcatRow)
         {
-       		echo "<option value='".$data1['cc_id']."'>".$data1['cc_name']."</option>" ;
+       		echo "<option value='".$chilcatRow['cc_id']."'>".$chilcatRow['cc_name']."</option>" ;
             
         }
 	}
 
 
-	public function childcatAjax(){
+	public function childcatAjax(){		
 		
-		$con=mysqli_connect("localhost","root","","craftzae_craftcrazy");
 		$childData = $_POST['childcatId'];
-		echo "<option>Select Child Category</option>";
-		$res1=mysqli_query($con,"select * from `sub_category`  WHERE `cc_id` = '$childData'"); 
-        while($data1=mysqli_fetch_array($res1))
+		$this->load->model("product_model");
+		$subCatData=$this->product_model->getSubcatByChildcat($childData);
+		echo "<option>Select Child Category</option>";		 
+        foreach($subCatData as $key=>$subCatRow)
         {
-       		echo "<option value='".$data1['sc_id']."'>".$data1['sc_name']."</option>" ;
+       		echo "<option value='".$subCatRow['sc_id']."'>".$subCatRow['sc_name']."</option>" ;
             
         }
 	}
