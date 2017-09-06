@@ -2,7 +2,7 @@
 /* Global "table" column settings */
 
 .cartArea-header {
-    background: #2196f3;
+    background: #2669b6;
     color: #fff;
 }
 .cartArea-header label{
@@ -344,7 +344,7 @@ label {
     padding: 5px 0px;
 }
 .checkout-btn {
-    background: #2196f3;
+    background: #2669b6;
     width: 100%;
     margin: 25px 0px;
     font-weight: bolder;
@@ -371,7 +371,8 @@ label {
 
 .checkout-btn:hover,.checkout-btn:focus 
 {
-  background: #90caf9 !important;
+  /*background: #90caf9 !important;*/
+  background: rgba(38, 105, 182, 0.32) !important;
   color: rgba(25,25,25,0.9) !important;
   font-weight: bolder;
   text-shadow: 0px 2px 3px rgba(84, 84, 84, 0.6);
