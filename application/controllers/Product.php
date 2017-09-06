@@ -208,7 +208,8 @@ class Product extends CI_Controller {
 	{
 		$this->load->model("product_model");
 		$productData=$this->product_model->getProduct($proID);
-		$this->load->view('updateProduct',array('proData'=>$productData));
+		    $categoryList=$this->product_model->getAllMainCat();
+		$this->load->view('updateProduct',array('proData'=>$productData,"categoryList"=>$categoryList));
 	}
 	
 

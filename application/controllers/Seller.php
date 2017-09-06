@@ -59,7 +59,7 @@ class Seller extends CI_Controller
 		//var_dump($childcatData);
 		echo "<option>Select Parent Category</option>";
 		
-        foreach($childcatData as $key=> $chilcatRow)
+        foreach($childcatData as $key=>$chilcatRow)
         {
        		echo "<option value='".$chilcatRow['cc_id']."'>".$chilcatRow['cc_name']."</option>" ;
             
@@ -67,15 +67,15 @@ class Seller extends CI_Controller
 	}
 
 
-	public function childcatAjax(){
+	public function childcatAjax(){		
 		
-		$con=mysqli_connect("localhost","root","","craftzae_craftcrazy");
 		$childData = $_POST['childcatId'];
-		echo "<option>Select Child Category</option>";
-		$res1=mysqli_query($con,"select * from `sub_category`  WHERE `cc_id` = '$childData'"); 
-        while($data1=mysqli_fetch_array($res1))
+		$this->load->model("product_model");
+		$subCatData=$this->product_model->getSubcatByChildcat($childData);
+		echo "<option>Select Child Category</option>";		 
+        foreach($subCatData as $key=>$subCatRow)
         {
-       		echo "<option value='".$data1['sc_id']."'>".$data1['sc_name']."</option>" ;
+       		echo "<option value='".$subCatRow['sc_id']."'>".$subCatRow['sc_name']."</option>" ;
             
         }
 	}

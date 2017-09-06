@@ -68,6 +68,19 @@ class Product_model extends CI_Model{
         return $result;
     }
 
+
+    public function getSubcatByChildcat($childCatID){
+        $query=$this->db->query("select * from sub_category where cc_id='$childCatID' and sc_status=1 ");
+        $result=$query->result_array();
+        return $result;
+
+    }
+   public function getSubcatByChildcats(){
+    $query=$this->db->query("select * from sub_category where sc_status=1");
+    $result=$query->result_array();
+    return $result;
+    }
+
     public function getProductByMainCat($mainCatID){
         $query = $this->db->query("select * from product_details where mc_id='$mainCatID'");
         $result = $query->result_array();

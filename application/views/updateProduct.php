@@ -5,9 +5,9 @@
         <div class="input-field col s12">
           <select name="mc_id" id="mc_id">
             <option value="" disabled selected>Choose Main Category</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+               <?php foreach($categoryList as $key=>$categoryRow){ ?>
+            <option value="<?php echo $categoryRow['mc_id']; ?>"><?php echo $categoryRow['mc_name']; ?></option>
+            <?php } ?>
           </select>  
           <label>Main Category</label>
         </div>
@@ -17,9 +17,7 @@
         <div class="input-field col s12">
           <select name="pc_id" id="pc_id">
             <option value="" disabled selected>Choose Parent Category</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+           
           </select>
           <label>Parent Category</label>
         </div>
@@ -29,9 +27,7 @@
         <div class="input-field col s12">
           <select name="cc_id" id="cc_id">
             <option value="" disabled selected>Choose Sub Category</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+         
           </select>
           <label>Sub Category</label>  
         </div>
@@ -41,9 +37,7 @@
         <div class="input-field col s12">
           <select name="sc_id" id="sc_id">
             <option value="" disabled selected>Choose Child Category</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+       
           </select>
           <label>Child Category</label>
         </div>
