@@ -30,28 +30,6 @@
 </head>
 <body>
 
-<!-- 
-<div class="blue top-header">
-  <div class="container">
-    <ul>
-      <li><a href="#!"><span class="fa fa-facebook-square" aria-hidden="true"></span></a></li>
-      <li><a href="#!"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
-      <li><a href="#!"><span class="fa fa-youtube-play" aria-hidden="true"></span></a></li>
-      <li><a href="#!"><span class="fa fa-pinterest-square" aria-hidden="true"></span></a></li>
-      <li class="right">
-      <span class="search-area">
-          <form action="" class="search">
-            <div class="field">
-              <input type="text" class="input-search" id="input-search" name="input-search" required>
-              <label for="input-search"><span class="fa fa-search"></span>&nbsp;Search</label>
-            </div> <!-- /field -->
-         <!-- </form>
-      </span>
-      </li>
-    </ul>
-  </div>
-</div> -->
-
 <header>
   
 <!-- Dropdown Structure -->
@@ -62,7 +40,7 @@
   <li><a href="#!">three</a></li>
 </ul>
 
-<nav class="white hide-on-med-and-down">
+<nav class="white hide-on-med-and-down show-on-medium-and-down">
   <div class="row top-nav-container">
 
   <div class="top-nav-links">
@@ -77,24 +55,54 @@
     <a href="#!" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
     </div>
 
-    <div class="search-area col m5">
+    <div class="search-area col m5 hide-on-med-and-down">
     <form>
       <input type="search" name="Search" placeholder="Search" class="search-box">
     </form>
     </div>
     
     <div class="cart-area col m4">
-        <span class="user right col m2">
-        <a href="#!"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></span></a>
+        <span class="user right col m2 hide-on-med-and-down">
+        <a href="#!"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></a>
         </span>
         <span class="right cart-bag col m2">
         <a href="#!"><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i><span class="cart-bedge">1</span></a></span>
     </div>
    
   </div>
+     <ul id="slide-out" class="side-nav">
+      <li>
+        <div class="user-view">
+          <div class="user-area-background">
+          <div class="row user-area">
+            <div class="user left col m4">
+              <a href="#!"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></a>
+            </div>
+            <div class="col m8 left">
+              <p style="color: #aaa;line-height: 2rem;"> Mr. Craft User</p>
+            </div>
+          </div>  
+            <div class="row searbar-area">
+            <div class="search-area">
+              <form>
+                <input type="search" name="Search" placeholder="Search" class="search-box">
+              </form>
+            </div>
+            </div>
+          </div>
+        </div>
+    </li>
+    <li>
+    </li>
+      <li><a href="<?php echo base_url(); ?>home">Home</a></li>
+      <li><a href="#!">Products</a></li>
+      <li><a href="#!">Raw Materials</a></li>
+      <li><a href="#!">Contact</a></li>
+    </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 </nav>
 
-<nav class="navigation-menu-area  z-depth-1">
+<nav class="navigation-menu-area hide-on-med-and-down z-depth-1">
   <div class="nav-wrapper container">
 
   <a href="#!" class="main-logo hide-on-med-and-up"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
