@@ -29,9 +29,9 @@
         <td><?php echo $productRow['discounted_price']; ?></td>
          <td><?php echo $productRow['quantity']; ?></td>
            <td class="right-align blog-btn">
-            <a data-blogid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light blue-grey blog-view-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
-              <a data-blogid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light red blog-delete-btn"><i class="material-icons">delete</i></a>
-              <a data-blogid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light blue-grey blog-edit-btn"><i class="material-icons">mode_edit</i></a>
+            <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light blue-grey blog-view-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+              <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light red blog-delete-btn"><i class="material-icons">delete</i></a>
+              <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light blue-grey product-edit-btn"><i class="material-icons">mode_edit</i></a>
             </td>
       </tr>
       <?php } ?>
@@ -44,9 +44,19 @@
 <!-- Modal Structure -->
   <div id="addModal" class="modal">
     <div class="modal-content">
-      <?php $this->load->view("addProduct"); ?>
+      <?php $this->load->view("addProduct",$categoryList); ?>
     </div>
     <div class="modal-footer">
-      <a id="sendblogdata" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
+      <a id="sendProductData" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+   <div id="editModal" class="modal">
+    <div class="modal-content">
+     </div>
+
+    <div class="modal-footer">
+      <a  id="updateblogdata" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
     </div>
   </div>

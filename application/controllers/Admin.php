@@ -8,6 +8,7 @@ class Admin extends CI_Controller
   {
     $this->load->model("product_model");
     $productsData=$this->product_model->allProduct();
+    $categoryList=$this->product_model->getAllMainCat();
 
     $headerData = array(
       "pageTitle" => "Dashboard",
@@ -18,7 +19,7 @@ class Admin extends CI_Controller
     );
     $viewData = array(
       "viewName" => "dashboard",
-      "viewData" => array("productsData"=>$productsData),
+      "viewData" => array("productsData"=>$productsData,"categoryList"=>$categoryList),
       "headerData" => $headerData,
       "footerData" => $footerData 
     );

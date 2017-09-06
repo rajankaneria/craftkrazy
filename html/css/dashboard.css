@@ -293,3 +293,14 @@ input:-webkit-autofill {
     display: block;
     float: none !important;
 }
+.modal-close{
+  position: relative;bottom: 50px !important
+}
+.modal .modal-footer {height: 0 !important}
+.row {
+    margin-bottom: 17px !important;
+} 
+.input-field {
+    position: relative;
+    margin-top: 0rem;}
+    .lable-row{margin-bottom: 12px !important}
