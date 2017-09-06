@@ -2,7 +2,7 @@
   $(function() {
     var baseurl=$("#base_url").val();
      $('#mc_id').on("change",function () {
-        var maincatId = $(this).find('option:selected').val();       
+        var maincatId = $(this).find('option:selected').val();
         $.ajax({
             url: baseurl+"seller/maicatAjax",
             type: "POST",

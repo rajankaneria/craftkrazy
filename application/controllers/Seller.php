@@ -38,15 +38,15 @@ class Seller extends CI_Controller
 		echo json_encode($result);
 	}
 	public function maicatAjax(){
-		
-		$con=mysqli_connect("localhost","root","","craftzae_craftcrazy");
 		$maincatData = $_POST['maincatId'];
-		echo "<option>Select Main Category</option>";
-		$res1=mysqli_query($con,"select * from `parent_category`  WHERE `mc_id` = '$maincatData'"); 
-        while($data1=mysqli_fetch_array($res1))
+		$this->load->model("product_model");
+		//get list of parentcategories for maincatid
+		$parentCategoryList = $this->product_model->getAllParentCatByMainCat($maincatData);
+		 //return options
+		echo "<option>Select Main Category</option>";	
+        foreach($parentCategoryList as $key=>$parentCategoryRow)
         {
-       		echo "<option value='".$data1['pc_id']."'>".$data1['pc_name']."</option>" ;
-            
+       		echo "<option value='".$parentCategoryRow['pc_id']."'>".$parentCategoryRow['pc_name']."</option>" ;
         }
 	}
 
