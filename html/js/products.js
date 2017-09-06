@@ -1,7 +1,3 @@
-
-
-
-
 function initMainCat(){
   var baseurl=$("#base_url").val();
     $('.main-category').off("change");
