@@ -56,8 +56,8 @@ class Product_model extends CI_Model{
 
     }
 
-    public function getChildCat($childCatID){
-        $query=$this->db->query("select * from child_category where pc_id ='$childCatID' and cc_status=1 ");
+    public function getChildCat($parentCatID){
+        $query=$this->db->query("select * from child_category where pc_id ='$parentCatID' and cc_status=1 ");
         $result=$query->row_array();
         return$result;
     }
@@ -102,7 +102,10 @@ class Product_model extends CI_Model{
     /* Seller add/edit delete products */
     public function addProduct($pro_data)
     {
-        $query=$this->db->insert("product_details",$pro_data);
+        $query=$this->db->insert("product_details",$pro_data);       
+        $id=$this->db->insert_id();
+        return $id;
+
     }
     public function updateProduct($pro_data,$pro_id)
     {
@@ -118,6 +121,12 @@ class Product_model extends CI_Model{
     {
         $query=$this->db->query("select * from product_details");
         $result=$query->result_array();
+        return $result;
+    }
+    public function getProduct($proID)
+    {
+        $query=$this->db->query("select * from product_details where product_id ='$proID' ");
+        $result=$query->row_array();
         return $result;
     }
 

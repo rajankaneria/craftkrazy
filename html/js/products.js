@@ -1,7 +1,58 @@
 
   $(function() {
     var baseurl=$("#base_url").val();
+     $('#mc_id').on("change",function () {
+        var maincatId = $(this).find('option:selected').val();
+        $.ajax({
+            url: baseurl+"seller/maicatAjax",
+            type: "POST",
+            data: "maincatId="+maincatId,
+            success: function (response) {
+               $("#pc_id").html(response);
+                $('select').material_select();
+            },
+        });
+    }); 
+
+     /* Parent Category*/
+          $('#pc_id').on("change",function () {
+        var parentcatId = $(this).find('option:selected').val();      
+        $.ajax({
+            url: baseurl+"seller/parentcatAjax",
+            type: "POST",
+            data: "parentcatId="+parentcatId,
+            success: function (response) {
+               $("#cc_id").html(response);
+                $('select').material_select();
+            },
+        });
+    });
+
+     /*End*/
+
+       /* Child Category*/
+          $('#cc_id').on("change",function () {
+        var childcatId = $(this).find('option:selected').val();      
+        $.ajax({
+            url: baseurl+"seller/childcatAjax",
+            type: "POST",
+            data: "childcatId="+childcatId,
+            success: function (response) {
+               $("#sc_id").html(response);
+                $('select').material_select();
+            },
+        });
+    });
+
+     /*End*/
+
+
+    
     $('.modal').modal();
+
+  $(document).ready(function() {
+    $('select').material_select();
+  });
   var Accordion = function(el, multiple) {
     this.el = el || {};
     // more then one submenu open?
@@ -38,13 +89,11 @@
     $('#zoom1').zoom();
   });
 
-
-
-
   /* Seller add/edit/delete Products*/
   /* Add Products*/
+
   $("#addProductBtn").on("click",function(){
-      $("#addModal").model('open');
+       $("#addModal").modal('open');
   });
   $("#sendProductData").on('click',function(){
     var productData=new FormData($("#addProductForm")[0]);
@@ -63,19 +112,20 @@
 
   });
   /* Delete Products*/
-  $("#product_delete_bttn").on("click",function(){
-    var proID=$(this).data("proID");
-    if(confirm("Do You Want to Delete this Product"))
-    $.post(baseurl+"product/deleteProduct"+proID,function(data){
+  $(".product_delete_btn").on("click",function(){
+    var proID=$(this).data("proid");
+    if(confirm("Do You Want to Delete this Product")){
+    $.post(baseurl+"product/deleteProduct/"+proID,function(data){
       $("tr[data-proid="+proID+"]").remove();
     });
+  }
 
   });
  /* Update Products*/
   $("#updateBtn").on("click",function(){
     var productData=new FormData($("#updateForm")[0]);
     $.ajax({
-        url:baseurl+"product/updateProduct",
+        url:baseurl+"product/updateProduct/",
         type: 'POST',
         processData: false,
         contentType: false,
@@ -84,18 +134,16 @@
           alert('Updated succesfully');
           window.locatio.relode();
         }
-
-
     });
 
   });
-  $("$editBtn").on("click",function(){
+  $(".product-edit-btn").on("click",function(){
     $("#editModal .modal-content").html("");
     $("#editModal").modal('open');
-    var proID=$(this).data("proID");
-    $.post(baseurl+"product/updateProduct"+proID,function(data){
+    var proID=$(this).data("proid");
+    $.post(baseurl+"product/getProduct/"+proID,function(data){
       $("#editModal .modal-content").html(data);
-      Materialize.updateTextFields();
+      Materialize.updateTextFields();$('select').material_select();
     });
     
   });

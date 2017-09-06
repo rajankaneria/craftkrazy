@@ -1,5 +1,3 @@
-
-
 <div class="modal-title">Add Products</div>
 <div class="row">
     <form class="col s12" method="post" id="addProductForm" enctype="multipart/form-data">
@@ -7,9 +5,9 @@
         <div class="input-field col s12">
           <select name="mc_id" id="mc_id">
             <option value="" disabled selected>Choose Main Category</option>
-            <?php foreach($categoryList as $key=>$categoryRow){ ?>
-            <option value="<?php echo $categoryRow['mc_id']; ?>"><?php echo $categoryRow['mc_name']; ?></option>
-            <?php } ?>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
           </select>  
           <label>Main Category</label>
         </div>
@@ -18,7 +16,10 @@
        <div class="row"> 
         <div class="input-field col s12">
           <select name="pc_id" id="pc_id">
-            <option value="" disabled selected>Choose Parent Category</option>            
+            <option value="" disabled selected>Choose Parent Category</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
           </select>
           <label>Parent Category</label>
         </div>
@@ -27,7 +28,10 @@
         <div class="row">      
         <div class="input-field col s12">
           <select name="cc_id" id="cc_id">
-            <option value="" disabled selected>Choose Sub Category</option>           
+            <option value="" disabled selected>Choose Sub Category</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
           </select>
           <label>Sub Category</label>  
         </div>
@@ -36,8 +40,10 @@
         <div class="row"> 
         <div class="input-field col s12">
           <select name="sc_id" id="sc_id">
-            <option value="" disabled selected>Choose Child Category</option>           
-           
+            <option value="" disabled selected>Choose Child Category</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
           </select>
           <label>Child Category</label>
         </div>
@@ -46,14 +52,15 @@
         <div class="row lable-row">      
         <div class="input-field col s12">
          <label>Product Name</label>
-         <input type="text" name="product_name" id="product_name">
+         <input type="text" name="product_name" id="product_name"
+          value="<?php echo $proData['product_name'] ?>">
         </div>
         </div>
 
          <div class="row lable-row"> 
          <div class="input-field col s12">
          <label>Quantity</label>
-         <input type="number" name="quantity" id="quantity">
+         <input type="number" name="quantity" id="quantity" value="<?php echo $proData['quantity'] ?>">
         </div>
         </div>   
         <div class="row" style="margin-bottom: 0px !important">
@@ -72,20 +79,21 @@
         <div class="row lable-row">      
          <div class="input-field col s12">
         <label>Discounted Price</label>
-         <input type="text" name="discounted_price" id="discounted_price">
+         <input type="text" name="discounted_price" id="discounted_price" value="<?php echo $proData['discounted_price'] ?>">
         </div>
         </div>
 
          <div class="row lable-row"> 
         <div class="input-field col s12">
         <label>Product Price</label>
-         <input type="text" name="price" id="price">
+         <input type="text" name="price" id="price" value="<?php echo $proData['price'] ?>">
         </div>
         </div>          
 
         <div class="row">                 
              <label for="content">Descriptions</label>
-            <textarea id="description" name="description" style="height:12rem !important"></textarea>            
-        </div>    
+            <textarea id="description" name="description" style="height:12rem !important"><?php echo $proData['description'] ?></textarea>            
+        </div>  
+        <input type="hidden" name="proID" value="<?php echo $proData['product_id']; ?>">  
     </form>
   </div>

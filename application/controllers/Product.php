@@ -115,23 +115,21 @@ class Product extends CI_Controller {
 	/* Seller add/edit/delete/products */
 	public function addProduct()
 	{
+		$this->load->model("product_model");
 		$result=array(
 					"mc_id"=>$_POST["mc_id"],
 					"pc_id"=>$_POST["pc_id"],
 					"mc_id"=>$_POST["mc_id"],
 					"cc_id"=>$_POST["cc_id"],
 					"sc_id"=>$_POST["sc_id"],
-					"product_name"=>$_POST["product_name"],
-					"product_code"=>$_POST["product_code"],					
+					"product_name"=>$_POST["product_name"],									
 					"discounted_price"=>$_POST["discounted_price"],
+					"price"=>$_POST["price"],	
 					"description"=>$_POST["description"],
-					"quantity"=>$_POST["quantity"],
-					"seller_id"=>$_POST["seller_id"],
-					"created_by"=>$_POST["created_by"],
-					"creater_id"=>$_POST["creater_id"]					
+					"quantity"=>$_POST["quantity"]							
 			);
 
-		$proID = $this->product_model->addBlog($result);
+		$proID = $this->product_model->addProduct($result);
 
 		//Define the file names with blog id with same extension which has been uploaded
 		$product_image = $proID."_product.".pathinfo($_FILES['product_image']['name'], PATHINFO_EXTENSION);		
@@ -142,9 +140,8 @@ class Product extends CI_Controller {
 		// update the name of the images in the database
 		$this->product_model->updateProduct($updateData,$proID);
 
-
 		//set configuration for the upload library
-		$config['upload_path'] = 'C:\xampp\htdocs\labouradda\html\images\blog';
+		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\products';
 	    $config['allowed_types'] = 'gif|jpg|png';
 	    $config['overwrite'] = TRUE;
 	    $config['encrypt_name'] = FALSE;
@@ -154,7 +151,7 @@ class Product extends CI_Controller {
 	    $config['file_name'] = $proID."_product";
 	    $this->load->library('upload', $config);
 	    $this->upload->do_upload('product_image');
-}
+	}
 	public function updateProduct()
 	{
 		$proID=$_POST['product_id'];
@@ -207,6 +204,13 @@ class Product extends CI_Controller {
 		$result=$this->product_model->allProducts();
 		echo json_encode($result);
 	}
+	public function getProduct($proID)
+	{
+		$this->load->model("product_model");
+		$productData=$this->product_model->getProduct($proID);
+		$this->load->view('updateProduct',array('proData'=>$productData));
+	}
+	
 
 
 
