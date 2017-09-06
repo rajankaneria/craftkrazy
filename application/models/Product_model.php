@@ -58,7 +58,7 @@ class Product_model extends CI_Model{
 
     public function getChildCat($parentCatID){
         $query=$this->db->query("select * from child_category where pc_id ='$parentCatID' and cc_status=1 ");
-        $result=$query->row_array();
+        $result=$query->result_array();
         return$result;
     }
     public function getChildAll(){
@@ -66,6 +66,19 @@ class Product_model extends CI_Model{
         $query=$this->db->query("select * from child_category where cc_status=1");
         $result=$query->result_array();
         return $result;
+    }
+
+
+    public function getSubcatByChildcat($childCatID){
+        $query=$this->db->query("select * from sub_category where cc_id='$childCatID' and sc_status=1 ");
+        $result=$query->result_array();
+        return $result;
+
+    }
+   public function getSubcatByChildcats(){
+    $query=$this->db->query("select * from sub_category where sc_status=1");
+    $result=$query->result_array();
+    return $result;
     }
 
     public function getProductByMainCat($mainCatID){
