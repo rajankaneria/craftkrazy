@@ -124,6 +124,7 @@ class Product extends CI_Controller {
 					"sc_id"=>$_POST["sc_id"],
 					"product_name"=>$_POST["product_name"],									
 					"discounted_price"=>$_POST["discounted_price"],
+					"price"=>$_POST["price"],	
 					"description"=>$_POST["description"],
 					"quantity"=>$_POST["quantity"]							
 			);
@@ -139,7 +140,6 @@ class Product extends CI_Controller {
 		// update the name of the images in the database
 		$this->product_model->updateProduct($updateData,$proID);
 
-
 		//set configuration for the upload library
 		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\products';
 	    $config['allowed_types'] = 'gif|jpg|png';
@@ -151,7 +151,7 @@ class Product extends CI_Controller {
 	    $config['file_name'] = $proID."_product";
 	    $this->load->library('upload', $config);
 	    $this->upload->do_upload('product_image');
-}
+	}
 	public function updateProduct()
 	{
 		$proID=$_POST['product_id'];

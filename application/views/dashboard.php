@@ -21,18 +21,20 @@
         <th>Actions</th>
    		</tr>
       <?php foreach ($productsData as $key => $productRow) { ?>
-      <tr>
-        <td><?php echo $productRow['mc_id']; ?></td>
+       <tr data-proid="<?php echo $productRow['product_id']; ?>">
+        <td><?php echo $productRow['mc_id']; ?>>><?php echo $productRow['pc_id']; ?><?php echo $productRow['cc_id']; ?> >> <?php echo $productRow['sc_id']; ?> </td>
         <td><?php echo $productRow['product_name']; ?></td>
         <td><?php echo $productRow['product_code']; ?></td>
         <td><?php echo $productRow['price']; ?></td>
         <td><?php echo $productRow['discounted_price']; ?></td>
          <td><?php echo $productRow['quantity']; ?></td>
+          
            <td class="right-align blog-btn">
             <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light blue-grey blog-view-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
-              <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light red blog-delete-btn"><i class="material-icons">delete</i></a>
+              <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light red product_delete_btn"><i class="material-icons">delete</i></a>
               <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light blue-grey product-edit-btn"><i class="material-icons">mode_edit</i></a>
             </td>
+          
       </tr>
       <?php } ?>
 

@@ -102,7 +102,10 @@ class Product_model extends CI_Model{
     /* Seller add/edit delete products */
     public function addProduct($pro_data)
     {
-        $query=$this->db->insert("product_details",$pro_data);
+        $query=$this->db->insert("product_details",$pro_data);       
+        $id=$this->db->insert_id();
+        return $id;
+
     }
     public function updateProduct($pro_data,$pro_id)
     {

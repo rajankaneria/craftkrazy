@@ -112,19 +112,20 @@
 
   });
   /* Delete Products*/
-  $("#product_delete_btn").on("click",function(){
-    var proID=$(this).data("proID");
-    if(confirm("Do You Want to Delete this Product"))
-    $.post(baseurl+"product/deleteProduct"+proID,function(data){
+  $(".product_delete_btn").on("click",function(){
+    var proID=$(this).data("proid");
+    if(confirm("Do You Want to Delete this Product")){
+    $.post(baseurl+"product/deleteProduct/"+proID,function(data){
       $("tr[data-proid="+proID+"]").remove();
     });
+  }
 
   });
  /* Update Products*/
   $("#updateBtn").on("click",function(){
     var productData=new FormData($("#updateForm")[0]);
     $.ajax({
-        url:baseurl+"product/updateProduct",
+        url:baseurl+"product/updateProduct/",
         type: 'POST',
         processData: false,
         contentType: false,
@@ -133,8 +134,6 @@
           alert('Updated succesfully');
           window.locatio.relode();
         }
-
-
     });
 
   });
