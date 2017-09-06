@@ -85,37 +85,60 @@
 			</div>	
 			<div id="OrderList" class="col s12 myAccount-content-Area OrderList-Area">
 				<h5>Order List</h5>
-				<div class="row product-content-area">
+				<div class="product-content-area">
+					<div class="row">
 					<div class="orderList-image col s12 m3">
 						<img src="<?php base_url(); ?>html/images/shop-placeholder.png">
 					</div>
 					<div class="col s12 m7">
 						<p class="productName">Product name</p>
 						<p class="productPrice"><i class="fa fa-inr" aria-hidden="true">&nbsp;</i> 550.
-						<span class="Off-price"><i class="fa fa-inr" aria-hidden="true">&nbsp;</i> 550.</span>
+						<span class="old-price"><i class="fa fa-inr" aria-hidden="true">&nbsp;</i> 550.</span>
+						<span class="Off-price"><i class="fa fa-inr" aria-hidden="true">&nbsp;</i> 20% Off.</span>
 						</p>
-						<p class="product-quantity"><strong>Quantity : </strong><span class="badge"> 2</span></p>
-						<p  class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla dapibus aliquet. Phasellus dignissim consequat augue, at commodo arcu cursus et. Morbi faucibus purus odio, non interdum mi eleifend sit amet. In ornare tellus in erat sollicitudin venenatis. </p>
 					</div>
-					<div class="col s12 m2">
-					    <div>
-						<a class="btn-floating btn waves-effect waves-light btn-remove-order"><i class="material-icons">clear</i></a>
-						<a class="btn-floating btn waves-effect waves-light btn-add-to-whishlist"><i class="material-icons">favorite</i></a>
-						</div>
+
+					<div class="col s12 m2">	
+							<a class="btn btn-remove-order">REMOVE</a>
+						<!-- <a class="waves-effect waves-light btn"><i class="material-icons right">clear</i>Remove</a>	 -->
 					</div>
+					<div class="row">
+						<p class="left">Oredered on <strong> Sun, Jun 19th '2017</strong></p>
+						<p class="right"> Order Amount <strong>Rs. 550</strong></p>
+					</div>
+					</div>
+					
 				</div>
-
-				<div class="grand-total row">
-					<li><strong>Sub-total</strong> <span>: Rs. 550</span></li>
-					<li><strong>Tex</strong> <span>: Rs. 50</span></li>
-					<li><strong>Shipping Charges</strong> <span>: Rs. 50</span></li><hr>
-					<li><strong>Grand-total</strong> <span>: Rs. 600</span></li>
-				</div>
-
 			</div>
 			<div id="OrderReturns" class="col s12 myAccount-content-Area Return-Area"> Returns</div>   
 	  </div>
-	  <div id="test-swipe-3" class="col s12 myAccount-content-Area">My Wish List</div>
+	  <div id="test-swipe-3" class="col s12 myAccount-content-Area">
+	  <h5>MY Wishlist</h5>
+	  <div class="product-content-area">
+					<div class="row">
+					<div class="orderList-image col s12 m3">
+						<img src="<?php base_url(); ?>html/images/shop-placeholder.png">
+					</div>
+					<div class="col s12 m7">
+						<p class="productName">Product name</p>
+						<p class="productPrice"><i class="fa fa-inr" aria-hidden="true">&nbsp;</i> 550.
+						<span class="old-price"><i class="fa fa-inr" aria-hidden="true">&nbsp;</i> 550.</span>
+						<span class="Off-price"><i class="fa fa-inr" aria-hidden="true">&nbsp;</i> 20% Off.</span>
+						</p>
+					</div>
+
+					<div class="col s12 m2">	
+							<a class="btn btn-remove-order">REMOVE</a>
+						<!-- <a class="waves-effect waves-light btn"><i class="material-icons right">clear</i>Remove</a>	 -->
+					</div>
+					<div class="row">
+						<p class="left">Oredered on <strong> Sun, Jun 19th '2017</strong></p>
+						<p class="right"> Order Amount <strong>Rs. 550</strong></p>
+					</div>
+					</div>
+					
+				</div>
+	  </div>
 	  <div id="test-swipe-4" class="col s12 myAccount-content-Area">Account MAnage</div>
 </div>
 

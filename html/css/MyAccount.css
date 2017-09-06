@@ -61,6 +61,7 @@
 .product-content-area{
 	padding: 15px 0px;
     border-bottom: 1px dashed #ddd;
+    padding-bottom: 0px;
 }
 .orderList-image {
     width: 25%;
@@ -80,12 +81,21 @@
     font-weight: bolder;
     color: green;
     margin: 5px 0px;
+    padding: 10px 0px;
 }
-.Off-price{
-	color: #999;
+.old-price{
+	color: rgba(173, 172, 172, 0.7);
     text-decoration: line-through;
     padding: 10px;
     margin: 0px 10px;
+    font-size: 16px;
+}
+span.Off-price {
+    font-size: 16px;
+    background: #d6ead6;
+    color: #006900;
+    padding: 5px 10px;
+    border-radius: 3px;
 }
 .product-description{
 	float: left;
@@ -96,9 +106,34 @@
     text-align: justify;
 }
 .btn-remove-order{
-	background: rgb(195, 13, 13);
+	background: rgba(189, 0, 0, 0.11);
+    margin: 0px 10px;
+    padding: 0px 20px;
+    margin: 0px 0px 0px 0px;
+    color: #bd1515;
 }
-
+/*.btn-remove-order:hover{
+	background: rgba(189, 0, 0, 0.0);
+    margin: 0px 10px;
+    padding: 0px 20px;
+    margin: 0px 20px 0px 0px;
+    color: #bd1515;
+}*/
+.btn-add-to-whishlist{
+	background: rgba(189, 0, 0, 0.11);
+    margin: 0px 10px;
+    padding: 0px 20px;
+    margin: 0px 20px 0px 0px;
+    color: #bd1515;
+}
+/*.btn-add-to-whishlist:hover{
+	background: rgba(189, 0, 0, 0.0);
+    margin: 0px 10px;
+    padding: 0px 20px;
+    margin: 0px 20px 0px 0px;
+    color: #bd1515;
+}
+*/
 .product-quantity span.badge{
 	float: none;
     background: #eee;
@@ -110,14 +145,15 @@
     font-weight: bolder;
     margin: 10px;
 }
-.grand-total{
-	width: 35%;
+p.product-seller span {
+    color: #999;
+    padding: 0px 10px;
 }
-.grand-total span{
-	float: right;
-}
-.grand-total li{
- 	list-style: none;
+.row.order-bottom {
+    background: #eee;
+    margin: 0 auto;
+    margin-top: 15px;
+    line-height: 0;
 }
 /*==========================================================
 				Mobile Responsive Area
