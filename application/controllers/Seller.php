@@ -50,8 +50,7 @@ class Seller extends CI_Controller
         }
 	}
 
-	public function parentcatAjax(){
-		
+	public function parentcatAjax(){		
 		$con=mysqli_connect("localhost","root","","craftzae_craftcrazy");
 		$parentData = $_POST['parentcatId'];
 		echo "<option>Select Parent Category</option>";
