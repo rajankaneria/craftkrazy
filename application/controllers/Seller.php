@@ -42,6 +42,7 @@ class Seller extends CI_Controller
 		$this->load->model("product_model");
 		//get list of parentcategories for maincatid
 		$parentCategoryList = $this->product_model->getAllParentCatByMainCat($maincatData);
+		//var_dump($parentCategoryList);
 		 //return options
 		echo "<option>Select Main Category</option>";	
         foreach($parentCategoryList as $key=>$parentCategoryRow)
@@ -54,7 +55,8 @@ class Seller extends CI_Controller
 		$parentData = $_POST['parentcatId'];
 		$this->load->model("product_model");
 		$childcatData=$this->product_model->getChildCat($parentData);
-		var_dump($childcatData);
+
+		//var_dump($childcatData);
 		echo "<option>Select Parent Category</option>";
 		
         foreach($childcatData as $key=> $chilcatRow)

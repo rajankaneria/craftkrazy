@@ -58,7 +58,7 @@ class Product_model extends CI_Model{
 
     public function getChildCat($parentCatID){
         $query=$this->db->query("select * from child_category where pc_id ='$parentCatID' and cc_status=1 ");
-        $result=$query->row_array();
+        $result=$query->result_array();
         return$result;
     }
     public function getChildAll(){
