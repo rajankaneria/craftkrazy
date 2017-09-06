@@ -17,7 +17,7 @@
 
        <div class="row"> 
         <div class="input-field col s12">
-          <select name="pc_id" id="pc_id">
+          <select name="pc_id" id="pc_id" class="parent-category">
             <option value="" disabled selected>Choose Parent Category</option>            
           </select>
           <label>Parent Category</label>
@@ -26,7 +26,7 @@
 
         <div class="row">      
         <div class="input-field col s12">
-          <select name="cc_id" id="cc_id">
+          <select name="cc_id" id="cc_id" class="child-category">
             <option value="" disabled selected>Choose Sub Category</option>           
           </select>
           <label>Sub Category</label>  
@@ -35,7 +35,7 @@
 
         <div class="row"> 
         <div class="input-field col s12">
-          <select name="sc_id" id="sc_id">
+          <select name="sc_id" id="sc_id" class="sub-category">
             <option value="" disabled selected>Choose Child Category</option>           
            
           </select>
