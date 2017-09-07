@@ -323,4 +323,10 @@ p.product-quantity-value {
 	.user-description-area{
 		padding: 0px !important;
 	}
+	.user-setting-Area{
+		padding: 5px 0px;
+	}
+	.collapsible-body{
+		padding: 1rem;
+	}
 }	

@@ -103,7 +103,7 @@ input[type=password].invalid:not(.browser-default) {
 }
 .container.active .card.alt {
   background: #2669b6;
-  top: 10px;
+  top: -15px;
   right: 0;
   width: 100%;
   min-width: 100%;
