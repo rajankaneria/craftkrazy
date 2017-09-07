@@ -38,7 +38,7 @@ class Product_model extends CI_Model{
 
     public function getParentCatDetails($parentCatID){
         // get parent category details
-        $query=$this->db->query("select * from parent_category where mc_id ='$parentCatID' and pc_status = 1");
+        $query=$this->db->query("select * from parent_category where pc_id ='$parentCatID' and pc_status = 1");
         $result=$query->row_array();
         return $result;
     }
