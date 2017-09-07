@@ -205,7 +205,23 @@ class Product extends CI_Controller {
 	{
 		$this->load->model("product_model");
 		$productData=$this->product_model->getProduct($proID);
-		    $categoryList=$this->product_model->getAllMainCat();
+		$mainCategoryList=$this->product_model->getAllMainCat();
+
+		//get parent category list from main category id
+		$parentCategoryList = $this->product_model->getAllParentCatByMainCat($productData["mc_id"]);
+		//get child category list from parent category id
+		$childCategoryList = $this->product_model->getChildCat($productData["pc_id"]);
+		//get sub category list from child category id
+		$subCategoryList = $this->product_model->getSubcatByChildcat($productData["cc_id"]);
+
+		$categoryList = array(
+			"mainCategory" => $mainCategoryList,
+			"parentCategory" => $parentCategoryList,
+			"childCategory" => $childCategoryList,
+			"subCategory" => $subCategoryList
+		);
+
+
 		$this->load->view('updateProduct',array('proData'=>$productData,"categoryList"=>$categoryList));
 	}
 	
