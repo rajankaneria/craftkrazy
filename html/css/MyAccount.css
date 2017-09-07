@@ -35,6 +35,14 @@
 .user-profile-area{
 
 }
+.user-profile-area h5{
+	text-align: center;
+	color: #aaa;
+	background: linear-gradient(360deg, rgba(221, 221, 221, 0.58),rgba(238, 238, 238, 0.42),#f1f1f1);
+	padding: 10px 0px;
+	border-radius: 50px;
+	margin-top: 0px;
+}
 .userDetails li{
 	list-style: none;
 	padding: 3px 10px;
@@ -53,20 +61,52 @@
     border: 2px dashed #ddd;
     padding: 3px;
 }
-
+.user-address{
+	text-align: justify;
+}
 /*========================  Order List  ===========================*/
 .OrderList-Area{
 	padding-top: 0px !important;
+}
+.OrderList-Area h5{
+	text-align: center;
+	color: #aaa;
+	background: linear-gradient(360deg, rgba(221, 221, 221, 0.58),rgba(238, 238, 238, 0.42),#f1f1f1);
+	padding: 10px 0px;
+	border-radius: 50px;
+	margin-top: 0px;
 }
 .product-content-area{
 	padding: 15px 0px;
     border-bottom: 1px dashed #ddd;
     padding-bottom: 0px;
 }
+.product-view-area{
+    margin: 10px 0px;
+    padding: 10px 10px;
+    border: 1px dashed #ddd;
+}
+.product-content-area:last-child{
+	padding: 15px 0px;
+    border-bottom: 0px dashed #ddd;
+    padding-bottom: 0px;
+}
+.row-content{
+	padding: 0px;
+	margin-bottom: 0px;
+}
+.product-view-area.box{
+    border-bottom: 1px dashed #ddd;
+    margin-bottom: 5px;
+}
+.product-view-area.box:last-child{
+    border-bottom: 0px dashed #ddd;
+    margin-bottom: 5px;
+}
 .orderList-image {
     width: 25%;
     height: auto;
-    float: left;
+    padding-left: 0px !important;
 }
 .orderList-image img{
 	width: 80%;
@@ -74,93 +114,155 @@
 .productName{
 	color: #666;
     font-size: 24px;
-    margin: 5px 0px;
+    margin:0px auto;
+    line-height: 1.5rem;
+    padding-bottom: 7px;
 }
-.productPrice {
-    font-size: 24px;
-    font-weight: bolder;
+.product-seller {
+    float: right;
+    margin-top: 5px;
+}
+.product-seller .label {
+    text-align: right;
+    font-size: 11px;
+    line-height: 11px;
+    color: #b7b7b7;
+}
+.seller-name {
+    font-size: 10px;
+    color: #9a9a9a;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.product-category-list {
+    font-size: 11px;
+    color: #a2a2a2;
+}
+.produce-price {
+    font-size: 11px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    line-height: 12px;
+    letter-spacing: 1px !important;
+    color: #848688;
+}
+.price-amount {
+   font-size: 25px;
+    /* float: left; */
+    margin-top: 0px;
+    line-height: 25px;
+    /* letter-spacing: 11px; */
     color: green;
-    margin: 5px 0px;
-    padding: 10px 0px;
+    margin-bottom: 0px; 
 }
-.old-price{
-	color: rgba(173, 172, 172, 0.7);
+
+p.price-amount i {
+    font-size: 15px;
+}
+p.product-original-price {
+    margin-left: 10px;
+    /* vertical-align: baseline; */
+    font-size: 15px;
+    margin-top: 27px;
+    color: #ccc;
     text-decoration: line-through;
-    padding: 10px;
-    margin: 0px 10px;
-    font-size: 16px;
 }
-span.Off-price {
-    font-size: 16px;
-    background: #d6ead6;
-    color: #006900;
-    padding: 5px 10px;
-    border-radius: 3px;
+
+p.product-discount {
+    margin-top: 27px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #757575;
 }
-.product-description{
-	float: left;
-    color: #666;
-    font-size: 14px;
-    line-height: 20px;
+
+.product-quantity {
+    padding: 0px !important;
+    margin: 0 auto !important;
+    margin-bottom: 0px !important;
+    line-height: 0px;
+    color: #848688;
+}
+.badge{
+	float: none !important;
+    background: #eee;
+    padding: 5px 10px!important;
+    border-radius: 100px;
+    height: 30px !important;
+    width: 30px;
+    font-weight: bolder;
+}
+p.product-quantity-value {
+    line-height: 0;
+    padding: 0;
     margin: 5px 0px;
-    text-align: justify;
+}
+
+.product-main-category{
+    line-height: 0.5;
+    color: #848688;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.product-subCategory{
+	line-height: 0.5;
+    color: rgb(158, 158, 158);
+    font-size: 12px;
+    text-transform: capitalize;
 }
 .btn-remove-order{
-	background: rgba(189, 0, 0, 0.11);
-    margin: 0px 10px;
-    padding: 0px 20px;
-    margin: 0px 0px 0px 0px;
-    color: #bd1515;
+	float: right;
+    padding: 1rem;
+    background: rgba(239, 239, 239, 0.74);
 }
-/*.btn-remove-order:hover{
-	background: rgba(189, 0, 0, 0.0);
-    margin: 0px 10px;
-    padding: 0px 20px;
-    margin: 0px 20px 0px 0px;
-    color: #bd1515;
-}*/
-.btn-add-to-whishlist{
-	background: rgba(189, 0, 0, 0.11);
-    margin: 0px 10px;
-    padding: 0px 20px;
-    margin: 0px 20px 0px 0px;
-    color: #bd1515;
-}
-/*.btn-add-to-whishlist:hover{
-	background: rgba(189, 0, 0, 0.0);
-    margin: 0px 10px;
-    padding: 0px 20px;
-    margin: 0px 20px 0px 0px;
-    color: #bd1515;
-}
-*/
-.product-quantity span.badge{
-	float: none;
-    background: #eee;
-    padding: 10px;
-    border-radius: 50px;
-    height: 50px;
-    width: 100px;
-    line-height: 20px;
-    font-weight: bolder;
-    margin: 10px;
-}
-p.product-seller span {
-    color: #999;
-    padding: 0px 10px;
-}
-.row.order-bottom {
+.order-bottom {
     background: #eee;
     margin: 0 auto;
     margin-top: 15px;
     line-height: 0;
 }
+.box{
+    	padding: 0px;
+    	margin-bottom: 10px;
+   		border-bottom: 1px dashed #ddd;
+	}
+/*================== MY Wishlist ================*/
+.my-whishlist-Area h5{
+	text-align: center;
+	color: #aaa;
+	background: linear-gradient(360deg, rgba(221, 221, 221, 0.58),rgba(238, 238, 238, 0.42),#f1f1f1);
+	padding: 10px 0px;
+	border-radius: 50px;
+	margin-top: 0px;
+}
+/*================= Manage User Account Area ===================*/
+.manage-userAccount-Area h5{
+	text-align: center;
+	color: #aaa;
+	background: linear-gradient(360deg, rgba(221, 221, 221, 0.58),rgba(238, 238, 238, 0.42),#f1f1f1);
+	padding: 10px 0px;
+	border-radius: 50px;
+	margin-top: 0px;
+}
+
+/**================= User ACCOUNT  Setting ================*/
+.user-setting-Area {
+    padding: 25px;
+}
+
+.radio-area{
+	line-height: 2rem !important;
+    padding: 2px 10px !important;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
 /*==========================================================
 				Mobile Responsive Area
 ============================================================*/
 @media(max-width: 768px){
 	.myAccount-content-Area{
-		padding: 15px !important;
+		padding: 10px !important;
 	}
 	.myAccount-Area {
      	padding: 15px;
@@ -181,4 +283,50 @@ p.product-seller span {
 		padding-top: 0px !important;
 		padding: 0px !important;
 	}	
+	.orderList-image{
+		padding: 0px !important;
+	}
+	.orderList-image img{
+		width: 100%;
+		padding-bottom: 10px;
+	}
+	.product-content-area{
+		padding:0px !important; 
+	}
+	.product-seller{
+		float: left;
+	}
+	.product-seller .label{
+		float: left;
+	}
+	.seller-name{
+		float: left;
+		width: 100%;
+	}
+	.btn-remove-order {
+	    float: left;
+	    padding: 1rem;
+	    background: rgba(239, 239, 239, 0.74);
+	    text-align: center;
+	    margin: 10px 0px;
+	    width: 100%;
+	    border: 1px dashed #DDD;
+	}
+	.total-amount{
+		float: left !important;
+	}
+	.box{
+    	padding: 0px;
+    	margin-bottom: 10px;
+   		border-bottom: 1px dashed #ddd;
+	}
+	.user-description-area{
+		padding: 0px !important;
+	}
+	.user-setting-Area{
+		padding: 5px 0px;
+	}
+	.collapsible-body{
+		padding: 1rem;
+	}
 }	

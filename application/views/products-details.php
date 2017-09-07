@@ -14,7 +14,7 @@
 
 <!--==========  Satrt Products Area  Here  =============-->
 <div class="product-details"> 
-  <div class="row">
+  <div class="row" style="background: #fff;">
     <div class="col m4">
     <div class="row">
       <div class="col m12">
@@ -78,7 +78,7 @@
           <form class="col s12">
             <div class="row">
               <div class="input-field col s6">
-                <input placeholder="Placeholder" id="first_name" type="number"  class="validate" style="line-height: 3rem;">
+                <input placeholder="Placeholder" id="first_name" type="number" minlength="0" class="validate" style="line-height: 3rem;">
                 <label for="first_name">Qty</label>
               </div>
               <div class="col m4">
