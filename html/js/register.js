@@ -1,6 +1,6 @@
 $(function(){
 
-$("#register").on("click",function(){
+$("form[name=Register] .button-container i").on("click",function(){
 	var baseurl=$("#base_url").val();
 	var data={
 		"company_name":$("#company_name").val(),
@@ -14,11 +14,10 @@ $("#register").on("click",function(){
 	};
 	
 	$.post(baseurl+"Seller/register/",{data:data},function(data){
+
 		var data=$.parseJSON(data);
-		console.log(data.status);
 		if (data.status=="ok") {
-			alert("Succesfully Register....");
-			window.location.href="login";
+			window.location.href=baseurl+"admin";
 		}
 		else if(data.status=="fail"){
 			alert(data.message);
@@ -34,17 +33,16 @@ $("#register").on("click",function(){
 });
 
 
-$("#login").on("click",function(){
+$("form[name=Login] .button-container i").on("click",function(){
 var baseurl=$("#base_url").val();
 var data={
 	"a_name":$("#a_name").val(),
 	"a_pass":$("#a_pass").val()
 };
-$.post(baseurl+"Seller/login",{data:data},function(){
+$.post(baseurl+"Seller/login",{data:data},function(data){
 	var data=$.parseJSON(data);
 	if(data.status=="ok"){
-		alert("Login Succesfully...");
-		window.location.href="#!";
+		window.location.href=baseurl+"admin";
 	}
 	else if(data.status="fail"){
 		alert("Login Fail...");

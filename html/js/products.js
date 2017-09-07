@@ -8,7 +8,7 @@ function initMainCat(){
             type: "POST",
             data: "maincatId="+maincatId,
             success: function (response) {
-               $(".parent-category").html(response);
+               $("select.parent-category").html(response);
                 $('select').material_select();
             },
         });
@@ -26,7 +26,7 @@ function initParentCat(){
             type: "POST",
             data: "parentcatId="+parentcatId,
             success: function (response) {
-               $(".child-category").html(response);
+               $("select.child-category").html(response);
                 $('select').material_select();
             },
         });
@@ -46,7 +46,7 @@ function initChildCat(){
             type: "POST",
             data: "childcatId="+childcatId,
             success: function (response) {
-               $(".sub-category").html(response);
+               $("select.sub-category").html(response);
                 $('select').material_select();
             },
         });
@@ -93,8 +93,6 @@ function initChildCat(){
   
   var accordion = new Accordion($('.accordion-menu'), false);
 
-
-
   $(".product-thumbnail").on("click",function(){
     var imageSrc = $(this).attr("src");
     $("#mainProductImage").attr("src",imageSrc);
@@ -119,7 +117,6 @@ function initChildCat(){
             alert("Inserted successfully");
             window.location.relode();
           }
-
     });
 
   });
@@ -134,7 +131,7 @@ function initChildCat(){
 
   });
  /* Update Products*/
-  $("#updateBtn").on("click",function(){
+  $("#updateproductdata").on("click",function(){
     var productData=new FormData($("#updateForm")[0]);
     $.ajax({
         url:baseurl+"product/updateProduct/",
@@ -162,7 +159,4 @@ function initChildCat(){
     });
     
   });
-
-
-
 });

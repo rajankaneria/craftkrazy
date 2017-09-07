@@ -6,6 +6,10 @@ class Admin extends CI_Controller
 {
   public function index()
   {
+    if(!$this->session->userdata("email"))
+    {
+      header("Location:".base_url()."seller");
+    }
     $this->load->model("product_model");
     $productsData=$this->product_model->allProduct();
     $categoryList=$this->product_model->getAllMainCat();

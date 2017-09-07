@@ -5,6 +5,10 @@
 class Seller extends CI_Controller
 {
 	public function index(){
+		if($this->session->userdata("email"))
+		{
+			header("location:".base_url()."Admin");
+		}
 		$headerData = array(
 			"pageTitle" => "Sign Up",
 			"stylesheet" => array('seller.css')			
@@ -37,11 +41,18 @@ class Seller extends CI_Controller
 		$result=$this->Seller_model->login($data);
 		echo json_encode($result);
 	}
+	public function logout(){
+			$this->session->unset_userdata("email");
+			$this->session->sess_destroy();
+			header('location:'.base_url()."seller");
+
+	}
 	public function maicatAjax(){
 		$maincatData = $_POST['maincatId'];
 		$this->load->model("product_model");
 		//get list of parentcategories for maincatid
 		$parentCategoryList = $this->product_model->getAllParentCatByMainCat($maincatData);
+		//var_dump($parentCategoryList);
 		 //return options
 		echo "<option>Select Main Category</option>";	
         foreach($parentCategoryList as $key=>$parentCategoryRow)
@@ -54,7 +65,8 @@ class Seller extends CI_Controller
 		$parentData = $_POST['parentcatId'];
 		$this->load->model("product_model");
 		$childcatData=$this->product_model->getChildCat($parentData);
-		var_dump($childcatData);
+
+		//var_dump($childcatData);
 		echo "<option>Select Parent Category</option>";
 		
         foreach($childcatData as $key=>$chilcatRow)

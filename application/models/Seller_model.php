@@ -8,9 +8,6 @@ class Seller_model extends CI_Model
 	public function register($data)
 	{
 		$data["password"] = md5($data["password"]);
-		print_r($data);
-
-
 		
 		$query=$this->db->insert("seller",$data);
 
@@ -18,6 +15,7 @@ class Seller_model extends CI_Model
 			$check=array("status"=>"ok",
 					"message"=>"Your Registration Succesfully..."
 			);	
+			$this->session->set_userdata('email', $data["email"]);
 		}
 		else {
 		$check=array("status"=>"ok",
@@ -36,6 +34,7 @@ class Seller_model extends CI_Model
 				"status"=>"ok",
 				"message"=>"Login Successfully.."
 				);
+			$this->session->set_userdata('email', $name);
 		}
 		else{
 			$check=array(

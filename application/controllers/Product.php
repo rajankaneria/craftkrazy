@@ -154,11 +154,11 @@ class Product extends CI_Controller {
 	}
 	public function updateProduct()
 	{
-		$proID=$_POST['product_id'];
+		$proID=$_POST['proID'];
 		$this->load->model('product_model');
 		
 
-		$product_image = $blogID."_product.".pathinfo($_FILES['product_image']['name'], PATHINFO_EXTENSION);
+		$product_image = $proID."_product.".pathinfo($_FILES['product_image']['name'], PATHINFO_EXTENSION);
 
 		$result=array(
 					"mc_id"=>$_POST["mc_id"],
@@ -166,28 +166,25 @@ class Product extends CI_Controller {
 					"mc_id"=>$_POST["mc_id"],
 					"cc_id"=>$_POST["cc_id"],
 					"sc_id"=>$_POST["sc_id"],
-					"product_name"=>$_POST["product_name"],
-					"product_code"=>$_POST["product_code"],					
+					"product_name"=>$_POST["product_name"],									
 					"discounted_price"=>$_POST["discounted_price"],
+					"price"=>$_POST["price"],
 					"description"=>$_POST["description"],
-					"quantity"=>$_POST["quantity"],
-					"seller_id"=>$_POST["seller_id"],
-					"created_by"=>$_POST["created_by"],
-					"creater_id"=>$_POST["creater_id"],
+					"quantity"=>$_POST["quantity"],				
 					"product_image"	=>$product_image				
 			);
 		$this->product_model->updateProduct($result,$proID);
 
 
 			//set configuration for the upload library
-		$config['upload_path'] = 'C:\xampp\htdocs\labouradda\html\images\blog';
+		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\blog';
 	    $config['allowed_types'] = 'gif|jpg|png';
 	    $config['overwrite'] = TRUE;
 	    $config['encrypt_name'] = FALSE;
 	    $config['remove_spaces'] = TRUE;
 	    
 	    //set name in the config file for the feature image
-	    $config['file_name'] = $blogID."_product";
+	    $config['file_name'] = $proID."_product";
 	    $this->load->library('upload', $config);
 	    $this->upload->do_upload('product_image');	
 
@@ -208,7 +205,23 @@ class Product extends CI_Controller {
 	{
 		$this->load->model("product_model");
 		$productData=$this->product_model->getProduct($proID);
-		    $categoryList=$this->product_model->getAllMainCat();
+		$mainCategoryList=$this->product_model->getAllMainCat();
+
+		//get parent category list from main category id
+		$parentCategoryList = $this->product_model->getAllParentCatByMainCat($productData["mc_id"]);
+		//get child category list from parent category id
+		$childCategoryList = $this->product_model->getChildCat($productData["pc_id"]);
+		//get sub category list from child category id
+		$subCategoryList = $this->product_model->getSubcatByChildcat($productData["cc_id"]);
+
+		$categoryList = array(
+			"mainCategory" => $mainCategoryList,
+			"parentCategory" => $parentCategoryList,
+			"childCategory" => $childCategoryList,
+			"subCategory" => $subCategoryList
+		);
+
+
 		$this->load->view('updateProduct',array('proData'=>$productData,"categoryList"=>$categoryList));
 	}
 	
