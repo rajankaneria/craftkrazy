@@ -32,6 +32,8 @@ class Product extends CI_Controller {
 		$this->load->model("category_model");
 
 		$output = $this->product_model->getProductDetails($productID);
+	
+
 		$categoryList = $this->category_model->generateNavBar(7);
 
 		$headerData = array(

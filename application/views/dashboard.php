@@ -37,7 +37,7 @@
    		</tr>
       <?php foreach ($productsData as $key => $productRow) { ?>
        <tr data-proid="<?php echo $productRow['product_id']; ?>">
-        <td><?php echo $productRow['mc_id']; ?>>><?php echo $productRow['pc_id']; ?><?php echo $productRow['cc_id']; ?> >> <?php echo $productRow['sc_id']; ?> </td>
+        <td><?php echo $productRow['mc_id']; ?>>><?php echo $productRow['pc_id']; ?>>><?php echo $productRow['cc_id']; ?> >> <?php echo $productRow['sc_id']; ?> </td>
         <td><?php echo $productRow['product_name']; ?></td>
         <td><?php echo $productRow['product_code']; ?></td>
         <td><?php echo $productRow['price']; ?></td>
