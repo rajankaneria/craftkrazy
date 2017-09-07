@@ -1,6 +1,6 @@
 <div class="container" style="width: 100% !important">
  <div class="row">
-  <div class="col s3 m3" style="background: black;width: 15%;margin: 0 auto !important;
+  <div class="col s3 m3" style="background: black;width: 15%;height: 967px;max-height: 100%;margin: 0 auto !important;
     display: block;margin-top: 0.5rem !important">
  <div>
       <ul id="sidebar_menu" class="sidebar-nav">

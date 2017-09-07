@@ -1,4 +1,4 @@
-<div class="modal-title">Add Products</div>
+<div class="modal-title">Update Products</div>
 <div class="row">
     <form class="col s12" method="post" id="updateForm" enctype="multipart/form-data">
       <div class="row">      

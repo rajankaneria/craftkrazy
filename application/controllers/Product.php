@@ -154,11 +154,11 @@ class Product extends CI_Controller {
 	}
 	public function updateProduct()
 	{
-		$proID=$_POST['product_id'];
+		$proID=$_POST['proID'];
 		$this->load->model('product_model');
 		
 
-		$product_image = $blogID."_product.".pathinfo($_FILES['product_image']['name'], PATHINFO_EXTENSION);
+		$product_image = $proID."_product.".pathinfo($_FILES['product_image']['name'], PATHINFO_EXTENSION);
 
 		$result=array(
 					"mc_id"=>$_POST["mc_id"],
@@ -184,7 +184,7 @@ class Product extends CI_Controller {
 	    $config['remove_spaces'] = TRUE;
 	    
 	    //set name in the config file for the feature image
-	    $config['file_name'] = $blogID."_product";
+	    $config['file_name'] = $proID."_product";
 	    $this->load->library('upload', $config);
 	    $this->upload->do_upload('product_image');	
 
