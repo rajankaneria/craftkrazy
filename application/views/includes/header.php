@@ -44,7 +44,7 @@
   <div class="row top-nav-container">
 
   <div class="top-nav-links">
-    <div class="top-nav-item"><a href="#">Home</a></div>
+    <div class="top-nav-item"><a href="<?php base_url(); ?>home">Home</a></div>
     <div class="top-nav-item"><a href="#">Contact</a></div>
     <div class="top-nav-item"><a href="#">Sell on Craftkrazy</a></div>
     <div class="top-nav-item"><a href="#">Contact</a></div>
@@ -52,7 +52,7 @@
 
   <div class="nav-wrapper" style="overflow: hidden;">
     <div class="col m3 logo-area">
-    <a href="#!" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
+    <a href="<?php base_url(); ?>home" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
     </div>
 
     <div class="search-area col m5 hide-on-med-and-down">
@@ -105,7 +105,7 @@
 <nav class="navigation-menu-area hide-on-med-and-down z-depth-1">
   <div class="nav-wrapper container">
 
-  <a href="#!" class="main-logo hide-on-med-and-up"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
+  <a href="<?php base_url(); ?>home" class="main-logo hide-on-med-and-up"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
  
     <ul id="slide-out" class="side-nav">
       <li>
