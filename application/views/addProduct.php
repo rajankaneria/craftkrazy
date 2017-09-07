@@ -5,7 +5,7 @@
     <form class="col s12" method="post" id="addProductForm" enctype="multipart/form-data">
       <div class="row">      
         <div class="input-field col s12">
-          <select name="mc_id" id="mc_id">
+          <select name="mc_id" id="mc_id" class="main-category">
             <option value="" disabled selected>Choose Main Category</option>
             <?php foreach($categoryList as $key=>$categoryRow){ ?>
             <option value="<?php echo $categoryRow['mc_id']; ?>"><?php echo $categoryRow['mc_name']; ?></option>
