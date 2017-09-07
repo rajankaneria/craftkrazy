@@ -47,7 +47,7 @@
     <div class="top-nav-item"><a href="<?php base_url(); ?>home">Home</a></div>
     <div class="top-nav-item"><a href="#">Contact</a></div>
     <div class="top-nav-item"><a href="#">Sell on Craftkrazy</a></div>
-    <div class="top-nav-item"><a href="#">Contact</a></div>
+    <div class="top-nav-item"><a href="#">Log in</a></div>
   </div>
 
   <div class="nav-wrapper" style="overflow: hidden;">
