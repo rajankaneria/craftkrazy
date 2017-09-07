@@ -83,6 +83,7 @@
 .tabs .tab a:hover, .tabs .tab a.active{
     background-color: white;
     color: #2196f3;
+    border-left: 1px solid #2196f3;
     border-bottom: none;
     .tabs{
         border-bottom: none; 

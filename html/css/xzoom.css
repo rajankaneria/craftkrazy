@@ -1,14 +1,18 @@
 .zoom {
 display:inline-block;
 position: relative;
-padding: 25px;
+/*padding: 25px;*/
 background: #fff;
+margin: 0 auto;
 }
 .zoom img {
 display: block;
-padding: 25px;
+/*padding: 25px;*/
+margin: 0 auto;
 padding-top: 0 !important;
 }
+
+
 .zoom img::selection { background-color: transparent; padding: 25px;}
 
 /***************************
