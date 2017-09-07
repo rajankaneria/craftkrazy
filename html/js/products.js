@@ -8,7 +8,7 @@ function initMainCat(){
             type: "POST",
             data: "maincatId="+maincatId,
             success: function (response) {
-               $(".parent-category").html(response);
+               $("select.parent-category").html(response);
                 $('select').material_select();
             },
         });
@@ -26,7 +26,7 @@ function initParentCat(){
             type: "POST",
             data: "parentcatId="+parentcatId,
             success: function (response) {
-               $(".child-category").html(response);
+               $("select.child-category").html(response);
                 $('select').material_select();
             },
         });
@@ -46,7 +46,7 @@ function initChildCat(){
             type: "POST",
             data: "childcatId="+childcatId,
             success: function (response) {
-               $(".sub-category").html(response);
+               $("select.sub-category").html(response);
                 $('select').material_select();
             },
         });
