@@ -119,7 +119,6 @@ function initChildCat(){
             alert("Inserted successfully");
             window.location.relode();
           }
-
     });
 
   });
@@ -134,7 +133,7 @@ function initChildCat(){
 
   });
  /* Update Products*/
-  $("#updateBtn").on("click",function(){
+  $("#updateproductdata").on("click",function(){
     var productData=new FormData($("#updateForm")[0]);
     $.ajax({
         url:baseurl+"product/updateProduct/",

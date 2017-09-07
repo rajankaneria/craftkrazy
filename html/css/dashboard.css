@@ -106,7 +106,7 @@
     margin-left: -150px;
     left: 70px;
    
-    width: 150px;
+   
     background: #222;
     position: fixed;
     height: 100%;
@@ -147,9 +147,9 @@
     
     text-decoration: none;
     width: 150px;
-    background: #252525;
-    border-top: 1px solid #373737;
-    border-bottom: 1px solid #1A1A1A;
+  /*  background: #252525;*/
+  
+    border-bottom: 2px solid #1A1A1A;
     -webkit-transition: background .5s;
     -moz-transition: background .5s;
     -o-transition: background .5s;
@@ -304,3 +304,31 @@ input:-webkit-autofill {
     position: relative;
     margin-top: 0rem;}
     .lable-row{margin-bottom: 12px !important}
+
+.bgrn{
+    background: black;
+    width: 15%;
+    margin: 0 auto !important;
+    display: block;
+  }
+  ul:not(.browser-default) {
+     padding-left:0 !important ; }
+
+.sidebar-main{
+  background: black;
+  width: 15%;
+  margin: 0 auto !important;
+  display: block;margin-top: 0.5rem !important}
+.logout{ 
+color: #000;
+font-size: 33px;
+margin: 40px 0px 0px 220px !important;
+display: block;
+}
+.main-logo img {
+    height: auto;
+    padding: 0px 13px;
+    width: 30% !important;
+    max-width: 100% !important;
+    margin-top: 10px;
+}

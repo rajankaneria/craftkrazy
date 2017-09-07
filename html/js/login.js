@@ -4,7 +4,7 @@ var data={
 	"a_name":$("$a_name").val(),
 	"a_pass":$("$a_pass").val()
 };
-$.post(baseurl+"Seller/login",{data:data},function(){
+$.post(baseurl+"Seller/login",{data:data},function(data){
 	var data=$.parseJSON(data);
 	if(data.status=="ok"){
 		alert("Login Succesfully...");
