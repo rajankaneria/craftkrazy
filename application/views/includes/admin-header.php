@@ -60,13 +60,13 @@
 
 
   <div class="nav-wrapper" style="overflow: hidden;">
-    <div class="col m3 logo-area">
-    <a href="#!" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
+    <div class="col m9 logo-area">
+    <a href="#!" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>    
     </div>
-
-
-  </div>
-   
+       <div class="col m3 logo-area">
+    <a href="<?php echo base_url(); ?>seller/logout"> <i class="fa fa-power-off logout" aria-hidden="true"></i></a>   
+    </div>
+  </div>   
   </div>
 </nav>
 

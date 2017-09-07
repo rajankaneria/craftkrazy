@@ -5,6 +5,10 @@
 class Seller extends CI_Controller
 {
 	public function index(){
+		if($this->session->userdata("email"))
+		{
+			header("location:".base_url()."Admin");
+		}
 		$headerData = array(
 			"pageTitle" => "Sign Up",
 			"stylesheet" => array('seller.css')			
@@ -36,6 +40,12 @@ class Seller extends CI_Controller
 		$this->load->model("Seller_model");
 		$result=$this->Seller_model->login($data);
 		echo json_encode($result);
+	}
+	public function logout(){
+			$this->session->unset_userdata("email");
+			$this->session->sess_destroy();
+			header('location:'.base_url()."seller");
+
 	}
 	public function maicatAjax(){
 		$maincatData = $_POST['maincatId'];

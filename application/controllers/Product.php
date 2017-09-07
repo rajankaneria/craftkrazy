@@ -166,21 +166,18 @@ class Product extends CI_Controller {
 					"mc_id"=>$_POST["mc_id"],
 					"cc_id"=>$_POST["cc_id"],
 					"sc_id"=>$_POST["sc_id"],
-					"product_name"=>$_POST["product_name"],
-					"product_code"=>$_POST["product_code"],					
+					"product_name"=>$_POST["product_name"],									
 					"discounted_price"=>$_POST["discounted_price"],
+					"price"=>$_POST["price"],
 					"description"=>$_POST["description"],
-					"quantity"=>$_POST["quantity"],
-					"seller_id"=>$_POST["seller_id"],
-					"created_by"=>$_POST["created_by"],
-					"creater_id"=>$_POST["creater_id"],
+					"quantity"=>$_POST["quantity"],				
 					"product_image"	=>$product_image				
 			);
 		$this->product_model->updateProduct($result,$proID);
 
 
 			//set configuration for the upload library
-		$config['upload_path'] = 'C:\xampp\htdocs\labouradda\html\images\blog';
+		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\blog';
 	    $config['allowed_types'] = 'gif|jpg|png';
 	    $config['overwrite'] = TRUE;
 	    $config['encrypt_name'] = FALSE;
