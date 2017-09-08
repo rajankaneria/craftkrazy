@@ -34,7 +34,6 @@ class Seller_model extends CI_Model
 				"status"=>"ok",
 				"message"=>"Login Successfully.."
 				);
-			$this->session->set_userdata('email', $name);
 			$this->session->set_userdata('admin', $name);
 		}
 		else{
@@ -48,7 +47,7 @@ class Seller_model extends CI_Model
 	}
 
 	public function  currentUser(){
-		$email = $this->session->userdata('email');
+		$email = $this->session->userdata('admin');
 		$query = $this->db->query("select * from seller where email='$email'");
 		return $query->row_array();
 	}

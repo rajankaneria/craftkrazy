@@ -87,7 +87,7 @@ class Seller extends CI_Controller
         }
 	}
 	public function dashboard(){
-		if(!$this->session->userdata("email"))
+		if(!$this->session->userdata("admin"))
     	{
      		 header("Location:".base_url()."seller");
     	
