@@ -142,6 +142,7 @@ class Product_model extends CI_Model{
         $result=$query->result_array();
         return $result;
     }
+    
     public function getProduct($proID)
     {
         $query=$this->db->query("select * from product_details where product_id ='$proID' ");

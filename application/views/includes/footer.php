@@ -1,25 +1,54 @@
 <footer class="page-footer blue">
   <div class="container">
     <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Footer Content</h5>
-        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-      </div>
-      <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
+      <div class="col m4 s12 contact-area">
+        <h5 class="white-text">Contat Details</h5>
+        <address>
+          Intelliworkz Business Solutions 
+          F - 1003 Titanium City Center, Nr. Sachin Tower, 
+          Anandnagar Road, Prahaladnagar, 
+          Satellite, Ahmedabad - 380015
+        </address>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          <li><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp; (+91) 99099 99099</li>
+          <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;info@craftkrazy@gmail.com</a></li>
         </ul>
+      </div>
+      <div class="col m4 s12 quick-links">
+        <h5 class="white-text">Quick Links</h5>
+        <ul>
+          <li><a  href="#!">Home</a></li>
+          <li><a  href="#!">Categories</a></li>
+          <li><a  href="#!">Sell on Craftkrazy</a></li>
+          <li><a  href="#!">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col m4 s12 feedback">
+        <h5></h5>
+          <form name="feedback" method="post">
+            <div class="row">
+              <div class="col s12 m12">
+              <input type="search" name="search" placeholder="Name" class="name">
+              </div>
+              <div class="col s12 m12">
+              <textarea cols="5" placeholder="Feedback"></textarea>
+              </div>
+              <div class="col s12 m12">
+                <input type="submit" name="feedback" value="Feedback" class="btn btn-feedback">
+              </div>
+            </div>  
+          </form>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
     <div class="container">
-    © 2014 Copyright Text
-    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    © 2017 all rights reserved. | <a href="#"> www.craftkrzy.com. </a>
+    <div class="right">
+    <label class="">Polices :</label>
+      <a class="" href="#!">Returns Policy</a>&nbsp; | &nbsp;
+      <a href="#!">Terms of use</a>
+    </div>
     </div>
   </div>
 </footer>

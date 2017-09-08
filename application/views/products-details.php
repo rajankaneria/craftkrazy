@@ -105,7 +105,7 @@
     </div>  
   </div> 
   
-
+<!-- 
   <div class="row review-container">
     <div class="col s12 review-tabs">
       <ul class="tabs">
@@ -145,12 +145,12 @@
           </div>
       </div>
     </div>
-  </div>
+  </div> -->
   
 
  <!-- Related Products -->       
 
-<div class="row">
+<div class="row related-product-area">
 <div class="col m12">
   <h4 class="related-product">Related Products :</h4>
 </div>
