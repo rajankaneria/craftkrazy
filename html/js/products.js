@@ -162,7 +162,7 @@ function initChildCat(){
 
     var productID=$(this).data("product-id");
     $.post(baseurl+"product/addProductToCart/"+productID,function(data){
-     
+        $(".cart-bedge").html(data);
     });
   });
   $(".remove-product").on("click",function(){
@@ -176,6 +176,7 @@ function initChildCat(){
 function deleteCartProduct(productID){
   var baseurl=$("#base_url").val();
   $.post(baseurl+"product/deleteCartProduct/"+productID,function(data){
+    $(".cart-bedge").html(data);
     $("#product-"+productID).remove();
     recalculateCart();
   })

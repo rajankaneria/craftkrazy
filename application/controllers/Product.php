@@ -234,6 +234,7 @@ class Product extends CI_Controller {
 		$productKey = array_search($productID, $shoppingCart);
 		unset($shoppingCart[$productKey]);
 		$this->session->set_userdata("shoppingCart",$shoppingCart);
+		echo sizeof($shoppingCart);
 	}
 
 	public function addProductToCart($productID){
@@ -242,10 +243,17 @@ class Product extends CI_Controller {
 			$shoppingCart = array($productID);
     	}else{
     		$shoppingCart = $this->session->userdata("shoppingCart");
-    		array_push($shoppingCart, $productID);
+    		$productKey = array_search($productID, $shoppingCart);
+    		if(!$productKey>0){
+    			array_push($shoppingCart, $productID);
+    		}
     	}
     	$this->session->set_userdata("shoppingCart",$shoppingCart);
+    	echo sizeof($shoppingCart);
 	}
+
+
+
 
 
 
