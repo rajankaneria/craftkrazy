@@ -10,7 +10,7 @@ class ShoppingCart extends CI_Controller {
 		$this->load->model("category_model");
 		$this->load->model("product_model");
 		$categoryList = $this->category_model->generateNavBar(7);
-
+		$productList = $this->product_model->getCartProducts();
 
 		$headerData = array(
 			"pageTitle" => "Shopping Cart",
@@ -22,7 +22,7 @@ class ShoppingCart extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "shopping-cart",
-            "viewData" => array(),
+            "viewData" => array("productList" => $productList),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);

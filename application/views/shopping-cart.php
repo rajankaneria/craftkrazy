@@ -19,46 +19,9 @@
     <label class="product-removal">Remove</label>
     <label class="product-line-price">Total</label>
   </div>
-
-  <div class="product">
-    <div class="product-image">
-      <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg">
-    </div>
-    <div class="product-details">
-      <div class="product-title">Dingo Dog Bones</div>
-      <p class="product-description">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
-    </div>
-    <div class="product-price">25</div>
-    <div class="product-quantity">
-      <input type="number" value="1" min="1">
-    </div>
-    <div class="product-removal">
-      <button class="remove-product">
-        <i class="fa fa-trash fa-2x" aria-hidden="true"></i>
-      </button>
-    </div>
-    <div class="product-line-price">25.00</div>
-  </div>
-
-  <div class="product">
-    <div class="product-image">
-      <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png">
-    </div>
-    <div class="product-details">
-      <div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
-      <p class="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
-    </div>
-    <div class="product-price">25.00</div>
-    <div class="product-quantity">
-      <input type="number" value="1" min="1">
-    </div>
-    <div class="product-removal">
-      <button class="remove-product">
-        <i class="fa fa-trash fa-2x" aria-hidden="true"></i>
-      </button>
-    </div>
-    <div class="product-line-price">25.00</div>
-  </div>
+  <?php foreach($productList as $key=>$productRow){ ?>
+  <?php $this->load->view("product-cart-row",$productRow); ?>
+  <?php } ?>
 </div>
 </div>
 </div>
