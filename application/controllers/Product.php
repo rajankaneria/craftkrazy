@@ -228,6 +228,37 @@ class Product extends CI_Controller {
 	}
 	
 
+	public function getCartProducts(){
+		$this->load->model("product_model");
+		$output = array();
+		//list of all products in the cart along with the details
+		$shoppingCart = $this->session->userdata("shoppingCart");
+		foreach ($shoppingCart as $key => $productID) {
+			$productRow = $this->product_model->getProductDetails($productID); 
+			$output[] = $productRow;
+		}
+		echo json_encode($output);
+	}
+
+	public function deleteCartProduct($productID){
+		//delete specific product from shopping cart
+		$shoppingCart = $this->session->userdata("shoppingCart");
+		$productKey = array_search($productID, $shoppingCart);
+		unset($shoppingCart[$productKey]);
+		$this->session->set_userdata("shoppingCart",$shoppingCart);
+	}
+
+	public function addProductToCart($productID){
+		//add product to shopping cart
+		if(!$this->session->userdata("shoppingCart")){
+			$shoppingCart = array($productID);
+    	}else{
+    		$shoppingCart = $this->session->userdata("shoppingCart");
+    		array_push($shoppingCart, $productID);
+    	}
+    	$this->session->set_userdata("shoppingCart",$shoppingCart);
+	}
+
 
 
 
