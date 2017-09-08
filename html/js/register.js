@@ -42,7 +42,7 @@ var data={
 $.post(baseurl+"Seller/login",{data:data},function(data){
 	var data=$.parseJSON(data);
 	if(data.status=="ok"){
-		window.location.href=baseurl+"admin";
+		window.location.href=baseurl+"Seller/dashboard";
 	}
 	else if(data.status="fail"){
 		alert("Login Fail...");

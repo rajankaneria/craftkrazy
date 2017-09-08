@@ -45,6 +45,12 @@ class Seller_model extends CI_Model
 		}
 		return $check;
 	}
+
+	public function  currentUser(){
+		$email = $this->session->userdata('email');
+		$query = $this->db->query("select * from seller where email='$email'");
+		return $query->row_array();
+	}
 	
 }
 ?>

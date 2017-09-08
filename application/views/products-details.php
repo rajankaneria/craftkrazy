@@ -48,7 +48,7 @@
           <span class="signle-product-name"><div class="product-text"><?php echo $productData["product_name"]; ?></div></span>
           <div class="product-seller"><div class="label">Seller</div><div class="seller-name"><?php echo $productData["contact_person"]; ?></div></div>  
           </div>
-         <div class="product-category-list"><?php echo $productData["mc_name"]; ?> > <?php echo $productData["pc_name"]; ?> > <?php echo $productData["cc_id"]; ?></div>
+         <div class="product-category-list"><?php echo $productData["mc_name"]; ?> > <?php echo $productData["pc_name"]; ?> > <?php echo $productData["cc_name"]; ?></div>
           <div class="row" style="margin-bottom: 0px; margin-top: 10px;">
             <div class="left">
               <p class="produce-price">Price</p><p class="price-amount"><i class="fa fa-inr" aria-hidden="true"></i><?php echo $productData["discounted_price"]; ?></p>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="left">
-              <p class="product-discount">%<?php echo round(100*($productData["price"] - $productData["discounted_price"])/$productData["price"]) ; ?> off</p>
+              <p class="product-discount"><?php echo round(100*($productData["price"] - $productData["discounted_price"])/$productData["price"]) ; ?>%  off</p>
             </div>
             
           </div>

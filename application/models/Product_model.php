@@ -9,19 +9,14 @@ class Product_model extends CI_Model{
     }
 
     public function getProductDetails($product_id){
-        $query = $this->db->query("select product_details.*,seller.contact_person,main_category.    mc_name , parent_category.pc_name,child_category.cc_name,sub_category.sc_name from product_details JOIN seller  ON product_details.seller_id=seller.seller_id JOIN main_category  ON product_details.mc_id=main_category.mc_id
-             JOIN seller  ON product_details.seller_id=seller.seller_id
-              JOIN seller  ON product_details.seller_id=seller.seller_id
-
-
-
-
+        $query = $this->db->query("select product_details.*,seller.contact_person,main_category.    mc_name , parent_category.pc_name,child_category.cc_name from product_details JOIN seller  ON product_details.seller_id=seller.seller_id JOIN main_category  ON product_details.mc_id=main_category.mc_id JOIN 
+            parent_category  ON product_details.pc_id=parent_category.pc_id JOIN 
+            child_category  ON product_details.cc_id=child_category.cc_id 
          where product_id='$product_id'");
         $result = $query->row_array();
         $productImages = $this->getProductImage($product_id);
         $result["productImageArray"] = $productImages;
         return $result;
-
     }
 
     public function getProductImage($product_id){
@@ -60,9 +55,7 @@ class Product_model extends CI_Model{
         $query=$this->db->query("select * from parent_category where pc_status=1 and mc_id='$mainCatID'");
         $result=$query->result_array();
         return $result;
-
     }
-
     public function getChildCat($parentCatID){
         $query=$this->db->query("select * from child_category where pc_id ='$parentCatID' and cc_status=1 ");
         $result=$query->result_array();
@@ -74,8 +67,6 @@ class Product_model extends CI_Model{
         $result=$query->result_array();
         return $result;
     }
-
-
     public function getSubcatByChildcat($childCatID){
         $query=$this->db->query("select * from sub_category where cc_id='$childCatID' and sc_status=1 ");
         $result=$query->result_array();
@@ -97,8 +88,6 @@ class Product_model extends CI_Model{
         }
         return $result;
     }
-
-
     public function getNonEmptyCategories(){
         $query = $this->db->query("select distinct mc_id from product_details");
         $result = $query->result_array();
@@ -108,7 +97,6 @@ class Product_model extends CI_Model{
         }
         return $output;        
     }
-
     public function allProducts(){
         $categoryList = $this->getNonEmptyCategories();
         foreach ($categoryList as $key => $categoryRow) {
@@ -118,7 +106,6 @@ class Product_model extends CI_Model{
         }
         return $categoryList;
     }
-
     /* Seller add/edit delete products */
     public function addProduct($pro_data)
     {
@@ -141,6 +128,12 @@ class Product_model extends CI_Model{
     {
         $query=$this->db->query("select * from product_details");
         $result=$query->result_array();
+        return $result;
+    }
+      public function allSellerProduct($sellerID)
+    {
+        $query=$this->db->query("select * from product_details where seller_id='$sellerID'");
+        $result=$query->row_array();
         return $result;
     }
     public function getProduct($proID)

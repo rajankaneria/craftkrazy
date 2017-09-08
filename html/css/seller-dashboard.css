@@ -1,0 +1,334 @@
+/* css for logout*/
+.blog-logout-btn 
+{
+   float: right !important;
+    color: #000 ;
+    font-size: 35px !important;
+    margin-top: 6px !important;
+    
+}
+/* css for view*/
+.page-container {
+    margin-top: 65px;
+}
+.blog-title {
+    font-size: 25px;
+}
+.blog-feature-image img {
+    width: 100%;
+}
+
+.blog-author {
+    float: left;
+    
+    margin-right: 20px;
+    /* font-size: 13px; */
+}
+
+.blog-date {
+    float: left;
+   
+}
+.blog-details {
+    overflow: hidden;
+    color: #5a5a5a;
+    font-size: 13px;
+}
+
+.blog-author i {
+    margin-right: 5px;
+}
+
+.blog-date i {
+    margin-right: 5px;
+}
+
+.blog-title {
+    color: #505050;
+    margin-top: 10px;
+}
+
+.blog-content {
+    margin-top: 35px;
+    color: #717171;
+}
+.blog-box-image {
+    position: relative;
+}
+
+.blog-box-image img {
+    width: 100%;
+}
+.blog-box-container .blog-title {
+    font-size: 25px;
+    margin-top: 5px;
+}
+.full-width-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-right: 23px !important;
+}
+
+.card-panel.blog-box-panel {
+
+    padding: 5px;
+}
+
+.blog-box-container .blog-title {
+    padding: 10px;
+}
+
+/* css for footer*/
+.card-panel {
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    padding: 24px;
+    margin: 0.5rem -26px 5rem 27px;
+    /*margin: .5rem 0 8rem 0; */
+    border-radius: 2px;
+    background-color: #fff;
+}
+/* css for menu*/
+.row{
+    margin-left:0px;
+    margin-right:0px;
+}
+
+#wrapper {
+    padding-left: 70px;
+    transition: all .4s ease 0s;
+    height: 100%
+}
+
+#sidebar-wrapper {
+    margin-left: -150px;
+    left: 70px;
+   
+   
+    background: #222;
+    position: fixed;
+    height: 100%;
+    z-index: 10000;
+    transition: all .4s ease 0s;
+}
+
+.sidebar-nav {
+    display: block;
+    float: left;
+    width: 150px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#page-content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+}
+#wrapper.active {
+    padding-left: 150px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+   
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+#sidebar_menu li a, .sidebar-nav li a {
+    color: #999;
+    display: block;
+    float: left;
+    
+    text-decoration: none;
+    width: 150px;
+  /*  background: #252525;*/
+  
+    border-bottom: 2px solid #1A1A1A;
+    -webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    -o-transition: background .5s;
+    -ms-transition: background .5s;
+    transition: background .5s;
+}
+.sidebar_name {
+    padding-top: 25px;
+    color: #fff;
+    opacity: .7;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+.sidebar-nav li a {
+  color: #999999;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#main_icon
+{
+    float:right;
+   padding-right: 65px;
+   padding-top:20px;
+}
+.sub_icon
+{
+    float:right;
+   padding-right: 65px;
+   padding-top:10px;
+}
+.content-header {
+  height: 65px;
+  line-height: 65px;
+}
+
+.content-header h1 {
+  margin: 0;
+  margin-left: 20px;
+  line-height: 65px;
+  display: inline-block;
+}
+
+@media (max-width:767px) {
+    #wrapper {
+    padding-left: 70px;
+    transition: all .4s ease 0s;
+}
+#sidebar-wrapper {
+    left: 70px;
+}
+#wrapper.active {
+    padding-left: 150px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+    width: 150px;
+    transition: all .4s ease 0s;
+}
+}
+
+
+/* page specific stylesheet */
+.page-container.container {
+    margin-top: 85px;
+    min-height: 700 !important;
+}
+
+.page-header .page-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    float: left;
+}
+
+.page-header .page-button {
+    float: right;
+}
+
+.page-header {
+    overflow: hidden;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.blog-btn a {
+    margin-left: 10px;
+}
+.btn-flat {
+    margin: 0 0 !important;}
+.modal-title {
+    margin-bottom: 15px;
+    margin-left: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.modal{
+	max-height: 90%;
+    overflow-y: auto;
+    top: 7% !important;
+   
+}
+@media screen and (max-width: 480px) {
+   .row .col .s6 {width: 100% !important}
+}
+
+.partner-logo {
+    margin: 0 auto;
+    display: block;
+    float: none !important;
+}
+.modal-close{
+  position: relative;bottom: 50px !important
+}
+.modal .modal-footer {height: 0 !important}
+.row {
+    margin-bottom: 17px !important;
+} 
+.input-field {
+    position: relative;
+    margin-top: 0rem;}
+    .lable-row{margin-bottom: 12px !important}
+
+.bgrn{
+    background: black;
+    width: 15%;
+    margin: 0 auto !important;
+    display: block;
+  }
+  ul:not(.browser-default) {
+     padding-left:0 !important ; }
+
+.sidebar-main{
+  background: black;
+  width: 15%;
+  margin: 0 auto !important;
+  display: block;margin-top: 0.5rem !important}
+.logout{ 
+color:#0c6f9e;
+font-size: 33px;
+margin: -24px 0px 0px 220px !important;
+display: block;
+}
+.main-logo img {
+    height: auto;
+    padding: 0px 8px;
+    width: 30% !important;
+    max-width: 100% !important;
+    margin-top: 10px;
+}
