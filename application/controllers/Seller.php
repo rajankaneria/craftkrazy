@@ -39,9 +39,15 @@ class Seller extends CI_Controller
 		echo json_encode($result);
 	}
 	public function logout(){
-			$this->session->unset_userdata("email");
+			$this->session->unset_userdata("admin");
 			$this->session->sess_destroy();
 			header('location:'.base_url()."seller");
+
+	}
+	public function adminLogout(){
+			$this->session->unset_userdata("admin");
+			$this->session->sess_destroy();
+			header('location:'.base_url()."admin/login");
 
 	}
 	public function maicatAjax(){
