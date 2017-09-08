@@ -1290,6 +1290,8 @@ address {
     color: rgba(255, 255, 255, 0.7);
     line-height: 21px;
     margin-top: 18px !important;
+    width: 70%;
+    text-align: justify;
 }
 .contact-area h5{
   font-weight: 300;
@@ -1348,6 +1350,11 @@ address {
     color: rgba(255, 255, 255, 0.7);
     padding: 0px 10px;
 }
+.feedback h5{
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+}
 .feedback .name{
   border: none;
   border-bottom: 1px solid rgba(255,255,255,0.7) !important;
@@ -1359,28 +1366,21 @@ address {
   margin-top: 5px;
 }
 .btn-feedback {
-    background: rgba(255, 255, 255, 0.8);
-    color: #2669b6;
+    background: rgba(0, 0, 0, 0.33);
+    color: rgba(230, 230, 230, 0.55);
+    font-weight: 500;
     width: 100%;
     border-radius: 3px !important;
 }
-input[type="search"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #fff;
+
+.btn-feedback:hover {
+    background: rgba(0, 0, 0, 0.55);
+    color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    border-radius: 3px !important;
 }
-input[type="search"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #909;
-   opacity:  1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #909;
-   opacity:  1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #909;
-}
-::-ms-input-placeholder { /* Microsoft Edge */
-   color:    #909;
-}
+
+
 /* ============  Mobile Responsive Navigations Area ====================== */
 @media(max-width: 768px){
   .drag-target{
@@ -1498,4 +1498,3 @@ input[type="search"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     text-align: center;
   }
 }
-.related-product .product-list .item{width: 25% !important}
