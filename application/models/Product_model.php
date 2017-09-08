@@ -149,4 +149,17 @@ class Product_model extends CI_Model{
         return $result;
     }
 
+
+    public function getCartProducts(){
+     
+        $output = array();
+        //list of all products in the cart along with the details
+        $shoppingCart = $this->session->userdata("shoppingCart");
+        foreach ($shoppingCart as $key => $productID) {
+            $productRow = $this->getProductDetails($productID); 
+            $output[] = $productRow;
+        }
+       return $output;
+    }
+
 }

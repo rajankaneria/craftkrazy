@@ -228,18 +228,6 @@ class Product extends CI_Controller {
 	}
 	
 
-	public function getCartProducts(){
-		$this->load->model("product_model");
-		$output = array();
-		//list of all products in the cart along with the details
-		$shoppingCart = $this->session->userdata("shoppingCart");
-		foreach ($shoppingCart as $key => $productID) {
-			$productRow = $this->product_model->getProductDetails($productID); 
-			$output[] = $productRow;
-		}
-		echo json_encode($output);
-	}
-
 	public function deleteCartProduct($productID){
 		//delete specific product from shopping cart
 		$shoppingCart = $this->session->userdata("shoppingCart");

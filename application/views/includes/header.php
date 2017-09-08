@@ -66,7 +66,7 @@
         <a href="#!"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></a>
         </span>
         <span class="right cart-bag col m2">
-        <a href="#!"><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i><span class="cart-bedge">1</span></a></span>
+        <a href="<?php echo base_url() ?>shoppingCart"><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i><span class="cart-bedge">1</span></a></span>
     </div>
    
   </div>

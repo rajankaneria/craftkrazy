@@ -18,7 +18,7 @@ class ShoppingCart extends CI_Controller {
 			"categoryList" =>$categoryList
 		);
 		$footerData = array(
-			"jsFiles" => array('shoppingCart.js')
+			"jsFiles" => array('shoppingCart.js','products.js')
 		);
 		$viewData = array(
 			"viewName" => "shopping-cart",
