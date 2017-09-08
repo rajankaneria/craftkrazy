@@ -18,7 +18,7 @@
     <div class="col m4">
     <div class="row">
       <div class="col m12">
-         <span class='zoom' id='zoom1' style="min-width: 420px;padding: 15px;">
+         <span class='zoom' id='zoom1' style="min-width: 300px;/*padding: 15px;*/overflow: hidden;height: auto;">
       <img  id="mainProductImage"  src='<?php echo  base_url(); ?>html/images/products/<?php echo $productData["product_image"]; ?>' class="responsive-img" alt='Baby Wallper' style="height: 340px !important"/>
       </span>
       </div>
