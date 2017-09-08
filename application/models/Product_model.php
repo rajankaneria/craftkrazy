@@ -133,7 +133,7 @@ class Product_model extends CI_Model{
       public function allSellerProduct($sellerID)
     {
         $query=$this->db->query("select * from product_details where seller_id='$sellerID'");
-        $result=$query->row_array();
+        $result=$query->result_array();
         return $result;
     }
     public function getProduct($proID)
