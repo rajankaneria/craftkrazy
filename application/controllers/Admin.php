@@ -8,7 +8,7 @@ class Admin extends CI_Controller
   {
     if(!$this->session->userdata("email"))
     {
-      header("Location:".base_url()."seller");
+      header("Location:".base_url()."admin/login");
     }
     $this->load->model("product_model");
     $productsData=$this->product_model->allProduct();
@@ -29,5 +29,28 @@ class Admin extends CI_Controller
     );
     $this->load->view('admin-template',$viewData);
   }
+
+
+  public function login(){
+ 
+      
+      $headerData = array(
+        "pageTitle" => "Sign Up",
+        "stylesheet" => array('seller.css','dashboard.css')     
+      );
+      $footerData = array(
+        "jsFiles" => array('admin-login.js','products.js')
+      );
+      $viewData = array(
+        "viewName" => "admin-login",
+              "viewData" => array(),
+        "headerData" => $headerData,
+        "footerData" => $footerData 
+      );
+      $this->load->view('seller-template',$viewData);
+
+  }
+
+
 }
 ?>

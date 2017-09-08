@@ -1,4 +1,4 @@
-<?php var_dump($productsData);  ?>
+
 <div class="container" style="width: 100% !important">
  <div class="row">
   <div class="col s3 m3" style="background: black;width: 15%;height: 967px;max-height: 100%;margin: 0 auto !important;
@@ -38,7 +38,7 @@
    		</tr>
       <?php foreach ($productsData as $key => $productRow) { ?>
        <tr data-proid="<?php echo $productRow['product_id']; ?>">
-        <td><?php echo $productRow['mc_id']; ?>>><?php echo $productRow['pc_id']; ?>>><?php echo $productRow['cc_id']; ?> >> <?php echo $productRow['sc_id']; ?> </td>
+        <td class="category-list"><?php echo $productRow['mc_name']; ?> > <?php echo $productRow['pc_name']; ?> > <?php echo $productRow['cc_name']; ?></td>
         <td><?php echo $productRow['product_name']; ?></td>
         <td><?php echo $productRow['product_code']; ?></td>
         <td><?php echo $productRow['price']; ?></td>
