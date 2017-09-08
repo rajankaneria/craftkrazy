@@ -7,22 +7,14 @@ class Checkout extends CI_Controller {
 	public function index()
 	{		
 
+		$this->load->model("category_model");
 		$this->load->model("product_model");
-		$allCats = $this->product_model->getAllMainCat();
-		foreach ($allCats as $key => $catRow) {
-			$subCats = $this->product_model->getAllParentCatByMainCat($catRow["mc_id"]);
-			$allCats[$key]["subCategory"] = $subCats;
-		}
-		$productNavHtml = "";
-		foreach ($allCats as $key => $catRow) {
-			$productNavHtml .= $this->load->view("mainCatBox",$catRow,TRUE);
-		}
-
+		$categoryList = $this->category_model->generateNavBar(7);
 
 		$headerData = array(
 			"pageTitle" => "Checkout",
 			"stylesheet" => array('checkout.css'),
-			"productNav" => $productNavHtml
+			"categoryList" =>$categoryList
 		);
 		$footerData = array(
 			"jsFiles" => array()
