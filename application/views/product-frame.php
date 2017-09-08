@@ -42,7 +42,7 @@
         <span class="discounted-price"><i class="fa fa-inr" aria-hidden="true"></i><?php echo $discounted_price; ?></span>
        
       </div>      
-      <div class="discount-percent"><span class="label">Off</span><span class="value">50%</span></div>
+      <div class="discount-percent"><span class="label">Off</span><span class="value"><?php echo round(100*($price - $discounted_price)/$price); ?>%</span></div>
     </div>
     <div class="product-action">
       <div class="product-cart-btn">
