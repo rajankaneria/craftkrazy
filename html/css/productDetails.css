@@ -72,8 +72,8 @@
 }
 
 .tabs{
-    background: #2196f3;
-    border: 2px solid #2196f3;
+    background: #2669b6;
+    border: 2px solid #2669b6;
     border-bottom: none; 
 }
 .tabs .indicator{
@@ -82,8 +82,8 @@
 .tabs .tab a{color: ghostwhite;}
 .tabs .tab a:hover, .tabs .tab a.active{
     background-color: white;
-    color: #2196f3;
-    border-left: 1px solid #2196f3;
+    color: #2669b6;
+    /*border-left: 1px solid #2669b6*/;
     border-bottom: none;
     .tabs{
         border-bottom: none; 
@@ -96,7 +96,7 @@
 	min-height: 200px !important;
 	background: #fff;
 	padding: 25px !important;
-	border: 2px solid #2196f3;
+	border: 2px solid #2669b6;
     border-top: none;
 }
 .review-content{
@@ -110,11 +110,15 @@
 {
 	border-bottom: 1px dashed #ddd;
     line-height: 2.7rem;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
-
+.related-product-area{
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px 0px;
+}
 .related-product{
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
 }
 /*Form - Review*/

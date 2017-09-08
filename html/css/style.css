@@ -3,7 +3,7 @@
 	Main Navigation 
 =====================*/
 body{background: #eee;}
-
+.blue{background: #2669b6 !important;}
 /*== Start Main navigationa area here ===*/
 
 nav.navigation-menu-area {
@@ -573,14 +573,14 @@ span.proce-strick {
     -o-transition:all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
     margin: 5px 10px;
-    border: 1px solid #2196f3;
+    border: 1px solid #2669b6;
 }
 .add-to-cart:hover{
     border-radius: 100px;
     width: 50%;
     background: rgba(255,255,255,0.9) !important;
-    color: #2196f3 !important;
-    border: 1px solid;
+    color: #2669b6 !important;
+    border: 1px solid #2669b6;
     -webkit-transition:all 0.3s ease-in-out;
     -moz-transition:all 0.3s ease-in-out;
     -o-transition:all 0.3s ease-in-out;
@@ -1283,9 +1283,104 @@ nav.navigation-menu-area {
 }
 
 
+/**====================== Footer Area  ===========================*/
+address {
+    font-weight: 300;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 21px;
+    margin-top: 18px !important;
+}
+.contact-area h5{
+  font-weight: 300;
+  font-size: 24px;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.7); 
+}
 
+.contact-area li{
+  font-weight: 300;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.7); 
+}
 
+.contact-area li a{
+  font-weight: 300;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.7); 
+}
+.contact-area li a:hover{
+  font-weight: 300;
+  font-style: normal;
+  color: rgba(255, 255, 255, 1); 
+}
 
+.quick-links h5{
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.7); 
+}
+.quick-links a{
+  font-weight: 300;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.7); 
+}
+.quick-links a:hover{
+  font-weight: 300;
+  font-style: normal;
+  color: rgba(255, 255, 255, 1); 
+}
+.footer-copyright a{
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);  
+}
+.footer-copyright a:hover{
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 1);  
+}
+.footer-copyright label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0px 10px;
+}
+.feedback .name{
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.7) !important;
+}
+.feedback textarea{
+  min-height: 70px;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.7);
+  margin-top: 5px;
+}
+.btn-feedback {
+    background: rgba(255, 255, 255, 0.8);
+    color: #2669b6;
+    width: 100%;
+    border-radius: 3px !important;
+}
+input[type="search"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff;
+}
+input[type="search"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #909;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #909;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #909;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #909;
+}
 /* ============  Mobile Responsive Navigations Area ====================== */
 @media(max-width: 768px){
   .drag-target{
