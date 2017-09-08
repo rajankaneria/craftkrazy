@@ -159,4 +159,13 @@ function initChildCat(){
     });
     
   });
+
+  $(".add-to-cart").on("click",function(){
+    var productID=$(this).data("product-id");
+    $.post(baseurl+"product/addProductToCart/"+productID,function(data){
+     
+    });
+  });
+
+
 });
