@@ -9,7 +9,14 @@ class Product_model extends CI_Model{
     }
 
     public function getProductDetails($product_id){
-        $query = $this->db->query("select product_details.*,seller.contact_person   from product_details  JOIN seller  ON product_details.seller_id=seller.seller_id where product_id='$product_id'");
+        $query = $this->db->query("select product_details.*,seller.contact_person,main_category.    mc_name , parent_category.pc_name,child_category.cc_name,sub_category.sc_name from product_details JOIN seller  ON product_details.seller_id=seller.seller_id JOIN main_category  ON product_details.mc_id=main_category.mc_id
+             JOIN seller  ON product_details.seller_id=seller.seller_id
+              JOIN seller  ON product_details.seller_id=seller.seller_id
+
+
+
+
+         where product_id='$product_id'");
         $result = $query->row_array();
         $productImages = $this->getProductImage($product_id);
         $result["productImageArray"] = $productImages;
