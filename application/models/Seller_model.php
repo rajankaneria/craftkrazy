@@ -35,6 +35,7 @@ class Seller_model extends CI_Model
 				"message"=>"Login Successfully.."
 				);
 			$this->session->set_userdata('email', $name);
+			$this->session->set_userdata('admin', $name);
 		}
 		else{
 			$check=array(
