@@ -228,6 +228,25 @@ class Product extends CI_Controller {
 	}
 	
 
+	public function deleteCartProduct($productID){
+		//delete specific product from shopping cart
+		$shoppingCart = $this->session->userdata("shoppingCart");
+		$productKey = array_search($productID, $shoppingCart);
+		unset($shoppingCart[$productKey]);
+		$this->session->set_userdata("shoppingCart",$shoppingCart);
+	}
+
+	public function addProductToCart($productID){
+		//add product to shopping cart
+		if(!$this->session->userdata("shoppingCart")){
+			$shoppingCart = array($productID);
+    	}else{
+    		$shoppingCart = $this->session->userdata("shoppingCart");
+    		array_push($shoppingCart, $productID);
+    	}
+    	$this->session->set_userdata("shoppingCart",$shoppingCart);
+	}
+
 
 
 

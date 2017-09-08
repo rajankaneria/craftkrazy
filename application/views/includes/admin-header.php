@@ -64,7 +64,7 @@
     <a href="#!" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>    
     </div>
        <div class="col m3 logo-area">
-    <a href="<?php echo base_url(); ?>seller/logout"> <i class="fa fa-power-off logout" aria-hidden="true"></i></a>   
+    <a href="<?php echo base_url(); ?>seller/adminLogout"> <i class="fa fa-power-off logout" aria-hidden="true"></i></a>   
     </div>
   </div>   
   </div>

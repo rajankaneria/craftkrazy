@@ -1498,3 +1498,4 @@ input[type="search"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     text-align: center;
   }
 }
+.related-product .product-list .item{width: 25% !important}

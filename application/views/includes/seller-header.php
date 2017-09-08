@@ -52,21 +52,23 @@
   </div>
 </div> -->
 
-<header>
-  
+<header>  
 
-<nav class="white" style="border-bottom:2px solid #0b99dd;">
+<nav class="white hide-on-med-and-down" style="border-bottom:2px solid #0b99dd;">
   <div class="row top-nav-container">
 
 
   <div class="nav-wrapper" style="overflow: hidden;">
-    <div class="col m12 logo-area">
-    <center><a href="#!" class="main-logo seller-header-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a></center>
+    <div class="col m9 logo-area">
+    <a href="#!" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>    
     </div>
+    <?php if($this->session->userdata('admin')) { ?>
+  echo ' <div class="col m3 logo-area">
+    <a href="<?php echo base_url(); ?>seller/logout"> <i class="fa fa-power-off logout" aria-hidden="true"></i></a>   
+    </div>';
 
-
-  </div>
-   
+    <?php } ?>
+  </div>   
   </div>
 </nav>
 

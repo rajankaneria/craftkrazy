@@ -4,17 +4,14 @@
 */
 class Seller extends CI_Controller
 {
-	public function index(){
-		if($this->session->userdata("email"))
-		{
-			header("location:".base_url()."Admin");
-		}
+	public function index(){		
+		
 		$headerData = array(
 			"pageTitle" => "Sign Up",
-			"stylesheet" => array('seller.css')			
+			"stylesheet" => array('seller.css','dashboard.css')			
 		);
 		$footerData = array(
-			"jsFiles" => array('register.js')
+			"jsFiles" => array('register.js','products.js')
 		);
 		$viewData = array(
 			"viewName" => "register-login",
@@ -42,9 +39,15 @@ class Seller extends CI_Controller
 		echo json_encode($result);
 	}
 	public function logout(){
-			$this->session->unset_userdata("email");
+			$this->session->unset_userdata("admin");
 			$this->session->sess_destroy();
 			header('location:'.base_url()."seller");
+
+	}
+	public function adminLogout(){
+			$this->session->unset_userdata("admin");
+			$this->session->sess_destroy();
+			header('location:'.base_url()."admin/login");
 
 	}
 	public function maicatAjax(){
@@ -89,8 +92,33 @@ class Seller extends CI_Controller
             
         }
 	}
+	public function dashboard(){
+		if(!$this->session->userdata("admin"))
+    	{
+     		 header("Location:".base_url()."seller");
+    	
+   		}
+    	$this->load->model("product_model");
+    	$this->load->model("seller_model");
+    	$sellerDetails = $this->seller_model->currentUser();
+	    $productsData=$this->product_model->allSellerProduct($sellerDetails["seller_id"]);
+	    $categoryList=$this->product_model->getAllMainCat();	    
+	    
+	    $headerData = array(
+			"pageTitle" => "Sign Up",
+			"stylesheet" => array('seller-dashboard.css')			
+		);
+		$footerData = array(
+			"jsFiles" => array('products.js')
+		);
+		$viewData = array(
+			"viewName" => "dashboard",
+            "viewData" => array("productsData"=>$productsData,"categoryList"=>$categoryList),
+			"headerData" => $headerData,
+			"footerData" => $footerData	
+		);
+		$this->load->view('seller-template',$viewData);
 
-
-
+}
 }
 ?>
