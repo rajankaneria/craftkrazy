@@ -151,7 +151,7 @@ function initChildCat(){
     $.post(baseurl+"product/getProduct/"+proID,function(data){
       $("#editModal .modal-content").html(data);
       Materialize.updateTextFields();$('select').material_select();
-       initMainCat();
+      initMainCat();
       initParentCat();
       initChildCat();
     });
@@ -169,16 +169,90 @@ function initChildCat(){
     deleteCartProduct($(this).data("product-id"));
   });
 
+
+  $(".fa-heart").on("click",function(){
+  var productID=$(this).data("product-id");
+  $.post(baseurl+"product/addProductwishList/"+productID,function(data){
+
+  });
+
+});
+
+$(".category-edit-btn").on("click",function(){
+$("#editModal .modal-content").html("");
+$("#editModal").modal('open');
+var catID=$(this).data("catid");
+$.post(baseurl+"product/mainCatDetails/"+catID,function(data){
+  $("#editModal .modal-content").html(data);
+  Materialize.updateTextFields();
+});
+    
+});
+
+$("#addCategoryBtn").on("click",function(){
+  $("#addModal").modal('open');
+
+});
+$("#sendCategoryData").on("click",function(){
+  var catData=new FormData($("#addCategoryForm")[0]);
+  $.ajax({
+    url:baseurl+"product/addCat",
+    type:'POST',
+    data:catData,
+    contentType:false,
+    processData:false,
+    success:function(res)
+    {
+      alert("Inserted succesfully....");
+      window.location.relode();
+    }
+
+  });
+
+});
+
+$(".category_delete_btn").on("click",function(){
+  var catId=$(this).data("catid");
+  if(confirm('Do you want Delete this record')){
+  $.post(baseurl+"product/deleteCategory/"+catId,function(data){      
+       $("tr[data-catid="+catid+"]").remove();
+       window.location.relode();
+  });
+
+}
+
 });
 
 
 
+$("#updatecategorydata").on("click",function(){
+  var catData= new FormData($("#updateCatForm")[0]);
+  console.log(catData);
+  console.log(baseurl);
+  $.ajax({
+        url:baseurl+"product/updateCategory/",
+        type:'POST',
+        contentType:false,
+        productData:false,
+        data:catData,     
+        success:function(res){
+          alert("succesfully updayed...");
+          window.location.relode();
+        }
+      });
+  });
+
+});
 function deleteCartProduct(productID){
   var baseurl=$("#base_url").val();
   $.post(baseurl+"product/deleteCartProduct/"+productID,function(data){
     $(".cart-bedge").html(data);
     $("#product-"+productID).remove();
     recalculateCart();
-  })
+  });
   
 }
+
+
+
+

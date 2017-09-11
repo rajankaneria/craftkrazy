@@ -1,3 +1,4 @@
+
 <?php 
 class Product_model extends CI_Model{
     
@@ -163,4 +164,19 @@ class Product_model extends CI_Model{
        return $output;
     }
 
+    public function addCategory($catData){
+        $query=$this->db->insert("main_category",$catData);
+        $id=$this->db->insert_id();
+        return $id;
+        
+    }
+    public function updateCategory($catData,$catId){
+        $this->db->where("mc_id",$catId);
+        $this->db->update("main_category",$catData);
+
+    }
+    public function deleteCategory($catId){
+        $this->db->where("mc_id",$catId);
+        $this->db->delete("main_category");
+    }
 }

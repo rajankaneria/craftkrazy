@@ -30,7 +30,6 @@ class Admin extends CI_Controller
     $this->load->view('admin-template',$viewData);
   }
 
-
   public function login(){
  
       
@@ -49,6 +48,24 @@ class Admin extends CI_Controller
       );
       $this->load->view('seller-template',$viewData);
 
+  }
+  public function categoryDashboard(){
+    $this->load->model("product_model");   
+    $categoryList=$this->product_model->getAllMainCat();
+     $headerData = array(
+      "pageTitle" => "Dashboard",
+      "stylesheet" => array('dashboard.css')     
+    );
+    $footerData = array(
+      "jsFiles" => array('products.js')
+    );
+    $viewData = array(
+      "viewName" => "category-dashboard",
+      "viewData" => array("categoryList"=>$categoryList),
+      "headerData" => $headerData,
+      "footerData" => $footerData 
+    );
+    $this->load->view('admin-template',$viewData);
   }
 }
 ?>

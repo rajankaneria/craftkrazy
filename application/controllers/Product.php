@@ -3,7 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Product extends CI_Controller {
 
-	
 	public function index()
 	{		
 
@@ -58,7 +57,8 @@ class Product extends CI_Controller {
 	{
 		$this->load->model("product_model");
 		$output=$this->product_model->getMainCatDetails($mainCatID);
-		var_dump($output);
+		$this->load->view("categoryRow",$output);
+		
 	}
 
 	public function mainCatAllDetails()
@@ -228,13 +228,24 @@ class Product extends CI_Controller {
 	}
 	
 
+	public function getCartProducts(){
+		$this->load->model("product_model");
+		$output = array();
+		//list of all products in the cart along with the details
+		$shoppingCart = $this->session->userdata("shoppingCart");
+		foreach ($shoppingCart as $key => $productID) {
+			$productRow = $this->product_model->getProductDetails($productID); 
+			$output[] = $productRow;
+		}
+		echo json_encode($output);
+	}
+
 	public function deleteCartProduct($productID){
 		//delete specific product from shopping cart
 		$shoppingCart = $this->session->userdata("shoppingCart");
 		$productKey = array_search($productID, $shoppingCart);
 		unset($shoppingCart[$productKey]);
 		$this->session->set_userdata("shoppingCart",$shoppingCart);
-		echo sizeof($shoppingCart);
 	}
 
 	public function addProductToCart($productID){
@@ -243,30 +254,75 @@ class Product extends CI_Controller {
 			$shoppingCart = array($productID);
     	}else{
     		$shoppingCart = $this->session->userdata("shoppingCart");
-    		$productKey = array_search($productID, $shoppingCart);
-    		if(!$productKey>0){
-    			array_push($shoppingCart, $productID);
-    		}
+    		array_push($shoppingCart, $productID);
     	}
     	$this->session->set_userdata("shoppingCart",$shoppingCart);
-    	echo sizeof($shoppingCart);
 	}
 
+	public function addCat()
+	{
+		$this->load->model("product_model");
+		$result=array(
+					"mc_name"=>$_POST["mc_name"]							
+			);
+
+		$proID = $this->product_model->addCategory($result);
+
+		//Define the file names with blog id with same extension which has been uploaded
+		$mc_image = $proID."_product.".pathinfo($_FILES['mc_image']['name'], PATHINFO_EXTENSION);		
+		$updateData = array(
+			"mc_image" => $mc_image			
+		);
+
+		// update the name of the images in the database
+		$this->product_model->updateCategory($updateData,$proID);
+
+		//set configuration for the upload library
+		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\category';
+	    $config['allowed_types'] = 'gif|jpg|png';
+	    $config['overwrite'] = TRUE;
+	    $config['encrypt_name'] = FALSE;
+	    $config['remove_spaces'] = TRUE;
+	    
+	    //set name in the config file for the feature image
+	    $config['file_name'] = $proID."_product";
+	    $this->load->library('upload', $config);
+	    $this->upload->do_upload('mc_image');
+}
+	public function deleteCategory($catId){
+		$this->load->model("product_model");
+		$this->product_model->deleteCategory($catId);
+
+	}
+
+	public function updateCategory(){
+		$catID=$_POST['catID'];
+		$this->load->model('product_model');
+		
+
+		$mc_image = $catID."_product.".pathinfo($_FILES['mc_image']['name'], PATHINFO_EXTENSION);
+
+		$result=array(
+					"mc_name"=>$_POST["mc_name"],						
+					"mc_image"	=>$mc_image				
+			);
+		$this->product_model->updateCategory($result,$catID);
 
 
+			//set configuration for the upload library
+		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\category';
+	    $config['allowed_types'] = 'gif|jpg|png';
+	    $config['overwrite'] = TRUE;
+	    $config['encrypt_name'] = FALSE;
+	    $config['remove_spaces'] = TRUE;
+	    
+	    //set name in the config file for the feature image
+	    $config['file_name'] = $catID."_product";
+	    $this->load->library('upload', $config);
+	    $this->upload->do_upload('mc_image');	
 
 
-
-
-
-
-
-
-
-
-
-
-
+	}
 
 
 }
