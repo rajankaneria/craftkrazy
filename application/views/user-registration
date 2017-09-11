@@ -1,0 +1,622 @@
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+          <label for="disabled">Disabled</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          This is an inline input field:
+          <div class="input-field inline">
+            <input id="email" type="email" class="validate">
+            <label for="email" data-error="wrong" data-success="right">Email</label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+        
+
+Prefilling Text Inputs
+If you are having trouble with the labels overlapping prefilled content, Try adding class="active" to the label. 
+You can also call the function Materialize.updateTextFields(); to reinitialize all the Materialize labels on the page if you are dynamically adding inputs.
+
+
+Alvin
+First Name
+
+  <div class="row">
+    <div class="input-field col s6">
+      <input value="Alvin" id="first_name2" type="text" class="validate">
+      <label class="active" for="first_name2">First Name</label>
+    </div>
+  </div>
+        
+
+  $(document).ready(function() {
+    Materialize.updateTextFields();
+  });
+        
+Icon Prefixes
+You can add an icon prefix to make the form input label even more clear. Just add an icon with the class  prefix before the input and label.
+
+
+account_circle
+First Name phone
+Telephone
+
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone">Telephone</label>
+        </div>
+      </div>
+    </form>
+  </div>
+        
+Custom Error or Success Messages
+You can add custom validation messages by adding either data-error or data-success attributes to your input field labels.
+
+
+
+Email
+
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email" data-error="wrong" data-success="right">Email</label>
+        </div>
+      </div>
+    </form>
+  </div>
+        
+Changing colors
+Here is a CSS template for modifying input fields in CSS. With Sass, you can achieve this by just changing a variable. The CSS shown below is unprefixed. Depending on what you use, you may have to change the type attribute selector.
+
+
+  /* label color */
+   .input-field label {
+     color: #000;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #000;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #000;
+   }
+        
+Textarea
+Textareas allow larger expandable user input. The border should light up simply and clearly indicating which field the user is currently editing. You must have a .input-field div wrapping your input and label. This helps our jQuery animate the label. This is only used in our Input and Textarea form elements.
+
+Textareas will auto resize to the text inside.
+
+
+Textarea
+
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Textarea</label>
+        </div>
+      </div>
+    </form>
+  </div>
+        
+advanced note: When dynamically changing the value of a textarea with methods like jQuery's .val(), you must trigger an autoresize on it afterwords because .val() does not automatically trigger the events we've binded to the textarea.
+
+
+  $('#textarea1').val('New Text');
+  $('#textarea1').trigger('autoresize');
+        
+
+Icon Prefixes
+You can add an icon prefix to make the form input label even more clear. Just add an icon with the class  prefix before the input and label.
+
+
+mode_edit
+Message
+
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">mode_edit</i>
+          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+          <label for="icon_prefix2">First Name</label>
+        </div>
+      </div>
+    </form>
+  </div>
+        
+Select
+Select allows user input through specified options. Make sure you wrap it in a .input-field for proper alignment with other text fields. Remember that this is a jQuery plugin so make sure you initialize this in your document ready.
+
+▼
+Choose your option
+Materialize Select
+You can add the property multiple to get the multiple select and select several options.
+▼
+Choose your option
+Materialize Multiple Select
+We also support optgroups in our selects.
+▼
+Option 1
+Optgroups
+You can add icons to your options in any type of select. In the option you add the image source with the  data-icon attribute. You can add the left or right class to align your icon. You can also add the  circle class to your icon.
+▼
+Choose your option
+Images in select
+▼
+Choose your option
+Images in select
+You can add the class browser-default to get the browser default.
+Browser Select 
+
+  <div class="input-field col s12">
+    <select>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+    <label>Materialize Select</label>
+  </div>
+
+  <div class="input-field col s12">
+    <select multiple>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+    <label>Materialize Multiple Select</label>
+  </div>
+
+  <div class="input-field col s12">
+    <select>
+      <optgroup label="team 1">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+      </optgroup>
+      <optgroup label="team 2">
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </optgroup>
+    </select>
+    <label>Optgroups</label>
+  </div>
+
+  <div class="input-field col s12 m6">
+    <select class="icons">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="" data-icon="images/sample-1.jpg" class="circle">example 1</option>
+      <option value="" data-icon="images/office.jpg" class="circle">example 2</option>
+      <option value="" data-icon="images/yuna.jpg" class="circle">example 3</option>
+    </select>
+    <label>Images in select</label>
+  </div>
+  <div class="input-field col s12 m6">
+    <select class="icons">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
+      <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
+      <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+    </select>
+    <label>Images in select</label>
+  </div>
+
+  <label>Browser Select</label>
+  <select class="browser-default">
+    <option value="" disabled selected>Choose your option</option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+  </select>
+            
+
+
+Disabled Styles
+You can also add disabled to the select element to make the whole thing disabled. Or if you add disabled to the options, the individual options will be unselectable.
+
+▼
+Choose your option
+Materialize Disabled
+Browser Disabled 
+
+  <div class="input-field">
+    <select disabled>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+    <label>Materialize Disabled</label>
+  </div>
+
+  <label>Browser Disabled</label>
+  <select class="browser-default" disabled>
+    <option value="" disabled selected>Choose your option</option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+  </select>
+            
+Initialization
+You must initialize the select element as shown below. In addition, you will need a separate call for any dynamically generated select elements your page generates.
+
+
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+            
+Updating/Destroying Select
+If you want to update the items inside the select, just rerun the initialization code from above after editing the original select. Or you can destroy the material select with this function below, and create a new select altogether
+
+
+  $('select').material_select('destroy');
+            
+Radio Buttons
+Radio Buttons are used when the user must make only one selection out of a group of items. The for attribute is necessary to bind our custom radio button with the input. Add the input's id as the value of the  for attribute of the label.
+
+Add radio buttons to a group by adding the name attribute along with the same corresponding value for each of the radio buttons in the group. Create disabled radio buttons by adding the disabled attribute as shown below.
+
+Red
+
+Yellow
+
+Green
+
+Brown
+
+
+  <form action="#">
+    <p>
+      <input name="group1" type="radio" id="test1" />
+      <label for="test1">Red</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="test2" />
+      <label for="test2">Yellow</label>
+    </p>
+    <p>
+      <input class="with-gap" name="group1" type="radio" id="test3"  />
+      <label for="test3">Green</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="test4" disabled="disabled" />
+      <label for="test4">Brown</label>
+    </p>
+  </form>
+        
+Options
+To create a radio button with a gap, add class="with-gap" to your input. See the example below.
+
+Red
+
+
+  <p>
+    <input class="with-gap" name="group3" type="radio" id="test5" checked />
+    <label for="test5">Red</label>
+  </p>
+        
+Checkboxes
+Use checkboxes when looking for yes or no answers. The for attribute is necessary to bind our custom checkbox with the input. Add the input's id as the value of the for attribute of the label.
+
+Red
+
+Yellow
+
+Filled in
+
+Indeterminate Style
+
+Green
+
+Brown
+
+  <form action="#">
+    <p>
+      <input type="checkbox" id="test5" />
+      <label for="test5">Red</label>
+    </p>
+    <p>
+      <input type="checkbox" id="test6" checked="checked" />
+      <label for="test6">Yellow</label>
+    </p>
+    <p>
+      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+      <label for="filled-in-box">Filled in</label>
+    </p>
+    <p>
+      <input type="checkbox" id="indeterminate-checkbox" />
+      <label for="indeterminate-checkbox">Indeterminate Style</label>
+    </p>
+    <p>
+      <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+      <label for="test7">Green</label>
+    </p>
+    <p>
+      <input type="checkbox" id="test8" disabled="disabled" />
+      <label for="test8">Brown</label>
+    </p>
+  </form>
+        
+Switches
+Off   On
+Off   On
+
+  <!-- Switch -->
+  <div class="switch">
+    <label>
+      Off
+      <input type="checkbox">
+      <span class="lever"></span>
+      On
+    </label>
+  </div>
+
+  <!-- Disabled Switch -->
+  <div class="switch">
+    <label>
+      Off
+      <input disabled type="checkbox">
+      <span class="lever"></span>
+      On
+    </label>
+  </div>
+        
+File Input
+If you want to style an input button with a path input we provide this structure.
+
+FILE 
+
+ 
+  <form action="#">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+  </form>
+        
+You can also use the multiple attribute to allow multiple file uploads.
+
+FILE 
+
+Upload one or more files
+ 
+  <form action="#">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" multiple>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+      </div>
+    </div>
+  </form>
+        
+Range
+Add a range slider for values with a wide range. This one is set to be a number between 0 and 100. We have two different types of sliders. nouiSlider is a 3rd party plugin which we've modified. To use the noUiSlider, you will have to manually link the nouislider.css and nouislider.js files located in the extras folder.
+
+noUiSlider
+See noUiSlider's official documentation here to see a variety of slider options
+
+20
+80
+ 
+
+
+  <div id="test-slider"></div>
+        
+
+  var slider = document.getElementById('test-slider');
+  noUiSlider.create(slider, {
+   start: [20, 80],
+   connect: true,
+   step: 1,
+   orientation: 'horizontal', // 'horizontal' or 'vertical'
+   range: {
+     'min': 0,
+     'max': 100
+   },
+   format: wNumb({
+     decimals: 0
+   })
+  });
+        
+HTML5 Range
+
+ 
+  <form action="#">
+    <p class="range-field">
+      <input type="range" id="test5" min="0" max="100" />
+    </p>
+  </form>
+        
+Date Picker
+We use a modified version of pickadate.js to create a materialized date picker. Test it out below!
+
+Birthdate
+2017
+Mon,
+Sep 11
+September
+S	M	T	W	T	F	S
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+TODAYCLEAROK
+
+ 
+  <input type="text" class="datepicker">
+        
+Initialization
+At this time, not all pickadate.js options are working with our implementation
+
+
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  });
+        
+Time Picker
+Lunchtime 
+ 
+  <input type="text" class="timepicker">
+        
+Initialization
+
+  $('.timepicker').pickatime({
+    default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+    twelvehour: false, // Use AM/PM or 24-hour format
+    donetext: 'OK', // text for done-button
+    cleartext: 'Clear', // text for clear-button
+    canceltext: 'Cancel', // Text for cancel-button
+    autoclose: false, // automatic close timepicker
+    ampmclickable: true, // make AM PM clickable
+    aftershow: function(){} //Function for after opening timepicker
+  });
+        
+Character Counter
+Use a character counter in fields where a character restriction is in place.
+
+
+Input text
+
+Textarea
+
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="input_text" type="text" data-length="10">
+            <label for="input_text">Input text</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+            <label for="textarea1">Textarea</label>
+          </div>
+        </div>
+      </form>
+    </div>
+          
+
+Initialization
+There are no options for this plugin, but if you are adding these dynamically, you can use this to initialize them.
+
+
+  $(document).ready(function() {
+    $('input#input_text, textarea#textarea1').characterCounter();
+  });
+        
+Autocomplete
+Add an autocomplete dropdown below your input to suggest possible values.
+
+textsms
+Autocomplete
+
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">textsms</i>
+          <input type="text" id="autocomplete-input" class="autocomplete">
+          <label for="autocomplete-input">Autocomplete</label>
+        </div>
+      </div>
+    </div>
+  </div>
+        
