@@ -55,9 +55,19 @@
     <a href="<?php echo base_url(); ?>home" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
     </div>
 
-    <div class="search-area col m5 hide-on-med-and-down">
-    <form>
+    <div class="search-area col m5 hide-on-med-and-down container-box-search">
+   <!--  <form>
       <input type="search" name="Search" placeholder="Search" class="search-box">
+    </form> -->
+    <form action="" class="search">
+  
+      <div class="field">
+
+        <input type="text" class="input-search" id="input-search" name="input-search" required>
+        <label for="input-search">Search</label>
+
+      </div> <!-- /field -->
+
     </form>
     </div>
     
