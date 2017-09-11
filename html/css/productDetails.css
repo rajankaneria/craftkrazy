@@ -193,6 +193,7 @@ p.produce-price {
 
 .product-description-content.row p {
     margin-top: 0px;
+    text-align: justify;
 }
 
 .description-label {
