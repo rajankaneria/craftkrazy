@@ -47,7 +47,7 @@
     <div class="top-nav-item"><a href="<?php base_url(); ?>home">Home</a></div>
     <div class="top-nav-item"><a href="#">Contact</a></div>
     <div class="top-nav-item"><a href="#">Sell on Craftkrazy</a></div>
-    <div class="top-nav-item"><a href="#">Log in</a></div>
+    <div class="top-nav-item"><a href="#" id="userBtn-mobile">Log in</a></div>
   </div>
 
   <div class="nav-wrapper" style="overflow: hidden;">
@@ -63,7 +63,7 @@
     
     <div class="cart-area col m4">
         <span class="user right col m2 hide-on-med-and-down">
-        <a href="#!"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></a>
+        <a href="#!"><i id="userBtn" class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></a>
         </span>
         <span class="right cart-bag col m2">
         <a href="<?php echo base_url() ?>shoppingCart"><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i><span class="cart-bedge"><?php if($this->session->userdata("shoppingCart")){ echo sizeof($this->session->userdata("shoppingCart")); }else{ echo 0; } ?></span></a></span>

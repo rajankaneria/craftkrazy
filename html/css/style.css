@@ -70,7 +70,7 @@ span.right.cart-bag {
     top: 0;
     right: 0;
     /* color: #000; */
-    z-index: 100000000;
+    z-index: 10;
     -webkit-transition:all 0.3s ease-in-out;
     -moz-transition:all 0.3s ease-in-out;
     -o-transition:all 0.3s ease-in-out;
@@ -684,6 +684,135 @@ span.proce-strick {
     border: 1px solid rgba(55,55,55,0.2);
     line-height: 2rem;
 }
+
+
+
+
+/* home page product frame */ 
+.product-frame {
+    width: 25%;
+    float: left;
+    padding: 25px;
+    /* border: 1px solid #000; */
+}
+
+.product-list {
+    position: relative;
+}
+
+.product-image-container {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    /* text-align: center; */
+    margin: 0 auto;
+}
+
+.product-image-container img.pic {
+    width: 100%;
+    /* display: block; */
+    /* margin: 0 auto; */
+    /* float: none; */
+}
+
+.product-desc-container {
+    color: #000;
+}
+
+.product-image-container {
+    overflow: hidden;
+}
+
+.product-price-container {
+    overflow: hidden;
+}
+.product-name {
+    color: #2196f3;
+    margin-top: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+} 
+
+.price {
+    float: left;
+    width: 50%;
+}
+
+.discount-percent {
+    float: left;
+    width: 50%;
+}
+
+span.original-price {
+    display: block;
+}
+
+span.discounted-price {
+    display: block;
+}
+
+.price {
+    border-right: 1px solid #ccc;
+}
+
+span.original-price {
+   text-decoration: line-through;
+    color: #868585;
+    font-weight: 300;
+    line-height: 15px;
+    text-align: right;
+    margin-right: 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+span.discounted-price {
+        font-size: 25px;
+    color: #175f2a;
+    line-height: 22px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+span.discounted-price i {
+    font-size: 15px;
+    /* color: #ccc; */
+}
+
+span.original-price i {
+   font-size: 11px;
+   color: #868585;
+}
+
+.product-price-container {
+    margin-top: 10px;
+}
+.discount-percent span {
+    display: block;
+}
+
+.discount-percent .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 12px;
+    color:#737b76;
+    text-align: left;
+    margin-left: 20px;
+}
+
+
+.discount-percent .value {
+    font-size: 25px;
+    line-height: 26px;
+    color: #286b3a;
+    text-align: left;
+    margin-left: 20px;
+}
+.product-cart-btn {
+    margin-top: 18px;
+}
+.pro-panel{padding: 11px !important;padding-top: 1px !important;margin: 0.5rem 6px 1rem 9px !important}
 
 /*=======================
     Products Page
@@ -1381,6 +1510,77 @@ address {
 }
 
 
+/*=== product Buttons ======*/
+/*.toast{
+  background: linear-gradient(260deg,rgba(38, 105, 182, 1),rgb(132, 189, 255),rgba(38, 105, 182, 1));
+  padding: 10px 80px;
+}*/
+.toast{
+    opacity: 0.95;
+    border-bottom: 3px solid #2669b6;
+    top: 10px;
+    right: 0 !important;
+    border-radius: 0px; 
+}
+#toast-container {
+    top: 10px !important;
+    right: 10px;
+    max-width: 86%;
+    z-index: 100000000;
+}
+
+
+/*================ Sign up & Sign In Modal Area =======================*/
+.modal-40{
+  width: 40%;
+}
+.modal .modal-content{
+  min-height: 300px;
+}
+.modal .modal-footer{
+  background-color: rgba(50, 50, 50, 0.2);
+}
+.signUp-area{
+  background: ghostwhite;
+  padding: 15px 35px !important;
+  margin: 0px;
+}
+.signUp-area h5
+{
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 15px;
+}
+.sidebar-image {
+    background: #fff;
+}
+.signUp-form-area{
+
+}
+.modal-footer a{
+  color: #545658;
+  letter-spacing: 2px;
+}
+.new-user-link{
+  color: #848688;
+}
+a#signup-user-Btn {
+  color: #848688;
+  padding: 0px 10px;
+  text-transform: capitalize;
+}
+a#signup-user-Btn:hover {
+  color: rgb(38, 105, 182)!important;
+  text-transform: capitalize;
+}
+a#login-user-Btn{
+  color: #848688;
+  padding: 0px 10px;
+  text-transform: capitalize; 
+}
+a#login-user-Btn:hover{
+ color: rgb(38, 105, 182)!important;
+  text-transform: capitalize;
+}
 /* ============  Mobile Responsive Navigations Area ====================== */
 @media(max-width: 768px){
   .drag-target{
@@ -1476,6 +1676,13 @@ address {
     -webkit-box-shadow:none;
     box-shadow: none;
   }
+  .modal-40{
+    width: 90%;
+  }
+  .signUp-area
+  {
+    padding: 0px !important;
+  }
 }  
 
 @media( min-width: 798px) and(max-width: 1024px){
@@ -1496,5 +1703,8 @@ address {
     margin-top: 25px !important;
     margin-left: 60px !important;
     text-align: center;
+  }
+  .modal-40{
+    width: 100%;
   }
 }

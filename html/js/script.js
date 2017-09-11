@@ -19,4 +19,27 @@ $(function(){
 		$(".dropdown-menu-container").hide();
 	 });
 
+	 $(".modal").modal();
+
+	 $("#userBtn").on("click",function(){
+	 	//$("#signupModal").modal('close');
+	 	$("#loginModal").modal('open');
+	 });
+
+	 $("#userBtn-mobile").on("click",function(){
+	 	//$("#signupModal").modal('close');
+	 	$("#loginModal").modal('open');
+	 });
+	 
+	 $("#signup-user-Btn").on("click",function(){
+	 	$("#signupModal").modal('open');
+	 	//$("#loginModal").modal('close');
+	 });
+
+	 $("#login-user-Btn").on("click",function(){
+	 	$("#loginModal").modal('open');
+	 	//$("#loginModal").modal('close');
+	 });
+
 });
+

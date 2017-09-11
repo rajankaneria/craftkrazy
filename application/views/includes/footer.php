@@ -46,8 +46,18 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
    color: rgba(255,255,255,0.7) !important;
 }
 
+input[type=password]:not(.browser-default):focus:not([readonly]){
+  border-bottom: 1px solid #2669b6;
+  -webkit-box-shadow: 0 1px 0 0 #2669b6;
+  box-shadow: 0 1px 0 0 #2669b6;
+}
 </style>
+<?php 
 
+  $this->load->view("loginModal"); 
+  $this->load->view("signupModal"); 
+
+?>
 <footer class="page-footer blue">
   <div class="container">
     <div class="row">

@@ -159,7 +159,7 @@ function initChildCat(){
   });
 
   $(".add-to-cart").on("click",function(){
-
+    Materialize.toast('Product Added Succesfully.', 3000)
     var productID=$(this).data("product-id");
     $.post(baseurl+"product/addProductToCart/"+productID,function(data){
         $(".cart-bedge").html(data);
