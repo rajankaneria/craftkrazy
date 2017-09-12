@@ -2,14 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Product extends CI_Controller {
-
+/*
 	public function index()
 	{		
 
 		$this->load->model("category_model");
 		$this->load->model("product_model");
 		$categoryList = $this->category_model->generateNavBar(7);
-
+		$categoryData=$this->product_model->getMainCatDetails($catId);
+		
 		$headerData = array(
 			"pageTitle" => "Product",
 			"stylesheet" => array(),
@@ -20,12 +21,37 @@ class Product extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "products",
-            "viewData" => array(),
+            "viewData" => array("categoryData"=>$categoryData),
+			"headerData" => $headerData,
+			"footerData" => $footerData	
+		);
+		$this->load->view('template',$viewData);
+	}*/
+
+	public function id($catID){
+		$this->load->model("category_model");
+		$this->load->model("product_model");
+		$categoryList = $this->category_model->generateNavBar(7);
+		$categoryData = $this->product_model->getMainCatDetails($catID);
+		
+		$headerData = array(
+			"pageTitle" => "Product",
+			"stylesheet" => array(),
+			"categoryList" =>$categoryList
+		);
+		$footerData = array(
+			"jsFiles" => array('products.js')
+		);
+		$viewData = array(
+			"viewName" => "products",
+            "viewData" => array("categoryData"=>$categoryData),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
 		$this->load->view('template',$viewData);
 	}
+
+
 	public function productDetails($productID){
 		$this->load->model("product_model");
 		$this->load->model("category_model");

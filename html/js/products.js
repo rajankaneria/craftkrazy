@@ -223,17 +223,13 @@ $(".category_delete_btn").on("click",function(){
 
 });
 
-
-
 $("#updatecategorydata").on("click",function(){
-  var catData= new FormData($("#updateCatForm")[0]);
-  console.log(catData);
-  console.log(baseurl);
-  $.ajax({
-        url:baseurl+"product/updateCategory/",
+  var catData=new FormData($("#updateCatForm")[0]);
+ $.ajax({
+        url:baseurl+"product/updateCategory",
         type:'POST',
         contentType:false,
-        productData:false,
+        processData:false,
         data:catData,     
         success:function(res){
           alert("succesfully updayed...");

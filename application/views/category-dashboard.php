@@ -33,8 +33,7 @@
         <td><?php echo $categoryRow['mc_name']; ?></td>  
         <td><img width="300" height="200" src="<?php echo base_url() ?>html/images/category/<?php echo $categoryRow['mc_image']; ?>"></td>      
            <td class="blog-btn">
-            <a data-catid="<?php echo $categoryRow['mc_id']; ?>" class="btn-floating waves-effect waves-light blue-grey blog-view-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
-              <a data-catid="<?php echo $categoryRow['mc_id']; ?>" class="btn-floating waves-effect waves-light red category_delete_btn"><i class="material-icons">delete</i></a>
+           <a data-catid="<?php echo $categoryRow['mc_id']; ?>" class="btn-floating waves-effect waves-light red category_delete_btn"><i class="material-icons">delete</i></a>
               <a data-catid="<?php echo $categoryRow['mc_id']; ?>" class="btn-floating waves-effect waves-light blue-grey category-edit-btn"><i class="material-icons">mode_edit</i></a>
             </td>          
       </tr>
