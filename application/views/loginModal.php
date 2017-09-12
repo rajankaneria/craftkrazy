@@ -5,16 +5,16 @@
       	<form class="from-signup">
       	<div class="row">
       		<div class="input-field col s12">
-	          <input id="email" type="email" class="validate">
+	          <input id="email" type="email" class="validate" name="email">
 	          <label for="email">E-mail</label>
 	        </div>
 	        <div class="input-field col s12">
-	          <input id="password" type="password" class="validate">
+	          <input id="password" type="password" class="validate" name="password">
 	          <label for="password">Passwords</label>
 	        </div>
 
 	        <div class="input-field col s6">
-	          <input id="sign-up-btn" type="submit" class="validate waves-effect waves-light btn blue" value="Sign Up" class="btn btn blue">
+	          <input id="login-btn" type="submit" class="validate waves-effect waves-light btn blue" value="Login" class="btn btn blue">
 	        </div>
 
 	        <div class="right input-field">

@@ -179,14 +179,13 @@ function initChildCat(){
 });
 
 $(".category-edit-btn").on("click",function(){
-$("#editModal .modal-content").html("");
-$("#editModal").modal('open');
-var catID=$(this).data("catid");
-$.post(baseurl+"product/mainCatDetails/"+catID,function(data){
-  $("#editModal .modal-content").html(data);
-  Materialize.updateTextFields();
-});
-    
+    $("#editModal .modal-content").html("");
+    $("#editModal").modal('open');
+    var catID=$(this).data("catid");
+    $.post(baseurl+"product/mainCatDetails/"+catID,function(data){
+      $("#editModal .modal-content").html(data);
+      Materialize.updateTextFields();
+    });
 });
 
 $("#addCategoryBtn").on("click",function(){
@@ -216,7 +215,7 @@ $(".category_delete_btn").on("click",function(){
   if(confirm('Do you want Delete this record')){
   $.post(baseurl+"product/deleteCategory/"+catId,function(data){      
        $("tr[data-catid="+catid+"]").remove();
-       window.location.relode();
+       //window.location.relode();
   });
 
 }
@@ -233,7 +232,7 @@ $("#updatecategorydata").on("click",function(){
         data:catData,     
         success:function(res){
           alert("succesfully updayed...");
-          window.location.relode();
+          //window.location.reload();
         }
       });
   });
