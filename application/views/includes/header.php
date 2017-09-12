@@ -29,7 +29,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-
 <header>
   
 <!-- Dropdown Structure -->
@@ -128,6 +127,7 @@
       <li class="nav-bar-dropdown single-category-item" data-target="category-<?php echo $mainCatRow['mc_id']; ?>">
         <a href="#!"><?php echo $mainCatRow["mc_name"]; ?></a>
         <div class="dropdown-menu-container single-category z-depth-2" id="category-<?php echo $mainCatRow['mc_id']; ?>">
+        
           <?php $this->load->view("mainCatBox",$mainCatRow); ?>
         </div>
       </li>
