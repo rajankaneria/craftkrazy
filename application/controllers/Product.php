@@ -28,11 +28,13 @@ class Product extends CI_Controller {
 		$this->load->view('template',$viewData);
 	}*/
 
-	public function id($catID){
+	public function mainCategory($catID){
+
 		$this->load->model("category_model");
 		$this->load->model("product_model");
 		$categoryList = $this->category_model->generateNavBar(7);
 		$categoryData = $this->product_model->getMainCatDetails($catID);
+		$productsByparentCatData=$this->product_model->getProductByParentCat($parentId);
 		
 		$headerData = array(
 			"pageTitle" => "Product",
@@ -44,12 +46,40 @@ class Product extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "products",
-            "viewData" => array("categoryData"=>$categoryData),
+            "viewData" => array("categoryData"=>$categoryData,"productsparentCatData"=>$productsByparentCatData),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
 		$this->load->view('template',$viewData);
 	}
+
+
+
+	public function parentCategory($catID,$parentID){
+
+		$this->load->model("category_model");
+		$this->load->model("product_model");
+		$categoryList = $this->category_model->generateNavBar(7);
+		$categoryData = $this->product_model->getMainCatDetails($catID);		
+		$productsByparentCatData=$this->product_model->getProductByParentCat($parentID);
+		
+		$headerData = array(
+			"pageTitle" => "Product",
+			"stylesheet" => array(),
+			"categoryList" =>$categoryList
+		);
+		$footerData = array(
+			"jsFiles" => array('products.js')
+		);
+		$viewData = array(
+			"viewName" => "products",
+            "viewData" => array("categoryData"=>$categoryData,"productsparentCatData"=>$productsByparentCatData),
+			"headerData" => $headerData,
+			"footerData" => $footerData	
+		);
+		$this->load->view('template',$viewData);
+	}
+
 
 
 	public function productDetails($productID){
@@ -99,7 +129,6 @@ class Product extends CI_Controller {
 		$this->load->model("product_model");
 		$output=$this->product_model->getParentCatDetails($parentCatID);
 		var_dump($output);
-
 	}
 
 	public function parentCatAllDetails()
@@ -138,7 +167,11 @@ class Product extends CI_Controller {
 		$categoryList = $this->product_model->allProducts();
 		var_dump($categoryList);
 	}
-
+	public function productListByparentCat($parentCatID){
+	$this->load->model("product_model");
+	$parentCategoryList = $this->product_model->allProducts($parentCatID);
+	var_dump($parentCategoryList);
+	}
 
 	/* Seller add/edit/delete/products */
 	public function addProduct()
@@ -285,6 +318,7 @@ class Product extends CI_Controller {
     		array_push($shoppingCart, $productID);
     	}
     	$this->session->set_userdata("shoppingCart",$shoppingCart);
+    	echo sizeof($shoppingCart);
 	}
 
 	public function addCat()
