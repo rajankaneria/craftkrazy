@@ -340,7 +340,15 @@ td.category-list {
 }
 
 /**================= Mobile Responsive ============================*/
+
+/**=============== Moblie responsive ====================*/
+
+
 @media(min-width: 992px){
+    
+   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
+    display: block !important;
+   } 
   a.button-collapse {
       position: absolute;
   }

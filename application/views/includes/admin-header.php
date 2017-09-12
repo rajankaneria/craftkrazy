@@ -35,7 +35,7 @@
   <div class="row top-nav-container">
   <div class="nav-wrapper" style="overflow: hidden;">
     <div class="col m8 logo-area">
-    <a href="#!" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>    
+    <a href="#!" class="main-logo" style="left: 100px;"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>    
     </div>
     <div class="col m4 log-out-btn">
     <a href="<?php echo base_url(); ?>seller/adminLogout"> <i class="fa fa-power-off logout" aria-hidden="true"></i></a>   

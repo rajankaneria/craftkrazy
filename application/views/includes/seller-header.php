@@ -35,7 +35,7 @@
   <div class="row top-nav-container">
     <div class="nav-wrapper" style="overflow: hidden;">
       <div class="col m8 logo-area">
-      <a href="<?php echo base_url(); ?>home" class="main-logo" style="left: 50px;"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>    
+      <a href="<?php echo base_url(); ?>home" class="main-logo" style="left: 100px;"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>    
       </div>
       <?php if($this->session->userdata('admin')) { ?>
       <div class="col m3 logo-area">
