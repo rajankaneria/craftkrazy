@@ -210,6 +210,8 @@ class Product extends CI_Controller {
 	    $config['overwrite'] = TRUE;
 	    $config['encrypt_name'] = FALSE;
 	    $config['remove_spaces'] = TRUE;
+
+	   
 	    
 	    //set name in the config file for the feature image
 	    $config['file_name'] = $proID."_product";

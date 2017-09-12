@@ -173,18 +173,23 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
   -webkit-transition-delay: .4s;
           transition-delay: .4s;
 }
-.container-area.active .card.alt .input-container:nth-child(2) {
+.container-area.active .card.alt .input-container:nth-child(3) {
   -webkit-transition-delay: .5s;
           transition-delay: .5s;
 }
-.container-area.active .card.alt .input-container:nth-child(3) {
+.container-area.active .card.alt .input-container:nth-child(4) {
   -webkit-transition-delay: .6s;
           transition-delay: .6s;
 }
-.container-area.active .card.alt .button-container {
+.container-area.active .card.alt .button-container:nth-child(2) {
   -webkit-transition-delay: .7s;
           transition-delay: .7s;
 }
+.container-area.active .card.alt .button-container {
+  -webkit-transition-delay: .8s;
+          transition-delay: .8s;
+}
+
 
 /* Card */
 .card {
@@ -549,9 +554,16 @@ div#test1 form {
 .tabs{overflow: hidden !important; }
 
 
+
+
 /**=============== Moblie responsive ====================*/
 @media(max-width: 798px){
-	.seller-header-logo img {
+	 
+   .container-area{
+    padding: 15px;
+   }
+
+  .seller-header-logo img {
 	    width: 90% !important;
 	    min-width: 75%;
 	    margin: 0 auto !important;
