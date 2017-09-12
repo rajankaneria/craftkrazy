@@ -16,7 +16,7 @@ class Admin extends CI_Controller
 
     $headerData = array(
       "pageTitle" => "Dashboard",
-      "stylesheet" => array('dashboard.css')     
+      "stylesheet" => array('dashboard.css','admin-dashboard.css')     
     );
     $footerData = array(
       "jsFiles" => array('products.js')

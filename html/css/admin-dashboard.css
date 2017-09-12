@@ -1,0 +1,96 @@
+
+/**================= Menu =======*/
+
+
+
+
+.row.top-nav-container {
+    margin: 0 auto;
+}
+
+table.responsive-table tbody tr{
+	border-bottom: 1px dashed #ddd; 
+}
+table.responsive-table tbody tr:last-child{
+	border-bottom: 0px dashed #ddd; 
+}
+.card-panel{
+	position: relative;
+}
+nav a.button-collapse{
+		display: block !important;
+		margin-top: -15px !important;
+	}
+/**================= Mobile Responsive ============================*/
+@media(min-width: 992px){
+	a.button-collapse {
+	    position: absolute;
+	}
+	nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
+		font-size: 35px;
+		padding-left: 20px;
+	}
+	a.button-collapse li{
+	    font-size: 12px;
+	}
+	nav ul a:hover{
+		color: #fff;
+	}
+	.side-nav .collapsible-body, .side-nav.fixed .collapsible-body{
+		background-color: rgb(13, 81, 158);
+	}
+	.side-nav{
+		background-color: #2669b6;
+	}
+	.side-nav li>a{
+		color: #fff;
+		font-weight: 400;
+	}
+}
+@media (max-width: 798px){
+
+
+	nav .button-collapse{
+		top: 25px !important;
+	}
+	.main-logo img{
+		width: 55% !important;
+	}
+	.log-out-btn a{
+	    position: absolute;
+	    right: 25px;
+	    top: 25px;
+	}
+	.logout{
+		margin: 20px !important;
+	}
+
+	.page-content {
+	    padding: 25px 0px;
+	}
+	.modal .modal-content{
+		padding: 25px 10px;
+	}
+	.card-panel{
+		padding: 15px;
+	}
+	table.responsive-table tbody tr{
+		border: none;
+	}
+	table.responsive-table tbody tr td{
+		border-bottom: 1px dashed #ddd; 
+	}
+	table.responsive-table tbody tr td:last-child{
+		border-bottom: 0px dashed #ddd !important; 
+	}
+
+	table.responsive-table tbody tr:nth-child(even){
+		background-color: #eee;
+	}
+	table.responsive-table td{
+		text-align: center;
+	}
+	table.responsive-table th{
+		text-align: left;
+	}
+}
