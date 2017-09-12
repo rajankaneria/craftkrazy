@@ -50,6 +50,6 @@
      </div>
 
     <div class="modal-footer">
-      <a  id="updatecategorydata" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
+      <a  id="updatecategorydata" href="" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
     </div>
   </div>

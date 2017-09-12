@@ -33,8 +33,7 @@ class Product extends CI_Controller {
 		$this->load->model("category_model");
 		$this->load->model("product_model");
 		$categoryList = $this->category_model->generateNavBar(7);
-		$categoryData = $this->product_model->getMainCatDetails($catID);
-		$productsByparentCatData=$this->product_model->getProductByParentCat($parentId);
+		$categoryData = $this->product_model->getMainCatDetails($catID);	
 		
 		$headerData = array(
 			"pageTitle" => "Product",
@@ -46,7 +45,7 @@ class Product extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "products",
-            "viewData" => array("categoryData"=>$categoryData,"productsparentCatData"=>$productsByparentCatData),
+            "viewData" => array("categoryData"=>$categoryData),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
