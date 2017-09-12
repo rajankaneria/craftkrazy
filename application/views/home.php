@@ -87,69 +87,180 @@
 
   </div>
 
-
-
-   
-
-  <div class="col s12 container product-area card-panel show-on-medium-and-down product-area-mobile hide-on-large-only">
-  <div id="PaperCraft-Slider" class="show-on-medium-and-down carousel carousel-slider center product-area" data-indicators="true">
-    <div class="carousel-item white-text row" href="#one!">
-      <div class="col s12 productBox">
-        <div class="prodcut-image col s12">
-        <img src="http://lorempixel.com/250/250/nature/2"></div>
-        <span class="col s12"><div class="prodcut-name">hellow</div>
-        <div class="prodcut-price">256</div>
+<!-- Mobile view Product -->
+<div class="row show-on-small show-on-medium hide-on-med-and-up">
+  <div class="main-cat"><h5>Paper Craft</h5></div>
+  <div class="col s6 main-product-box">
+    <div class="product-frame">
+      <div class="product-image-container">
+        <img src="http://localhost/craftkrazy/html/images/products/1_product.jpg" alt="Green Earrings" class="pic">
+      </div>
+      <div class="product-desc-container">
+        <div class="product-name"><a href="http://localhost/craftkrazy/product/productDetails/1">Green Earrings</a></div>
+        <div class="product-price-container">
+          <div class="price">
+           <span class="original-price"><i class="fa fa-inr" aria-hidden="true"></i>75</span>
+            <span class="discounted-price"><i class="fa fa-inr" aria-hidden="true"></i>50</span>
+          </div>      
+          <div class="discount-percent"><span class="label">Off</span><span class="value">33%</span></div>
+        </div>
+        <div class="product-action">
+          <div class="product-cart-btn">
+            <button data-product-id="1" class="btn blue white-text add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
+            <button data-product-id="1" class="btn-floating waves-effect waves-light red wishlist-btn">
+              <i class="fa fa fa-heart" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="carousel-item white-text row" href="#two!">
-      <div class="col s12 productBox">
-        <div class="prodcut-image col s12">
-        <img src="http://lorempixel.com/250/250/nature/2"></div>
-        <span class="col s12"><div class="prodcut-name">hellow</div>
-        <div class="prodcut-price">256</div>
-      </div>
-    </div>
-    <div class="carousel-item white-text row" href="#three!">
-      <div class="col s12 productBox">
-        <div class="prodcut-image col s12">
-        <img src="http://lorempixel.com/250/250/nature/2"></div>
-        <span class="col s12"><div class="prodcut-name">hellow</div>
-        <div class="prodcut-price">256</div>
-      </div>
-    </div>
-   </div>
   </div>
 
-  <div class="col s12 container product-area card-panel show-on-medium-and-down product-area-mobile hide-on-large-only">
-  <div id="MixedMedia-Slider" class="carousel carousel-slider center product-area" data-indicators="true">
-    <div class="carousel-item white-text row" href="#one!">
-      <div class="col s12 productBox">
-        <div class="prodcut-image col s12">
-        <img src="http://lorempixel.com/250/250/nature/2"></div>
-        <span class="col s12"><div class="prodcut-name">hellow</div>
-        <div class="prodcut-price">256</div>
+  <div class="col s6 main-product-box">
+    <div class="product-frame">
+      <div class="product-image-container">
+        <img src="http://localhost/craftkrazy/html/images/products/1_product.jpg" alt="Green Earrings" class="pic">
+      </div>
+      <div class="product-desc-container">
+        <div class="product-name"><a href="http://localhost/craftkrazy/product/productDetails/1">Green Earrings</a></div>
+        <div class="product-price-container">
+          <div class="price">
+           <span class="original-price"><i class="fa fa-inr" aria-hidden="true"></i>75</span>
+            <span class="discounted-price"><i class="fa fa-inr" aria-hidden="true"></i>50</span>
+          </div>      
+          <div class="discount-percent"><span class="label">Off</span><span class="value">33%</span></div>
+        </div>
+        <div class="product-action">
+          <div class="product-cart-btn">
+            <button data-product-id="1" class="btn blue white-text add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
+            <button data-product-id="1" class="btn-floating waves-effect waves-light red wishlist-btn">
+              <i class="fa fa fa-heart" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="carousel-item white-text row" href="#two!">
-      <div class="col s12 productBox">
-        <div class="prodcut-image col s12">
-        <img src="http://lorempixel.com/250/250/nature/2"></div>
-        <span class="col s12"><div class="prodcut-name">hellow</div>
-        <div class="prodcut-price">256</div>
+  </div>
+
+  <div class="col s6 main-product-box">
+    <div class="product-frame">
+      <div class="product-image-container">
+        <img src="http://localhost/craftkrazy/html/images/products/1_product.jpg" alt="Green Earrings" class="pic">
+      </div>
+      <div class="product-desc-container">
+        <div class="product-name"><a href="http://localhost/craftkrazy/product/productDetails/1">Green Earrings</a></div>
+        <div class="product-price-container">
+          <div class="price">
+           <span class="original-price"><i class="fa fa-inr" aria-hidden="true"></i>75</span>
+            <span class="discounted-price"><i class="fa fa-inr" aria-hidden="true"></i>50</span>
+          </div>      
+          <div class="discount-percent"><span class="label">Off</span><span class="value">33%</span></div>
+        </div>
+        <div class="product-action">
+          <div class="product-cart-btn">
+            <button data-product-id="1" class="btn blue white-text add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
+            <button data-product-id="1" class="btn-floating waves-effect waves-light red wishlist-btn">
+              <i class="fa fa fa-heart" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="carousel-item white-text row" href="#three!">
-      <div class="col s12 productBox">
-        <div class="prodcut-image col s12">
-        <img src="http://lorempixel.com/250/250/nature/2"></div>
-        <span class="col s12"><div class="prodcut-name">hellow</div>
-        <div class="prodcut-price">256</div>
+  </div>
+
+  <div class="col s6 main-product-box">
+    <div class="product-frame">
+      <div class="product-image-container">
+        <img src="http://localhost/craftkrazy/html/images/products/1_product.jpg" alt="Green Earrings" class="pic">
+      </div>
+      <div class="product-desc-container">
+        <div class="product-name"><a href="http://localhost/craftkrazy/product/productDetails/1">Green Earrings</a></div>
+        <div class="product-price-container">
+          <div class="price">
+           <span class="original-price"><i class="fa fa-inr" aria-hidden="true"></i>75</span>
+            <span class="discounted-price"><i class="fa fa-inr" aria-hidden="true"></i>50</span>
+          </div>      
+          <div class="discount-percent"><span class="label">Off</span><span class="value">33%</span></div>
+        </div>
+        <div class="product-action">
+          <div class="product-cart-btn">
+            <button data-product-id="1" class="btn blue white-text add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
+            <button data-product-id="1" class="btn-floating waves-effect waves-light red wishlist-btn">
+              <i class="fa fa fa-heart" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-   </div>
+  </div>
+
+  <div class="col s6 main-product-box">
+    <div class="product-frame">
+      <div class="product-image-container">
+        <img src="http://localhost/craftkrazy/html/images/products/1_product.jpg" alt="Green Earrings" class="pic">
+      </div>
+      <div class="product-desc-container">
+        <div class="product-name"><a href="http://localhost/craftkrazy/product/productDetails/1">Green Earrings</a></div>
+        <div class="product-price-container">
+          <div class="price">
+           <span class="original-price"><i class="fa fa-inr" aria-hidden="true"></i>75</span>
+            <span class="discounted-price"><i class="fa fa-inr" aria-hidden="true"></i>50</span>
+          </div>      
+          <div class="discount-percent"><span class="label">Off</span><span class="value">33%</span></div>
+        </div>
+        <div class="product-action">
+          <div class="product-cart-btn">
+            <button data-product-id="1" class="btn blue white-text add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
+            <button data-product-id="1" class="btn-floating waves-effect waves-light red wishlist-btn">
+              <i class="fa fa fa-heart" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s6 main-product-box">
+    <div class="product-frame">
+      <div class="product-image-container">
+        <img src="http://localhost/craftkrazy/html/images/products/1_product.jpg" alt="Green Earrings" class="pic">
+      </div>
+      <div class="product-desc-container">
+        <div class="product-name"><a href="http://localhost/craftkrazy/product/productDetails/1">Green Earrings</a></div>
+        <div class="product-price-container">
+          <div class="price">
+           <span class="original-price"><i class="fa fa-inr" aria-hidden="true"></i>75</span>
+            <span class="discounted-price"><i class="fa fa-inr" aria-hidden="true"></i>50</span>
+          </div>      
+          <div class="discount-percent"><span class="label">Off</span><span class="value">33%</span></div>
+        </div>
+        <div class="product-action">
+          <div class="product-cart-btn">
+            <button data-product-id="1" class="btn blue white-text add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
+            <button data-product-id="1" class="btn-floating waves-effect waves-light red wishlist-btn">
+              <i class="fa fa fa-heart" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 
 
+
+</div>
 </div>

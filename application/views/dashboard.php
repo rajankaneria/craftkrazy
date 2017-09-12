@@ -1,8 +1,13 @@
 
 <div class="container" style="width: 100% !important">
  <div class="row">
+
+<!--   <div class="col s3 m3" style="background: black;width: 15%;height: 967px;max-height: 100%;margin: 0 auto !important;
+    display: block;margin-top: 0.5rem !important">
+
   <div class="col s3 m3" style="background: black;width: 15%;height: 967px;max-height: 100%;margin: 0 auto !important;
     display: block;margin-top: 0.5rem !important">  
+
  <div>
       <ul id="sidebar_menu" class="sidebar-nav">
            <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
@@ -13,17 +18,18 @@
         </ul>
       </div>
   </div>
-
-<div class="col s9 m9">
+ -->
+<div class="col s12 m12">
 
  <div class="card-panel">
 
   <div class="page-header">
       <div class="page-title">Products Mangement</div>      
-      <div class="page-button"><a class="waves-effect waves-light btn" id="addProductBtn">Add</a></div>
+      <div class="page-button"><a class="waves-effect waves-light btn blue" id="addProductBtn">Add</a></div>
   </div>
    <div class="page-content">
-   	<table border="1">
+   	<table border="1" class="responsive-table">
+    <thead>
    		<tr>
         <th>Category</th>
         <!-- <th>Parent Category</th>
@@ -36,6 +42,8 @@
         <th>Quantity</th>
         <th>Actions</th>
    		</tr>
+      </thead>
+      <tbody>
       <?php foreach ($productsData as $key => $productRow) { ?>
        <tr data-proid="<?php echo $productRow['product_id']; ?>">
         <td class="category-list"><?php echo $productRow['mc_name']; ?> > <?php echo $productRow['pc_name']; ?> > <?php echo $productRow['cc_name']; ?></td>
@@ -52,8 +60,9 @@
             </td>
           
       </tr>
-      <?php } ?>
 
+      <?php } ?>
+      <tbody>
    	</table>
    </div>
   </div>  
