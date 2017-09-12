@@ -338,3 +338,30 @@ input:-webkit-autofill {
 td.category-list {
     font-size: 11px;
 }
+
+/**================= Mobile Responsive ============================*/
+@media(min-width: 992px){
+  a.button-collapse {
+      position: absolute;
+  }
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
+    font-size: 35px;
+    padding-left: 20px;
+  }
+  a.button-collapse li{
+      font-size: 12px;
+  }
+  nav ul a:hover{
+    color: #fff;
+  }
+  .side-nav .collapsible-body, .side-nav.fixed .collapsible-body{
+    background-color: rgb(13, 81, 158);
+  }
+  .side-nav{
+    background-color: #2669b6;
+  }
+  .side-nav li>a{
+    color: #fff;
+    font-weight: 400;
+  }
+}
