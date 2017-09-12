@@ -2,7 +2,7 @@
 
 <!--  Slider starts here -->
 <div class="row">
-      <img src="<?php echo BASE_url();?>html/images/products-banner.jpg" class="responsive-img">
+      <img src="<?php echo BASE_url();?>html/images/category/<?php echo $categoryData["mc_image"]; ?>" class="responsive-img" width="100%"/>
 </div>      
 <!--  Slider Over here -->
 
@@ -24,37 +24,19 @@
         <h5>Main Categories</h5>
       </div>
       <div class="categories-view">
-        <ul class="accordion-menu">
-          <li>
-            <div class="dropdownlink">Papercraft
-              <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </div>
-            <ul class="submenuItems">
-              <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> &nbsp; History book 1</a></li>
-              <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> &nbsp; History book 2</a></li>
-              <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> &nbsp; History book 3</a></li>
-            </ul>
+      <ul class="accordion-menu">
+        <li>
+          <?php foreach ($categoryList["catList"] as $key => $mainCatRow) { ?>
+          <li class="nav-bar-dropdown single-category-item" data-target="category-<?php echo $mainCatRow['mc_id']; ?>">
+            <div class="dropdown-menu-container single-category z-depth-2" id="category-<?php echo $mainCatRow['mc_id']; ?>"></div>
+              <?php $this->load->view("subCatBox",$mainCatRow); ?>
           </li>
-          <li>
-            <div class="dropdownlink">Flower Craft
-              <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </div>
-            <ul class="submenuItems">
-              <li><a href="#">Fiction book 1</a></li>
-              <li><a href="#">Fiction book 2</a></li>
-              <li><a href="#">Fiction book 3</a></li>
-            </ul>
-          </li>
-          <li>
-            <div class="dropdownlink">Wood and Furniture
-              <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </div>
-            <ul class="submenuItems">
-              <li><a href="#">Fantasy book 1</a></li>
-              <li><a href="#">Fantasy book 2</a></li>
-              <li><a href="#">Fantasy book 3</a></li>
-            </ul>
-          </li>
+          <?php } ?>
+
+          <?php foreach($categoryList["moreList"] as $key => $mainCatRow){ ?>
+          <?php $this->load->view("subCatBox",$mainCatRow); ?>
+          <?php } ?>
+        </li> 
         </ul>
       </div>
     </div>

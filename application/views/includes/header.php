@@ -29,7 +29,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-
 <header>
   
 <!-- Dropdown Structure -->
@@ -64,8 +63,9 @@
       <div class="field">
 
         <input type="text" class="input-search" id="input-search" name="input-search" required>
+        
         <label for="input-search">Search</label>
-
+        <span class="fa fa-search search-icon" aria-hidden="true"></span>
       </div> <!-- /field -->
 
     </form>
@@ -89,13 +89,13 @@
               <a href="#!"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></a>
             </div>
             <div class="col m8 left">
-              <p style="color: #aaa;line-height: 2rem;"> Mr. Craft User</p>
+              <p style="color: #848688;line-height: 2rem;"> Mr. Craft User</p>
             </div>
           </div>  
             <div class="row searbar-area">
             <div class="search-area">
               <form>
-                <input type="search" name="Search" placeholder="Search" class="search-box">
+                <input type="search" name="Search" placeholder="Search" class="mobile-search-box">
               </form>
             </div>
             </div>
@@ -138,6 +138,7 @@
       <li class="nav-bar-dropdown single-category-item" data-target="category-<?php echo $mainCatRow['mc_id']; ?>">
         <a href="#!"><?php echo $mainCatRow["mc_name"]; ?></a>
         <div class="dropdown-menu-container single-category z-depth-2" id="category-<?php echo $mainCatRow['mc_id']; ?>">
+        
           <?php $this->load->view("mainCatBox",$mainCatRow); ?>
         </div>
       </li>

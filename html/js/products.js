@@ -223,8 +223,6 @@ $(".category_delete_btn").on("click",function(){
 
 });
 
-
-
 $("#updatecategorydata").on("click",function(){
   var catData= new FormData($("#updateCatForm")[0]);
   $.ajax({

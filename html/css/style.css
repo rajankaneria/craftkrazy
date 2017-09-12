@@ -2,9 +2,19 @@
 /*====================
 	Main Navigation 
 =====================*/
+.mobile-search-box {
+    background: rgb(38, 105, 182) !important;
+    color: #fff !important;
+    border: 1px solid #2669b6 !important;
+    border-radius: 3px !important;
+    padding: 2px 10px !important;
+    width: auto;
+    right: 14px !important;
+    width: calc(100% - 10px) !important;
+}
 
 input[type=text]:not(.browser-default){
-
+  width: 100%;
 }
 
 .container-box-search {
@@ -12,6 +22,14 @@ input[type=text]:not(.browser-default){
   position: fixed;
   top: 50%;
   /*transform: translate(-50%, -50%);*/
+}
+
+span.fa.fa-search.search-icon {
+    position: absolute;
+    color: #848688;
+    right: 0px;
+    top: 15px;
+    font-size: 18px;
 }
 
 .search {
@@ -28,23 +46,23 @@ input[type=text]:not(.browser-default){
 .search label {
   /*background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAAxElEQVR4AXXPIUuDcRDA4Zv4AUSwTLEKVoNlySyCYLO98CCsahGrX0AW/QhmBRHEJghLS4JFBBXDgrJi2In78w8v4v3S8XDh4nd0DTxLEzd2RC2EnrH07trQVDrXqbhs7FvfnBDWDKWTigOpL2oWvZpYKPjio1zVHEt7BdOtaLUtHRX8MmqjRjooeCVttPBOWi+4JT1aLaDjVLpU/5ytn840Dj1IaWSpYmi8yVlTF54qh9K8nn27usJK5fC3yvfhPx7a/AE9dYwDEfKrlAAAAABJRU5ErkJggg==) no-repeat 0 50%;*/
   content: "\f002";
-  color: #b2b2b2;
+  color: #848688;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   transition: left .4s, transform .4s;
-  padding-left: 1.25em;
+  padding-left: 1.25em !important;
 }
 .search .input-search {
-  border: 1px solid #dfdfdf;
-  border-radius: .25em;
-  box-shadow: 0 1px 0 #bfbebf;
+  border: 1px solid #dfdfdf !important;
+  border-radius: 50em !important;
+  box-shadow: 0 1px 0 #bfbebf !important;
   display: block;
-  font: 400 1em/1.5em sans-serif;
-  padding: .5em 2em;
-  width: 100%;
-  color: #848688;
+  padding: 0px 1em !important;
+  width: 100% !important;
+  color: #2669b6;
+  letter-spacing: 1px;
 }
 .search .input-search:focus + label, .search .input-search:valid + label {
   left: .5em;
@@ -1731,7 +1749,13 @@ a#login-user-Btn:hover{
   input[type=search]:not(.browser-default):focus:not([readonly]){
     -webkit-box-shadow:none;
     box-shadow: none;
+    color: #fff;
+    background: #2669b6;
   }
+  .home-cat-box {
+    margin-top: 10px !important;
+    padding: 0px 5px !important ;
+}
   .modal-40{
     width: 90%;
   }

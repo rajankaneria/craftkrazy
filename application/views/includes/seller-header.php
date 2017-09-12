@@ -54,13 +54,13 @@
 
 <header>  
 
-<nav class="white hide-on-med-and-down" style="border-bottom:2px solid #0b99dd;">
+<nav class="white hide-on-med-and-down" style="border-bottom:2px solid #2669b6;">
   <div class="row top-nav-container">
 
 
   <div class="nav-wrapper" style="overflow: hidden;">
     <div class="col m9 logo-area">
-    <a href="#!" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>    
+    <a href="<?php echo base_url(); ?>home" class="main-logo" style="left: 50px;"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>    
     </div>
     <?php if($this->session->userdata('admin')) { ?>
   echo ' <div class="col m3 logo-area">
