@@ -556,7 +556,10 @@ div#test1 form {
 
 
 
-/**=============== Moblie responsive ====================*/
+
+
+/*================= mobile Respnsive ============*/
+
 @media(max-width: 798px){
 	 
    .container-area{
