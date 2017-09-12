@@ -320,10 +320,13 @@ input:-webkit-autofill {
   margin: 0 auto !important;
   display: block;margin-top: 0.5rem !important}
 .logout{ 
-color:#0c6f9e;
-font-size: 33px;
-margin: -24px 0px 0px 220px !important;
-display: block;
+    color: #0c6f9e;
+    font-size: 33px;
+    /* margin: -24px 0px 0px 220px !important; */
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 0;
 }
 .main-logo img {
     height: auto;

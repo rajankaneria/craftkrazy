@@ -1,15 +1,11 @@
-<div class="container login-form-area">
-  
-<!-- Mixins-->
-<!-- Pen Title-->
-<div class="pen-title">
-  <h1>Seller Login Form</h1><!-- <span>Pen <i class='fa fa-code'></i> by <a href='http://andytran.me'>Andy Tran</a></span> -->
-</div>
+  <div class="pen-title">
+  <!-- <h5>SELLER HUB</h5> -->
+  </div>
 <!-- <div class="rerun"><a href="">Rerun Pen</a></div> -->
-<div class="container">
+<div class="container-area">
   <div class="card"></div>
   <div class="card">
-    <h1 class="title">Login</h1>
+    <h1 class="title">Seller Login</h1>
     <form name="Login" method="post">
       <div class="input-container">
         <input id="a_name"  name="a_name" type="#{type}" class="validate" required="">
@@ -32,23 +28,25 @@
       </div>
       <!-- <div class="footer"><a href="#">Forgot your password?</a></div> -->
     </form>
+
+    <div class="row center">
+      <div class="toggle">
+      <p>Create your Account by &nbsp; <a href="#">Sign Up</a> &nbsp; here.</p>
+      </div>
+    </div>
   </div>
+
+  <!-- Register Form -->
+
   <div class="card alt">
-    <div class="toggle"></div>
     <h1 class="title">Register
       <div class="close"></div>
     </h1>
     <form name="Register" method="post">
-      <div class="input-container">
-          <input id="company_name" name="company_name" type="#{type}" class="validate" required="true">
-          <label for="company_name">Comapany Name</label>
-        <!-- <input type="#{type}" id="#{label}" required="required"/>
-        <label for="#{label}">Username</label> -->
-        <div class="bar"></div>
-      </div>
+
       <div class="input-container">
         <input id="contact_person" name="contact_person" type="#{type}" class="validate" required="true">
-        <label for=" contact_person">Contact Person</label>
+        <label for="full_name">Full Name</label>
         <div class="bar"></div>
       </div>
 
@@ -65,25 +63,7 @@
       </div>
 
       <div class="input-container">
-        <input id="landline" name="landline" type="#{type}" class="validate" required="true">
-        <label for="mobile">Landline</label>
-        <div class="bar"></div>
-      </div>
-
-      <div class="input-container">
-        <input id="address" name="address" type="#{type}" class="validate" required="true">
-        <label for="address">Address</label>
-        <div class="bar"></div>
-      </div>
-      
-      <div class="input-container">
-        <input id="gcm_id" name="gcm_id" type="#{type}" class="validate" required="true">
-        <label for="gcm_id">Gcm Id</label>
-        <div class="bar"></div>
-      </div>
-    
-      <div class="input-container">
-        <input id="password" name="password" type="#{type}" class="validate" required="true">
+        <input id="password" name="password" type="password" class="validate" required="true">
         <label for="password">Password</label>
         <div class="bar"></div>
       </div>
@@ -93,4 +73,3 @@
     </form>
   </div>
 </div>
-</div> 
