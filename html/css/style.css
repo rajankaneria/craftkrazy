@@ -651,7 +651,6 @@ span.proce-strick {
 }
 .add-to-cart:hover{
     border-radius: 100px;
-    width: 50%;
     background: rgba(255,255,255,0.9) !important;
     color: #2669b6 !important;
     border: 1px solid #2669b6;
@@ -1376,13 +1375,13 @@ i.fa.fa-chevron-down {
     text-transform: uppercase;
 }
 
-.sub-cat-name {
+.sub-cat-name a{
 	line-height: 22px;
     color: #7b7b7b;
     font-size: 13px;
 }
 
-.sub-cat-name:hover {
+.sub-cat-name a:hover {
     color: #2b2b2b;
     cursor: pointer;
 }
@@ -1725,7 +1724,7 @@ a#login-user-Btn:hover{
     height: 56px;
     margin: 0 18px;
     top: 10px;
-    left: 10px;
+    left: 10px !important;
   }
   .user-view{
     z-index: 100;
