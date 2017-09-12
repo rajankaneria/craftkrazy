@@ -202,7 +202,7 @@ class Product extends CI_Controller {
 		$this->product_model->updateProduct($updateData,$proID);
 
 		//set configuration for the upload library
-		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\products';
+		$config['upload_path'] = 'C:\wamp\www\craftkrazy\html\images\products';
 	    $config['allowed_types'] = 'gif|jpg|png';
 	    $config['overwrite'] = TRUE;
 	    $config['encrypt_name'] = FALSE;
@@ -238,11 +238,13 @@ class Product extends CI_Controller {
 
 
 			//set configuration for the upload library
-		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\blog';
+		$config['upload_path'] = 'C:\wamp\www\craftkrazy\html\images\products';
 	    $config['allowed_types'] = 'gif|jpg|png';
 	    $config['overwrite'] = TRUE;
 	    $config['encrypt_name'] = FALSE;
 	    $config['remove_spaces'] = TRUE;
+
+	   
 	    
 	    //set name in the config file for the feature image
 	    $config['file_name'] = $proID."_product";
@@ -338,7 +340,7 @@ class Product extends CI_Controller {
 		$this->product_model->updateCategory($updateData,$proID);
 
 		//set configuration for the upload library
-		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\category';
+		$config['upload_path'] = 'C:\wamp\www\craftkrazy\html\images\category';
 	    $config['allowed_types'] = 'gif|jpg|png';
 	    $config['overwrite'] = TRUE;
 	    $config['encrypt_name'] = FALSE;
@@ -370,7 +372,7 @@ class Product extends CI_Controller {
 
 
 			//set configuration for the upload library
-		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\category';
+		$config['upload_path'] = 'C:\wamp\www\craftkrazy\html\images\category';
 	    $config['allowed_types'] = 'gif|jpg|png';
 	    $config['overwrite'] = TRUE;
 	    $config['encrypt_name'] = FALSE;

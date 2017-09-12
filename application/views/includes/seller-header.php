@@ -30,48 +30,48 @@
 </head>
 <body>
 
-<!-- 
-<div class="blue top-header">
-  <div class="container">
-    <ul>
-      <li><a href="#!"><span class="fa fa-facebook-square" aria-hidden="true"></span></a></li>
-      <li><a href="#!"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
-      <li><a href="#!"><span class="fa fa-youtube-play" aria-hidden="true"></span></a></li>
-      <li><a href="#!"><span class="fa fa-pinterest-square" aria-hidden="true"></span></a></li>
-      <li class="right">
-      <span class="search-area">
-          <form action="" class="search">
-            <div class="field">
-              <input type="text" class="input-search" id="input-search" name="input-search" required>
-              <label for="input-search"><span class="fa fa-search"></span>&nbsp;Search</label>
-            </div> <!-- /field -->
-         <!-- </form>
-      </span>
-      </li>
-    </ul>
-  </div>
-</div> -->
-
 <header>  
-
-<nav class="white hide-on-med-and-down" style="border-bottom:2px solid #0b99dd;">
+<nav class="white" style="border-bottom:2px solid #2669b6;">
   <div class="row top-nav-container">
+    <div class="nav-wrapper" style="overflow: hidden;">
+      <div class="col m8 logo-area">
+      <a href="<?php echo base_url(); ?>home" class="main-logo" style="left: 50px;"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>    
+      </div>
+      <?php if($this->session->userdata('admin')) { ?>
+      <div class="col m3 logo-area">
+      <a href="<?php echo base_url(); ?>seller/logout"> <i class="fa fa-power-off logout" aria-hidden="true"></i></a>   
+      </div>
 
-
-  <div class="nav-wrapper" style="overflow: hidden;">
-    <div class="col m9 logo-area">
-    <a href="#!" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>    
-    </div>
-    <?php if($this->session->userdata('admin')) { ?>
-  echo ' <div class="col m3 logo-area">
-    <a href="<?php echo base_url(); ?>seller/logout"> <i class="fa fa-power-off logout" aria-hidden="true"></i></a>   
-    </div>';
-
-    <?php } ?>
-  </div>   
+      <?php } ?>
+    </div>   
   </div>
+
+
+  <ul id="slide-out" class="side-nav">
+    <li>
+      <div class="row">
+          <center><h5 style="background-color: rgba(255,255,255,0.1);padding: 25px;margin-top: 0px;">Menu</h5></center>
+      </div>
+    </li>
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li><a href="#!">Second Sidebar Link</a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="#!">First</a></li>
+              <li><a href="#!">Second</a></li>
+              <li><a href="#!">Third</a></li>
+              <li><a href="#!">Fourth</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 </nav>
-
-
 </header>
 

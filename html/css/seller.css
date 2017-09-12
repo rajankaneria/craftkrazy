@@ -1,16 +1,41 @@
 
 /* Pen Title */
 
+a.main-logo {
+    position: relative;
+    height: 100%;
+    left: 53px;
+}
+
 input[type=password].invalid:not(.browser-default) {
 	border-bottom: 1px solid #2669b6 !important;
     -webkit-box-shadow: 0 1px 0 0 #2669b6 !important;
     box-shadow: 0 1px 0 0 #2669b6 !important;
 }
 
+input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label{
+  color: #9d9d9d;
+  -webkit-transform: translate(-12%, -50%) scale(0.75); 
+  transform: translate(-12%, -50%) scale(0.75); 
+  font-weight: 300 !important;
+  position: absolute;
+    top: 0 !important;
+    left: 0;
+    color: #757575;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px !important;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+
 .pen-title {
-  padding: 15px 0;
+  padding: 25px 0;
   text-align: center;
   letter-spacing: 2px;
+  /*background:linear-gradient(#07a0e2,#2767b5,rgba(16, 50, 88, 0.88));*/
+  color: #fff;
 }
 .pen-title h1 {
   margin: 0 0 3px;
@@ -87,33 +112,33 @@ input[type=password].invalid:not(.browser-default) {
 }
 
 /* Container */
-.container {
+.container-area {
   position: relative;
   max-width: 460px;
   width: 100%;
   margin: 0 auto 100px;
 }
-.container.active .card:first-child {
+.container-area.active .card:first-child {
   background: #f2f2f2;
   margin: 0 15px;
 }
-.container.active .card:nth-child(2) {
+.container-area.active .card:nth-child(2) {
   background: #fafafa;
   margin: 0 10px;
 }
-.container.active .card.alt {
+.container-area.active .card.alt {
   background: #2669b6;
   top: -15px;
   right: 0;
   width: 100%;
   min-width: 100%;
   height: auto;
-  border-radius: 5px;
-  padding: 35px 0 40px;
+  border-radius: 0px;
+  padding: 25px;
   overflow: hidden;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.37);
 }
-.container.active .card.alt .toggle {
+.container-area.active .card.alt .toggle {
   position: absolute;
   top: 250px;
   right: 15px;
@@ -128,45 +153,50 @@ input[type=password].invalid:not(.browser-default) {
   transition: transform .3s ease;
   transition: transform .3s ease, -webkit-transform .3s ease;
 }
-.container.active .card.alt .toggle:before {
+.container-area.active .card.alt .toggle:before {
   content: '';
 }
-.container.active .card.alt .title,
-.container.active .card.alt .input-container,
-.container.active .card.alt .button-container {
+.container-area.active .card.alt .title,
+.container-area.active .card.alt .input-container,
+.container-area.active .card.alt .button-container {
   left: 0;
   opacity: 1;
   visibility: visible;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
-.container.active .card.alt .title {
+.container-area.active .card.alt .title {
   -webkit-transition-delay: .3s;
           transition-delay: .3s;
 }
-.container.active .card.alt .input-container {
+.container-area.active .card.alt .input-container {
   -webkit-transition-delay: .4s;
           transition-delay: .4s;
 }
-.container.active .card.alt .input-container:nth-child(2) {
+.container-area.active .card.alt .input-container:nth-child(3) {
   -webkit-transition-delay: .5s;
           transition-delay: .5s;
 }
-.container.active .card.alt .input-container:nth-child(3) {
+.container-area.active .card.alt .input-container:nth-child(4) {
   -webkit-transition-delay: .6s;
           transition-delay: .6s;
 }
-.container.active .card.alt .button-container {
+.container-area.active .card.alt .button-container:nth-child(2) {
   -webkit-transition-delay: .7s;
           transition-delay: .7s;
 }
+.container-area.active .card.alt .button-container {
+  -webkit-transition-delay: .8s;
+          transition-delay: .8s;
+}
+
 
 /* Card */
 .card {
   position: relative;
   background: #ffffff;
-  border-radius: 5px;
-  padding: 25px 0 40px 0;
+  border-radius: 0px;
+  padding: 25px;
   box-sizing: border-box;
   box-shadow: 0 0px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: .3s ease;
@@ -187,18 +217,18 @@ input[type=password].invalid:not(.browser-default) {
 .card .title {
   position: relative;
   z-index: 1;
-  border-left: 5px solid #2669b6;
-  margin: 0 0 35px;
-  padding: 10px 0 10px 25px;
-  color: #2669b6;
+  border-bottom: 1px dashed #ddd;
+  margin: 0 auto;
+  padding: 0px 0px 25px;
+  color: #848688;
   font-size: 24px;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: center;
 }
 .card .input-container {
   position: relative;
-  /*margin: 0 60px 50px;*/
-  margin: 10px 30px 20px;
+  margin: 25px 0px 25px;
 }
 .card .input-container input {
   outline: none;
@@ -227,7 +257,7 @@ input[type=password].invalid:not(.browser-default) {
 }
 .card .input-container label {
   position: absolute;
-  top: 0;
+  top: 0 !important;
   left: 0;
   color: #757575;
   font-size: 18px;
@@ -386,18 +416,25 @@ input[type=password].invalid:not(.browser-default) {
 }
 .card.alt .title {
   position: relative;
-  border-color: #ffffff;
-  color: #ffffff;
+  z-index: 1;
+  border-bottom: 1px dashed #ddd;
+  margin: 0 auto;
+  padding: 0px 0px 25px;
+  color: ghostwhite;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: center;
 }
 .card.alt .title .close {
   cursor: pointer;
   position: absolute;
   top: 0;
-  right: 60px;
+  right: 0px;
   display: inline;
   color: #ffffff;
-  font-size: 58px;
-  font-weight: 400;
+  font-size: 42px;
+  font-weight: 300;
 }
 .card.alt .title .close:before {
   content: '\00d7';
@@ -473,6 +510,7 @@ input[type=password].invalid:not(.browser-default) {
 .btn-signup {
     background: #FFF;
     color: #2765ac;
+    width: 100%;
     font-weight: normal;
 }
 .btn-signup:hover {
@@ -516,9 +554,16 @@ div#test1 form {
 .tabs{overflow: hidden !important; }
 
 
+
+
 /**=============== Moblie responsive ====================*/
 @media(max-width: 798px){
-	.seller-header-logo img {
+	 
+   .container-area{
+    padding: 15px;
+   }
+
+  .seller-header-logo img {
 	    width: 90% !important;
 	    min-width: 75%;
 	    margin: 0 auto !important;

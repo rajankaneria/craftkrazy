@@ -1,12 +1,8 @@
-<div class="container login-form-area">
-  
-<!-- Mixins-->
-<!-- Pen Title-->
 <div class="pen-title">
-  <h1>Admin Login Form</h1><!-- <span>Pen <i class='fa fa-code'></i> by <a href='http://andytran.me'>Andy Tran</a></span> -->
+  <!-- <h1>Admin Login Form</h1> --><!-- <span>Pen <i class='fa fa-code'></i> by <a href='http://andytran.me'>Andy Tran</a></span> -->
 </div>
 <!-- <div class="rerun"><a href="">Rerun Pen</a></div> -->
-<div class="container">
+<div class="container-area">
   <div class="card"></div>
   <div class="card">
     <h1 class="title">Login</h1>
@@ -35,4 +31,3 @@
   </div>
 
 </div>
-</div> 

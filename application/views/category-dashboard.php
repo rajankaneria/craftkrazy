@@ -1,7 +1,7 @@
 
 <div class="container" style="width: 100% !important">
  <div class="row">
- 
+
 <div class="container">
  <div class="card-panel">
 
