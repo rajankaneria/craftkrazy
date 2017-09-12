@@ -133,7 +133,12 @@ class Product_model extends CI_Model{
         $result=$query->result_array();
         return $result;
     }
-      public function allSellerProduct($sellerID)
+     public function getProductByParentCat($parentCatID){
+        $query = $this->db->query("select * from product_details where pc_id='$parentCatID'");
+        $result = $query->result_array();
+        return $result;
+    }
+    public function allSellerProduct($sellerID)
     {
 
         $query=$this->db->query("select product_details.*,seller.contact_person,main_category.    mc_name , parent_category.pc_name,child_category.cc_name from product_details JOIN seller  ON product_details.seller_id=seller.seller_id JOIN main_category  ON product_details.mc_id=main_category.mc_id JOIN 
