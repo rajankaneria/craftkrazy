@@ -1356,12 +1356,22 @@ i.fa.fa-chevron-down {
     margin-top: 0px;
 }
 
-.main-cat-title {
+.main-cat-title a{
 	line-height: 25px;
 	margin-bottom: 10px;
     padding-bottom: 5px;
     border-bottom: 2px solid #ccc;
     color: #6b6b6b;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 0;
+}
+.main-cat-title a:hover{
+  line-height: 25px;
+  margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ccc;
+    color: #6a6a6a;
     font-size: 14px;
     text-transform: uppercase;
 }
