@@ -1,4 +1,9 @@
 /* css for logout*/
+
+.row.top-nav-container {
+    margin: 0 auto;
+}
+
 .blog-logout-btn 
 {
    float: right !important;
@@ -325,7 +330,7 @@ input:-webkit-autofill {
     /* margin: -24px 0px 0px 220px !important; */
     display: block;
     position: absolute;
-    top: 24px;
+    top: 25px;
     right: 0;
 }
 .main-logo img {
@@ -342,7 +347,9 @@ td.category-list {
 /**================= Mobile Responsive ============================*/
 
 /**=============== Moblie responsive ====================*/
+@media(min-width: 768px){
 
+}
 
 @media(min-width: 992px){
     
@@ -355,6 +362,11 @@ td.category-list {
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
     font-size: 35px;
     padding-left: 20px;
+    top: 25px;
+
+  }
+  nav .button-collapse{
+    top: 15px !important;
   }
   a.button-collapse li{
       font-size: 12px;

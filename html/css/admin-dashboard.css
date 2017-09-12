@@ -19,7 +19,7 @@ table.responsive-table tbody tr:last-child{
 }
 nav a.button-collapse{
 		display: block !important;
-		margin-top: -15px !important;
+		/*margin-top: -15px !important;*/
 	}
 /**================= Mobile Responsive ============================*/
 @media(min-width: 992px){
@@ -47,14 +47,14 @@ nav a.button-collapse{
 		font-weight: 400;
 	}
 }
-@media (max-width: 798px){
+@media (max-width: 768px){
 
 	.logout {
 	    right: 0;
-	    top: 20px;
+	    top: 10px;
 	}
 	nav .button-collapse{
-		top: 40px !important;
+		top: 20px !important;
 	}
 	.main-logo img{
 		width: 55% !important;

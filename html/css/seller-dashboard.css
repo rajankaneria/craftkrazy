@@ -1,4 +1,9 @@
 /* css for logout*/
+
+.row.top-nav-container {
+    margin: 0 auto;
+}
+
 .blog-logout-btn 
 {
    float: right !important;
@@ -344,22 +349,15 @@ td.category-list {
 
 
 /**=============== Moblie responsive ====================*/
-@media(min-width:798px ){
-  .logout {
-      right: 0;
-      top: 20px;
-    }
-}
 
-
-@media (max-width: 798px){
+@media (max-width: 768px){
 
   .logout {
-      right: 0;
-      top: 20px;
+      right: 25px;
+      top: 35px;
   }
   nav .button-collapse{
-    top: 40px !important;
+    top: 20px !important;
   }
   .main-logo img{
     width: 55% !important;
@@ -371,6 +369,7 @@ td.category-list {
   }
   .page-content {
       padding: 25px 0px;
+      overflow: hidden;
   }
   .modal .modal-content{
     padding: 25px 10px;
@@ -413,6 +412,11 @@ td.category-list {
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
     font-size: 35px;
     padding-left: 20px;
+    top: 25px;
+/*    right: 10px;*/
+  }
+  nav .button-collapse{
+    top: 15px  !important;
   }
   a.button-collapse li{
       font-size: 12px;
