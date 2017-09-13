@@ -89,5 +89,28 @@ $(function(){
 	 	//$("#loginModal").modal('close');
 	 });
 
+
+/*Position Fixed On Scroll top */
+
+	var header = $(".categories-area");
+	  $(window).scroll(function() {    
+	    var scroll = $(window).scrollTop();
+	    var height= $('header').height() + $('.productBanner').height();
+	       if (scroll >= height) {
+	          header.addClass("fixed");
+	        } else {
+	          header.removeClass("fixed");
+	        }
+	});
+
+/*
+	$(window).scroll(function(){
+	  var sticky = $('.categories-area'),
+	      scroll = $(window).scrollTop();
+
+	  if (scroll >= 1) sticky.addClass('fixed');
+	  else sticky.removeClass('fixed');
+	});
+*/
 });
 
