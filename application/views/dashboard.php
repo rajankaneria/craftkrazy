@@ -21,6 +21,7 @@
         <th>Price</th>
         <th>Discounted price</th>
         <th>Quantity</th>
+        <th>Tags</th>
         <th>Actions</th>
    		</tr>
     </thead>
@@ -33,6 +34,7 @@
         <td><?php echo $productRow['price']; ?></td>
         <td><?php echo $productRow['discounted_price']; ?></td>
         <td><?php echo $productRow['quantity']; ?></td>
+        <td><?php echo $productRow['tag']; ?></td>
           <td class="right-align blog-btn">
           <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light blue-grey blog-view-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
           <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light red product_delete_btn"><i class="material-icons">delete</i></a>

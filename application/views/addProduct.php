@@ -67,8 +67,7 @@
         <input type="file" name="product_image" id="product_image">
         </div>        
         </div> 
-        </div> 
-
+        </div>
         <div class="row lable-row">      
          <div class="input-field col s12">
         <label>Discounted Price</label>
@@ -86,6 +85,9 @@
         <div class="row">                 
              <label for="content">Descriptions</label>
             <textarea id="description" name="description" style="height:12rem !important"></textarea>            
-        </div>    
+        </div> 
+        <div class="row"> 
+        <input type="text" name="tag" id="tag" class="chips">           
+        </div>
     </form>
   </div>
