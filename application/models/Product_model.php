@@ -184,4 +184,8 @@ class Product_model extends CI_Model{
         $this->db->where("mc_id",$catId);
         $this->db->delete("main_category");
     }
+    public function addTowishList($wishListData){
+        $query=$this->db->insert("wishlist",$wishListData);
+    }
+
 }

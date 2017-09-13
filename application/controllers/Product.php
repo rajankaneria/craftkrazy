@@ -188,10 +188,11 @@ class Product extends CI_Controller {
 					"discounted_price"=>$_POST["discounted_price"],
 					"price"=>$_POST["price"],	
 					"description"=>$_POST["description"],
+
 					"quantity"=>$_POST["quantity"],
 					"tag"=>$_POST['tag'].",".$_POST["product_name"]					
 			);
-		
+
 		$proID = $this->product_model->addProduct($result);
 
 		//Define the file names with blog id with same extension which has been uploaded
@@ -289,8 +290,6 @@ class Product extends CI_Controller {
 
 		$this->load->view('updateProduct',array('proData'=>$productData,"categoryList"=>$categoryList));
 	}
-	
-
 	public function getCartProducts(){
 		$this->load->model("product_model");
 		$output = array();
@@ -383,9 +382,13 @@ class Product extends CI_Controller {
 	    //set name in the config file for the feature image
 	    $config['file_name'] = $catID."_product";
 	    $this->load->library('upload', $config);
-	    $this->upload->do_upload('mc_image');	
-
-
+	    $this->upload->do_upload('mc_image');
+	}
+	public function getTowishList(){
+		$data=$_POST["data"];
+		$this->load->model("product_model");
+		$result=$this->product_model->addTowishList($data);
+		echo json_encode($result);
 	}
 
 

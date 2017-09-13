@@ -187,13 +187,6 @@ function initChildCat(){
   });
 
 
-  $(".fa-heart").on("click",function(){
-  var productID=$(this).data("product-id");
-  $.post(baseurl+"product/addProductwishList/"+productID,function(data){
-
-  });
-
-});
 
 $(".category-edit-btn").on("click",function(){
     $("#editModal .modal-content").html("");
@@ -252,6 +245,26 @@ $("#updatecategorydata").on("click",function(){
           //window.location.reload();
         }
       });
+  });
+  $(".fa-heart").on("click",function(){
+    var baseurl=$("#base_url").val();
+    var data={
+      "product_id":$("#product_id").val(),
+      "user_id":$("#user_id").val()
+    };
+    $.post(baseurl+"Product/getTowishList",{data:data},function(data){
+      var data=$.parseJSON(data);
+      if(data.status="ok"){
+        alert("Product Addede succesfully...");
+      } 
+      else if(data.status="fail"){ 
+        alert("Product Addede fail...");
+       }
+       else{
+        console.log(data);
+       }
+
+    });
   });
 
 });
