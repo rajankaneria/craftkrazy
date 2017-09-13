@@ -133,16 +133,7 @@ $(function(){
         return false;
     });
 
-	 $('footer').click(function(){
-        $('#profile-area').hide(350);
-        return false;
-    });
-
-	 $('.container').click(function(){
-        $('#profile-area').hide(350);
-        return false;
-    });
-
+	
 
 });
 
