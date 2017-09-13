@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 
 	
 	public function index()
-	{		
+	{
 
 		$this->load->model("category_model");
 		$this->load->model("product_model");

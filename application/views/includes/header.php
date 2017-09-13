@@ -46,7 +46,11 @@
     <div class="top-nav-item"><a href="<?php base_url(); ?>home">Home</a></div>
     <div class="top-nav-item"><a href="#">Contact</a></div>
     <div class="top-nav-item"><a href="#">Sell on Craftkrazy</a></div>
-    <div class="top-nav-item"><a href="#" id="userBtn-mobile">Log in</a></div>
+    <?php if($this->session->userdata('user')){?>
+    <div class="top-nav-item"><a href="<?php echo base_url() ?>User/logout">Logout</a></div>
+    <?php } else { ?>
+     <div class="top-nav-item"><a href="#" id="userBtn-mobile">Login</a></div>
+     <?php } ?>
   </div>
 
   <div class="nav-wrapper" style="overflow: hidden;">
@@ -86,10 +90,12 @@
           <div class="user-area-background">
           <div class="row user-area">
             <div class="user left col m4">
-              <a href="#!"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></a>
+            <?php if($this->session->userdata('user')){ ?>          
+              <a href="#!"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i><?php echo $this->session->userdata('user');?></a>
+              <?php } ?>
             </div>
             <div class="col m8 left">
-              <p style="color: #848688;line-height: 2rem;"> Mr. Craft User</p>
+              <p style="color: #848688;line-height: 2rem;">Mr. Craft User</p>
             </div>
           </div>  
             <div class="row searbar-area">

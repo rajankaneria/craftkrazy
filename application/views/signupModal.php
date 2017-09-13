@@ -6,7 +6,7 @@
       	<div class="row">
       		<div class="input-field col s12">
 	          <input id="name" type="text" class="validate" name="name">
-	          <label for="full_name">Full Name</label>
+	          <label for="name">Full Name</label>
 	        </div>
 	        <div class="input-field col s12">
 	          <input id="mobile" type="text" class="validate" name="mobile">

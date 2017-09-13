@@ -29,7 +29,6 @@ class Seller extends CI_Controller
 		echo json_encode($output);
 
 	}
-
 	public function login(){
 		$data=$_POST["data"];
 		$this->load->model("Seller_model");
