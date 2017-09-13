@@ -21,7 +21,7 @@
 <!--==========  Satrt Products Area  Here  =============-->
 <div class="row productDisplay-area">
   <div class="col m3">
-    <div class="white categories-area">
+    <div class="white categories-area sticky">
       <div>
         <h5>Main Categories</h5>
       </div>

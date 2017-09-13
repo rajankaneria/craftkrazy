@@ -53,6 +53,15 @@
      <?php } ?>
   </div>
 
+<!-- USER PRODILE AREA START HERE -->
+  <div id="profile-area" class="userProfile-area">
+    <ul>
+      <li class="UserName"><a href="<?php echo base_url(); ?>myAccount" readonly="true">Mr. Crazy Kraft</a></li>
+      <li><a href="<?php echo base_url(); ?>myAccount">My Account <span class="fa fa-user right" aria-hidden="true"></span></a></li>
+      <li><a href="<?php echo base_url(); ?>myAccount">Logout <span class="fa fa-sign-out right" aria-hidden="true"></span></a></li>
+    </ul>
+  </div>
+<!-- USER PRODILE AREA OVER HERE -->
   <div class="nav-wrapper" style="overflow: hidden;">
     <div class="col m3 logo-area">
     <a href="<?php echo base_url(); ?>home" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
@@ -77,13 +86,13 @@
     
     <div class="cart-area col m5">
         <span class="user right col m2 hide-on-med-and-down">
-        <a href="#!"><i id="userBtn" class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></a>
+        <a href="#!"><i id="userBtn1" class="fa fa-user-circle-o fa-2x userProfile" aria-hidden="true"></i></a>
         </span>
         <span class="right cart-bag col m2">
         <a href="<?php echo base_url() ?>shoppingCart"><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i><span class="cart-bedge"><?php if($this->session->userdata("shoppingCart")){ echo sizeof($this->session->userdata("shoppingCart")); }else{ echo 0; } ?></span></a></span>
     </div>
-   
   </div>
+
      <ul id="slide-out" class="side-nav">
       <li>
         <div class="user-view">
@@ -174,4 +183,3 @@
   </div>
 </nav>
 </header>
-

@@ -92,25 +92,57 @@ $(function(){
 
 /*Position Fixed On Scroll top */
 
-	var header = $(".categories-area");
-	  $(window).scroll(function() {    
-	    var scroll = $(window).scrollTop();
-	    var height= $('header').height() + $('.productBanner').height();
-	       if (scroll >= height) {
-	          header.addClass("fixed");
-	        } else {
-	          header.removeClass("fixed");
-	        }
+	var stickySidebar = $('.sticky');
+
+	if (stickySidebar.length > 0) {	
+	  var stickyHeight = stickySidebar.height(),
+	      sidebarTop = stickySidebar.offset().top;
+	}
+
+	// on scroll move the sidebar
+	$(window).scroll(function () {
+	  if (stickySidebar.length > 0) {	
+	    var scrollTop = $(window).scrollTop();
+	            
+	    if (sidebarTop < scrollTop) {
+	      stickySidebar.css('top', scrollTop - sidebarTop);
+
+	      // stop the sticky sidebar at the footer to avoid overlapping
+	      var sidebarBottom = stickySidebar.offset().top + stickyHeight,
+	          stickyStop = $('.productDisplay-area').offset().top + $('.productDisplay-area').height();
+	      if (stickyStop < sidebarBottom) {
+	        var stopPosition = $('.productDisplay-area').height() - stickyHeight;
+	        stickySidebar.css('top', stopPosition);
+	      }
+	    }
+	    else {
+	      stickySidebar.css('top', '0');
+	    } 
+	  }
 	});
 
-/*
-	$(window).scroll(function(){
-	  var sticky = $('.categories-area'),
-	      scroll = $(window).scrollTop();
 
-	  if (scroll >= 1) sticky.addClass('fixed');
-	  else sticky.removeClass('fixed');
-	});
-*/
+/*=============== User profile ================*/
+
+	$('.userProfile').on("click", function(){
+		$('#profile-area').toggle(300);
+	})
+
+	 $('.main').click(function(){
+        $('#profile-area').hide(350);
+        return false;
+    });
+
+	 $('footer').click(function(){
+        $('#profile-area').hide(350);
+        return false;
+    });
+
+	 $('.container').click(function(){
+        $('#profile-area').hide(350);
+        return false;
+    });
+
+
 });
 
