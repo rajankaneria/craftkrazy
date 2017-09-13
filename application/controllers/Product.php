@@ -177,6 +177,7 @@ class Product extends CI_Controller {
 	public function addProduct()
 	{
 		$this->load->model("product_model");
+		//$tag = $_POST["tag"].",".$_POST["product_name"];
 		$result=array(
 					"mc_id"=>$_POST["mc_id"],
 					"pc_id"=>$_POST["pc_id"],
@@ -187,9 +188,10 @@ class Product extends CI_Controller {
 					"discounted_price"=>$_POST["discounted_price"],
 					"price"=>$_POST["price"],	
 					"description"=>$_POST["description"],
-					"quantity"=>$_POST["quantity"]							
+					"quantity"=>$_POST["quantity"],
+					"tag"=>$_POST['tag'].",".$_POST["product_name"]					
 			);
-
+		
 		$proID = $this->product_model->addProduct($result);
 
 		//Define the file names with blog id with same extension which has been uploaded

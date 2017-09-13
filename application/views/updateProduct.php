@@ -93,7 +93,10 @@
         <div class="row">                 
              <label for="content">Descriptions</label>
             <textarea id="description" name="description" style="height:12rem !important"><?php echo $proData['description'] ?></textarea>            
-        </div>  
+        </div> 
+        <div class="row">  
+            <div class="chips chips-initial"></div>
+        </div> 
         <input type="hidden" name="proID" value="<?php echo $proData['product_id']; ?>">  
     </form>
   </div>

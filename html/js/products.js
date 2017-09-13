@@ -55,6 +55,22 @@ function initChildCat(){
 
 
   $(function() {
+
+/*=====================FOR TAG START============================ */
+  $('.chips').material_chip();
+  $('.chips-initial').material_chip({
+    data: [{
+      tag: 'Apple',
+    }, {
+      tag: 'Microsoft',
+    }, {
+      tag: 'Google',
+    }],
+  });
+
+
+  /*=====================TAG END============================ */
+
     var baseurl=$("#base_url").val();
     initMainCat();
     initParentCat();
@@ -62,6 +78,7 @@ function initChildCat(){
      /*End*/
     $('.modal').modal();
     $('select').material_select();
+
 
     var Accordion = function(el, multiple) {
       this.el = el || {};
