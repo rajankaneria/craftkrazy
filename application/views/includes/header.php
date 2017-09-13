@@ -58,7 +58,7 @@
     <a href="<?php echo base_url(); ?>home" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
     </div>
 
-    <div class="search-area col m5 hide-on-med-and-down container-box-search">
+    <div class="search-area col m4 hide-on-med-and-down container-box-search">
    <!--  <form>
       <input type="search" name="Search" placeholder="Search" class="search-box">
     </form> -->
@@ -75,7 +75,7 @@
     </form>
     </div>
     
-    <div class="cart-area col m4">
+    <div class="cart-area col m5">
         <span class="user right col m2 hide-on-med-and-down">
         <a href="#!"><i id="userBtn" class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></a>
         </span>

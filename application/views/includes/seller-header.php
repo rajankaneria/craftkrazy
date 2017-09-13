@@ -50,7 +50,7 @@
   <ul id="slide-out" class="side-nav">
     <li>
       <div class="row">
-          <center><h5 style="background-color: rgba(255,255,255,0.1);padding: 25px;margin-top: 0px;">Menu</h5></center>
+          <center><h5 style="background-color: rgba(0, 0, 0, 0.1);padding: 25px;margin-top: 0px;">Seller Menu</h5></center>
       </div>
     </li>
     <li><a href="#!">First Sidebar Link</a></li>
