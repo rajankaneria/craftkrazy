@@ -9,26 +9,29 @@ $(function(){
     });	 
 
 	 $("#sign-up-btn").on("click",function(){
+
 		var base_url=$("#base_url").val();
 		var data={
-				"name":$("#name").val,
-				"mobile":$("#mobile").val,
-				"email":$("#email").val(),
-				"password":$("#password").val()
+				"name":$("#signupModal #name").val(),
+				"mobile":$("#signupModal #mobile").val(),
+				"email":$("#signupModal #email").val(),
+				"password":$("#signupModal #password").val()
 				};
 			$.post(base_url+"User/register",{data:data},function(data){
 				var data=$.parseJSON(data);
 				if(data.status=="ok"){
-					//window.location.reload();
+					window.location.reload();
 				}
 				else if(data.status=="fail"){
-					//window.location.href="#!";
+					window.location.href="#!";
 				}
 				else{
 					console.log(data);
 				}
-
 			});
+			$("#signupModal input").val(""); $("#sign-up-btn").val("Sign Up");
+
+			
 
 		});
 
@@ -51,19 +54,16 @@ $(function(){
 				}
 
 			});
+			$("#loginModal input").val(""); $("#login-btn").val("Login");
 
 		});
-
-
-
-
 
 	 $(".nav-bar-dropdown").hover(function(){
 	 	var containerID = $(this).data("target");
 	 	$(".dropdown-menu-container").hide();
 	 	$("#"+containerID).fadeIn(300);
 	 },function(){
-	 	console.log("out");
+	 	console.log("containerID");
 		$(".dropdown-menu-container").hide();
 	 });
 

@@ -14,7 +14,7 @@
 	        </div>
 
 	        <div class="input-field col s6">
-	          <input id="login-btn" type="submit" class="validate waves-effect waves-light btn blue" value="Login" class="btn btn blue">
+	          <input id="login-btn" type="button" class="validate waves-effect waves-light btn blue" value="Login" class="btn btn blue">
 	        </div>
 
 	        <div class="right input-field">

@@ -16,6 +16,7 @@ class Seller_model extends CI_Model
 					"message"=>"Your Registration Succesfully..."
 			);	
 			$this->session->set_userdata('email', $data["email"]);
+			
 		}
 		else {
 		$check=array("status"=>"ok",
