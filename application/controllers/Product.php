@@ -34,7 +34,7 @@ class Product extends CI_Controller {
 		$this->load->model("product_model");
 		$categoryList = $this->category_model->generateNavBar(7);
 		$categoryData = $this->product_model->getMainCatDetails($catID);
-		$productsByparentCatData=$this->product_model->getProductByParentCat($parentId);
+		$productList = $this->product_model->getProductByMainCat($catID);	
 		
 		$headerData = array(
 			"pageTitle" => "Product",
@@ -46,7 +46,7 @@ class Product extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "products",
-            "viewData" => array("categoryData"=>$categoryData,"productsparentCatData"=>$productsByparentCatData),
+            "viewData" => array("categoryData"=>$categoryData,'productList'=>$productList),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
@@ -73,7 +73,7 @@ class Product extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "products",
-            "viewData" => array("categoryData"=>$categoryData,"productsparentCatData"=>$productsByparentCatData),
+            "viewData" => array("categoryData"=>$categoryData,"productList"=>$productsByparentCatData),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
@@ -340,7 +340,7 @@ class Product extends CI_Controller {
 		$this->product_model->updateCategory($updateData,$proID);
 
 		//set configuration for the upload library
-		$config['upload_path'] = 'C:\wamp\www\craftkrazy\html\images\category';
+		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\category';
 	    $config['allowed_types'] = 'gif|jpg|png';
 	    $config['overwrite'] = TRUE;
 	    $config['encrypt_name'] = FALSE;
@@ -372,7 +372,7 @@ class Product extends CI_Controller {
 
 
 			//set configuration for the upload library
-		$config['upload_path'] = 'C:\wamp\www\craftkrazy\html\images\category';
+		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\category';
 	    $config['allowed_types'] = 'gif|jpg|png';
 	    $config['overwrite'] = TRUE;
 	    $config['encrypt_name'] = FALSE;

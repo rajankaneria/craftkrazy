@@ -6,7 +6,55 @@ $(function(){
       draggable: true, // Choose whether you can drag to open on touch screens,
       onOpen: function(el) { /* Do Stuff */ }, // A function to be called when sideNav is opened
       onClose: function(el) { /* Do Stuff */ }, // A function to be called when sideNav is closed
-    });
+    });	 
+
+	 $("#sign-up-btn").on("click",function(){
+		var base_url=$("#base_url").val();
+		var data={
+				"name":$("#name").val,
+				"mobile":$("#mobile").val,
+				"email":$("#email").val(),
+				"password":$("#password").val()
+				};
+			$.post(base_url+"User/register",{data:data},function(data){
+				var data=$.parseJSON(data);
+				if(data.status=="ok"){
+					//window.location.reload();
+				}
+				else if(data.status=="fail"){
+					//window.location.href="#!";
+				}
+				else{
+					console.log(data);
+				}
+
+			});
+
+		});
+
+	 $("#login-btn").on("click",function(){
+		var base_url=$("#base_url").val();
+		var data={
+				"email":$("#email").val(),
+				"password":$("#password").val()
+				};
+			$.post(base_url+"User/login",{data:data},function(data){
+				var data=$.parseJSON(data);
+				if(data.status=="ok"){
+					window.location.reload();
+				}
+				else if(data.status=="fail"){
+					window.location.href="#!";
+				}
+				else{
+					console.log(data);
+				}
+
+			});
+
+		});
+
+
 
 
 

@@ -52,7 +52,7 @@
   <div class="uimax-block-section-26 pdt-80 pdb-80">
     <div class="row">
         <div class="product-list">
-           <?php foreach ($productsparentCatData as $productKey => $productRow) { ?>
+           <?php foreach ($productList as $productKey => $productRow) { ?>
               <?php $this->load->view("product-frame",$productRow); ?>
               <?php } ?>        
           
