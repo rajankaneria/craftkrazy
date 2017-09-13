@@ -1442,7 +1442,7 @@ label.active{
 
 /*=================================== Mobile Responsive =============================================*/
 .wishlist-btn {background: #fff !important;box-shadow: none;}
-.wishlist-btn i{color: red;}
+.wishlist-btn i{color: rgb(182, 38, 38);}
 .wishlist-btn :hover{background: red;-webkit-transition: all 0.5s ease-in-out;
 -moz-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
@@ -1666,6 +1666,10 @@ a#login-user-Btn:hover{
 }
 /* ============  Mobile Responsive Navigations Area ====================== */
 @media(max-width: 768px){
+  .row.cat-img-box {
+    padding: 0px 5px;
+    margin-bottom: 10px;
+  }
   .drag-target{
     z-index: 990;
   }
@@ -1839,5 +1843,30 @@ a#login-user-Btn:hover{
   }
   .modal-40{
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .col.m3.logo-area {
+    width: 45%;
+  }
+  .add-to-cart{
+    margin: 5px;
+    width: 50%;
+    margin:0px 50px;
+  }
+}
+@media only screen and (min-device-width : 1022px) and (max-device-width : 1366px) {
+  .top-nav-container{
+    width: 90%;
+  }
+  .main-logo img{
+    width: 100%;
+  }
+  .col.m3.logo-area{
+    width: 25%;
+  }
+  .navigation-menu-area .nav-wrapper.container{
+    width: 90%;
   }
 }
