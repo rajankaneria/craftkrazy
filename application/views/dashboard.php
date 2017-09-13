@@ -9,7 +9,7 @@
       <div class="page-button"><a class="waves-effect waves-light btn blue" id="addProductBtn">Add</a></div>
   </div>
    <div class="page-content">
-   	<table border="1" class="responsive-table">
+   	<table border="1" class="responsive-table centered">
     <thead>
    		<tr>
         <th>Category</th>
