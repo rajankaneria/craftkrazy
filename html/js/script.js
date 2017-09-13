@@ -128,9 +128,8 @@ $(function(){
 		$('#profile-area').toggle(300);
 	})
 
-	 $('.main').click(function(){
+	$('.main').click(function(){
         $('#profile-area').hide(350);
-        return false;
     });
 
 	

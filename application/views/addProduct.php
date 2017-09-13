@@ -87,7 +87,7 @@
             <textarea id="description" name="description" style="height:12rem !important"></textarea>            
         </div> 
         <div class="row"> 
-        <input type="text" name="tag" id="tag" class="chips">           
+          <input type="text" name="tag" id="tag" class="chips" placeholder="Add a tag"> 
         </div>
     </form>
   </div>
