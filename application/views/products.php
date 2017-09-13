@@ -2,7 +2,9 @@
 
 <!--  Slider starts here -->
 <div class="row">
+  <div class="productBanner">
       <img src="<?php echo BASE_url();?>html/images/category/<?php echo $categoryData["mc_image"]; ?>" class="responsive-img" width="100%"/>
+  </div>    
 </div>      
 <!--  Slider Over here -->
 
@@ -17,9 +19,9 @@
 <!--  categoriy Over here -->
 
 <!--==========  Satrt Products Area  Here  =============-->
-<div class="row">
+<div class="row productDisplay-area">
   <div class="col m3">
-    <div class="white categories-area">
+    <div class="white categories-area sticky">
       <div>
         <h5>Main Categories</h5>
       </div>
