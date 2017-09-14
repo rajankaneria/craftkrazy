@@ -270,6 +270,13 @@ $("#input-search").on("keyup",function(){
       }
 
   });
+
+    if(data<2){
+      $("#searchData").hide();
+    }
+    else {
+      $("#searchData").show();
+    }
   });
 
 });

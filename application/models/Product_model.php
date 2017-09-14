@@ -192,8 +192,8 @@ class Product_model extends CI_Model{
         $result=$query->row_array();
         
         $srch=implode("",$result);
-        $x=str_replace('"',' ', $srch);
-        return $x;
+      /*  $x=str_replace('"',' ', $srch);*/
+        return $srch;
     }
 
 }
