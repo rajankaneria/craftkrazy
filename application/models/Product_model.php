@@ -189,11 +189,10 @@ class Product_model extends CI_Model{
     }
     public function addSearchData($search_term){
         $query=$this->db->query("select tag from product_details where tag like '%$search_term%'");
-        $result=$query->row_array();
+        $result=$query->row_array();        
+       // $srch=implode("",$result); 
+       return $result;    
         
-        $srch=implode("",$result);
-        $x=str_replace('"',' ', $srch);
-        return $x;
     }
 
 }

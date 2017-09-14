@@ -186,17 +186,6 @@ function initChildCat(){
     deleteCartProduct($(this).data("product-id"));
   });
 
-
-
-  $(".fa-heart").on("click",function(){
-    var baseurl=$("#base_url").val();  
-    var productID=$(this).data("product-id");
-    $.post(baseurl+"product/getTowishList"+productID,function(data){
-      var data=$.parseJSON(data);  
-    });
-  });
-
-
 $(".category-edit-btn").on("click",function(){
     $("#editModal .modal-content").html("");
     $("#editModal").modal('open');
@@ -254,8 +243,20 @@ $("#updatecategorydata").on("click",function(){
         }
       });
   });
+/*  ==== WISHLIST PRODUCT ADD=== */
+
+  $(".fa-heart").on("click",function(){
+    var baseurl=$("#base_url").val();  
+    var productID=$(this).data("product-id");
+    $.post(baseurl+"product/getTowishList"+productID,function(data){
+      var data=$.parseJSON(data);  
+    });
+  });
+
+/*================================*/
 
 /*===SEARCH AUTOCOMPLE AJAX=====*/
+
 $("#input-search").on("keyup",function(){
   var baseurl=$("#base_url").val();
   var data=$("#input-search").val();
@@ -264,16 +265,15 @@ $("#input-search").on("keyup",function(){
       url:baseurl+"product/getSearchData/",
       data:"data="+data,     
       type:"POST",
+      processData:false,
+      contentType:false,
       success:function(result){
-        $("#searchData").html(result);
-        
+        $("#searchData").html(result);        
       }
-
   });
   });
 
-});
-  
+});  
 
 /*=========================*/
 
