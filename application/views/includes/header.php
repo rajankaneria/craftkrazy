@@ -27,6 +27,11 @@
     <link href="<?php echo base_url(); ?>html/css/<?php echo $fileName; ?>" rel="stylesheet">
     <?php } ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style type="text/css">
+      .ui-autocomplete-input:focus {color:green;
+        border:2px outset green;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -73,21 +78,21 @@
    <!--  <form>
       <input type="search" name="Search" placeholder="Search" class="search-box">
     </form> -->
-    <form action="" class="search">
-  
-      <div class="field">
-
+    <div class="ui-widget">
+    <form class="search" action="#!" method="post" name="form">  
+      <div class="field" >
         <input type="text" class="input-search" id="input-search" name="input-search" required>
         
         <label for="input-search">Search</label>
         <span class="fa fa-search search-icon" aria-hidden="true"></span>
       </div> <!-- /field -->
-
+      <div id="searchData" style="background: #000;height: 100px;"></div>
     </form>
+    </div>
     </div>
     
     <div class="cart-area col m5">
-    <?php if($this->session->userdata('user')){?>
+    <?php if($this->session->userdata('user')){ ?>
         <span class="user right col m2 hide-on-med-and-down">
         <a href="#!"><i id="userBtn1" class="fa fa-user-circle-o fa-2x userProfile" aria-hidden="true"></i></a>
         </span>

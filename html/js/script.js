@@ -30,9 +30,6 @@ $(function(){
 				}
 			});
 			$("#signupModal input").val(""); $("#sign-up-btn").val("Sign Up");
-
-			
-
 		});
 
 	 $("#login-btn").on("click",function(){

@@ -390,6 +390,14 @@ class Product extends CI_Controller {
 		$result=$this->product_model->addTowishList($data);
 		echo json_encode($result);
 	}
+	public function getSearchData(){
+		$this->load->model("product_model");
+		$data=$_POST["data"];		
+		$search=$this->product_model->addSearchData($data);
+		$s1=str_replace('"','', $search);
+		echo json_encode($s1);
+
+	}
 
 
 }
