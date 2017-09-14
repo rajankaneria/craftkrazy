@@ -27,11 +27,7 @@
     <link href="<?php echo base_url(); ?>html/css/<?php echo $fileName; ?>" rel="stylesheet">
     <?php } ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <style type="text/css">
-      .ui-autocomplete-input:focus {color:green;
-        border:2px outset green;
-        }
-    </style>
+    
 </head>
 <body>
 <header>
@@ -86,7 +82,7 @@
         <label for="input-search">Search</label>
         <span class="fa fa-search search-icon" aria-hidden="true"></span>
       </div> <!-- /field -->
-      <div id="searchData" style="background: #000;height: 100px;"></div>
+      <div id="searchData" class="searchResult-area"></div>
     </form>
     </div>
     </div>

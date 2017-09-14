@@ -271,6 +271,13 @@ $("#input-search").on("keyup",function(){
         $("#searchData").html(result);        
       }
   });
+
+    if(data<2){
+      $("#searchData").hide();
+    }
+    else {
+      $("#searchData").show();
+    }
   });
 
 });  
