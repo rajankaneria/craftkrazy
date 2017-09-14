@@ -261,24 +261,21 @@ $("#input-search").on("keyup",function(){
   var baseurl=$("#base_url").val();
   var data=$("#input-search").val();
   $.ajax({
-
       url:baseurl+"product/getSearchData/",
       data:"data="+data,     
-      type:"POST",
-      processData:false,
-      contentType:false,
+      type:"POST",     
       success:function(result){
         $("#searchData").html(result);        
       }
   });
 
-    if(data<2){
-      $("#searchData").hide();
-    }
-    else {
-      $("#searchData").show();
-    }
-  });
+      if(data<2){
+        $("#searchData").hide();
+      }
+      else {
+        $("#searchData").show();
+      }
+    });
 
 });  
 
