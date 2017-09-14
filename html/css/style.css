@@ -1766,6 +1766,18 @@ a#login-user-Btn:hover{
 /*========== AREA ADMIN OVERE HERE ====================*/
 
 
+/**============= SERACH AUTO COMPLETE ===============*/
+.autocomplete-content {
+    margin-top: 0PX;
+    margin-bottom: 20px;
+    display: block;
+    opacity: 1;
+    position: static;
+    margin-left: 20px;
+    z-index: 2;
+}
+
+
 
 
 
