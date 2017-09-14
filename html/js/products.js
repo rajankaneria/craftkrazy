@@ -176,7 +176,7 @@ function initChildCat(){
   });
 
   $(".add-to-cart").on("click",function(){
-    Materialize.toast('Product Added Succesfully.', 3000)
+    Materialize.toast('Product Added Succesfully.', 4000)
     var productID=$(this).data("product-id");
     $.post(baseurl+"product/addProductToCart/"+productID,function(data){
         $(".cart-bedge").html(data);
@@ -187,13 +187,15 @@ function initChildCat(){
   });
 
 
-  $(".fa-heart").on("click",function(){
-  var productID=$(this).data("product-id");
-  $.post(baseurl+"product/addProductwishList/"+productID,function(data){
 
+  $(".fa-heart").on("click",function(){
+    var baseurl=$("#base_url").val();  
+    var productID=$(this).data("product-id");
+    $.post(baseurl+"product/getTowishList"+productID,function(data){
+      var data=$.parseJSON(data);  
+    });
   });
 
-});
 
 $(".category-edit-btn").on("click",function(){
     $("#editModal .modal-content").html("");
@@ -207,7 +209,6 @@ $(".category-edit-btn").on("click",function(){
 
 $("#addCategoryBtn").on("click",function(){
   $("#addModal").modal('open');
-
 });
 $("#sendCategoryData").on("click",function(){
   var catData=new FormData($("#addCategoryForm")[0]);
@@ -254,7 +255,30 @@ $("#updatecategorydata").on("click",function(){
       });
   });
 
+/*===SEARCH AUTOCOMPLE AJAX=====*/
+$("#input-search").on("keyup",function(){
+  var baseurl=$("#base_url").val();
+  var data=$("#input-search").val();
+  $.ajax({
+
+      url:baseurl+"product/getSearchData/",
+      data:"data="+data,     
+      type:"POST",
+      success:function(result){
+        $("#searchData").html(result);
+        
+      }
+
+  });
+  });
+
 });
+  
+
+/*=========================*/
+
+
+
 function deleteCartProduct(productID){
   var baseurl=$("#base_url").val();
   $.post(baseurl+"product/deleteCartProduct/"+productID,function(data){

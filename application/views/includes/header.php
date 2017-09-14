@@ -27,6 +27,11 @@
     <link href="<?php echo base_url(); ?>html/css/<?php echo $fileName; ?>" rel="stylesheet">
     <?php } ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style type="text/css">
+      .ui-autocomplete-input:focus {color:green;
+        border:2px outset green;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -46,21 +51,23 @@
     <div class="top-nav-item"><a href="<?php base_url(); ?>home">Home</a></div>
     <div class="top-nav-item"><a href="#">Contact</a></div>
     <div class="top-nav-item"><a href="#">Sell on Craftkrazy</a></div>
-    <?php if($this->session->userdata('user')){?>
-    <div class="top-nav-item"><a href="<?php echo base_url() ?>User/logout">Logout</a></div>
-    <?php } else { ?>
-     <div class="top-nav-item"><a href="#" id="userBtn-mobile">Login</a></div>
-     <?php } ?>
+    <?php if(!$this->session->userdata('user')){?>
+    <div class="top-nav-item"><a href="#" id="userBtn-mobile">Login</a></div>
+    <?php } ?>
+     
+   
   </div>
 
 <!-- USER PRODILE AREA START HERE -->
+<?php if($this->session->userdata('user')){?>
   <div id="profile-area" class="userProfile-area">
     <ul>
-      <li class="UserName"><a href="<?php echo base_url(); ?>myAccount" readonly="true">Mr. Crazy Kraft</a></li>
+      <li class="UserName"><a href="#!" readonly="true"><?php echo $this->session->userdata('user')?></a></li>
       <li><a href="<?php echo base_url(); ?>myAccount">My Account <span class="fa fa-user right" aria-hidden="true"></span></a></li>
-      <li><a href="<?php echo base_url(); ?>myAccount">Logout <span class="fa fa-sign-out right" aria-hidden="true"></span></a></li>
+      <li><a href="<?php echo base_url(); ?>user/logout">Logout <span class="fa fa-sign-out right" aria-hidden="true"></span></a></li>
     </ul>
   </div>
+  <?php } ?>
 <!-- USER PRODILE AREA OVER HERE -->
   <div class="nav-wrapper" style="overflow: hidden;">
     <div class="col m3 logo-area">
@@ -71,23 +78,25 @@
    <!--  <form>
       <input type="search" name="Search" placeholder="Search" class="search-box">
     </form> -->
-    <form action="" class="search">
-  
-      <div class="field">
-
+    <div class="ui-widget">
+    <form class="search" action="#!" method="post" name="form">  
+      <div class="field" >
         <input type="text" class="input-search" id="input-search" name="input-search" required>
         
         <label for="input-search">Search</label>
         <span class="fa fa-search search-icon" aria-hidden="true"></span>
       </div> <!-- /field -->
-
+      <div id="searchData" style="background: #000;height: 100px;"></div>
     </form>
+    </div>
     </div>
     
     <div class="cart-area col m5">
+    <?php if($this->session->userdata('user')){ ?>
         <span class="user right col m2 hide-on-med-and-down">
         <a href="#!"><i id="userBtn1" class="fa fa-user-circle-o fa-2x userProfile" aria-hidden="true"></i></a>
         </span>
+        <?php } ?>
         <span class="right cart-bag col m2">
         <a href="<?php echo base_url() ?>shoppingCart"><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i><span class="cart-bedge"><?php if($this->session->userdata("shoppingCart")){ echo sizeof($this->session->userdata("shoppingCart")); }else{ echo 0; } ?></span></a></span>
     </div>
