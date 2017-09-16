@@ -67,7 +67,7 @@
 <!-- USER PRODILE AREA OVER HERE -->
   <div class="nav-wrapper" style="overflow: hidden;">
     <div class="col m3 logo-area">
-    <a href="<?php echo base_url(); ?>home" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy" width="200"></a>
+    <a href="<?php echo base_url(); ?>home" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
     </div>
 
     <div class="search-area col m4 hide-on-med-and-down container-box-search">

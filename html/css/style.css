@@ -2006,7 +2006,7 @@ a#login-user-Btn:hover{
     width: 90%;
   }
 }
-@media(min-width: 1280px){
+@media(min-width: 1280px) and(max-width: 1680px){
   .main-logo img {
     height: auto;
     padding: 0px 0px;
@@ -2016,5 +2016,14 @@ a#login-user-Btn:hover{
   }
 }
 @media(min-width: 768px) and(max-width: 992px){
-  
+
+}
+@media(min-width: 1920px){
+  .main-logo img {
+    height: auto;
+    padding: 0px 0px;
+    width: 60% !important;
+    max-width: 60% !important;
+    margin-top: 10px;
+  }
 }
