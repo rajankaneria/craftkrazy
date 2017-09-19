@@ -27,6 +27,7 @@
     <link href="<?php echo base_url(); ?>html/css/<?php echo $fileName; ?>" rel="stylesheet">
     <?php } ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
 </head>
 <body>
 <header>
@@ -46,50 +47,69 @@
     <div class="top-nav-item"><a href="<?php base_url(); ?>home">Home</a></div>
     <div class="top-nav-item"><a href="#">Contact</a></div>
     <div class="top-nav-item"><a href="#">Sell on Craftkrazy</a></div>
-    <div class="top-nav-item"><a href="#" id="userBtn-mobile">Log in</a></div>
+    <?php if(!$this->session->userdata('user')){?>
+    <div class="top-nav-item"><a href="#" id="userBtn-mobile">Login</a></div>
+    <?php } ?>
+     
+   
   </div>
 
+<!-- USER PRODILE AREA START HERE -->
+<?php if($this->session->userdata('user')){?>
+  <div id="profile-area" class="userProfile-area">
+    <ul>
+      <li class="UserName"><a href="#!" readonly="true"><?php echo $this->session->userdata('user')?></a></li>
+      <li><a href="<?php echo base_url(); ?>myAccount">My Account <span class="fa fa-user right" aria-hidden="true"></span></a></li>
+      <li><a href="<?php echo base_url(); ?>user/logout">Logout <span class="fa fa-sign-out right" aria-hidden="true"></span></a></li>
+    </ul>
+  </div>
+  <?php } ?>
+<!-- USER PRODILE AREA OVER HERE -->
   <div class="nav-wrapper" style="overflow: hidden;">
     <div class="col m3 logo-area">
     <a href="<?php echo base_url(); ?>home" class="main-logo"><img src="<?php echo base_url(); ?>html/images/Craftkrazy-logo.png" alt="Craftkrazy"></a>
     </div>
 
-    <div class="search-area col m5 hide-on-med-and-down container-box-search">
+    <div class="search-area col m4 hide-on-med-and-down container-box-search">
    <!--  <form>
       <input type="search" name="Search" placeholder="Search" class="search-box">
     </form> -->
-    <form action="" class="search">
-  
-      <div class="field">
-
+    <div class="ui-widget">
+    <form class="search" action="#!" method="post" name="form">  
+      <div class="field" >
         <input type="text" class="input-search" id="input-search" name="input-search" required>
         
         <label for="input-search">Search</label>
         <span class="fa fa-search search-icon" aria-hidden="true"></span>
       </div> <!-- /field -->
-
+      <div id="searchData" class="searchResult-area"></div>
     </form>
     </div>
+    </div>
     
-    <div class="cart-area col m4">
+    <div class="cart-area col m5">
+    <?php if($this->session->userdata('user')){ ?>
         <span class="user right col m2 hide-on-med-and-down">
-        <a href="#!"><i id="userBtn" class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></a>
+        <a href="#!"><i id="userBtn1" class="fa fa-user-circle-o fa-2x userProfile" aria-hidden="true"></i></a>
         </span>
+        <?php } ?>
         <span class="right cart-bag col m2">
         <a href="<?php echo base_url() ?>shoppingCart"><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i><span class="cart-bedge"><?php if($this->session->userdata("shoppingCart")){ echo sizeof($this->session->userdata("shoppingCart")); }else{ echo 0; } ?></span></a></span>
     </div>
-   
   </div>
+
      <ul id="slide-out" class="side-nav">
       <li>
         <div class="user-view">
           <div class="user-area-background">
           <div class="row user-area">
             <div class="user left col m4">
-              <a href="#!"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></a>
+            <?php if($this->session->userdata('user')){ ?>          
+              <a href="#!"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i><?php echo $this->session->userdata('user');?></a>
+              <?php } ?>
             </div>
             <div class="col m8 left">
-              <p style="color: #848688;line-height: 2rem;"> Mr. Craft User</p>
+              <p style="color: #848688;line-height: 2rem;">Mr. Craft User</p>
             </div>
           </div>  
             <div class="row searbar-area">
@@ -168,4 +188,3 @@
   </div>
 </nav>
 </header>
-

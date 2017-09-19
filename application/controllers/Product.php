@@ -34,7 +34,7 @@ class Product extends CI_Controller {
 		$this->load->model("product_model");
 		$categoryList = $this->category_model->generateNavBar(7);
 		$categoryData = $this->product_model->getMainCatDetails($catID);
-		$productsByparentCatData=$this->product_model->getProductByParentCat($parentId);
+		$productList = $this->product_model->getProductByMainCat($catID);	
 		
 		$headerData = array(
 			"pageTitle" => "Product",
@@ -46,7 +46,7 @@ class Product extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "products",
-            "viewData" => array("categoryData"=>$categoryData,"productsparentCatData"=>$productsByparentCatData),
+            "viewData" => array("categoryData"=>$categoryData,'productList'=>$productList),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
@@ -73,7 +73,7 @@ class Product extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "products",
-            "viewData" => array("categoryData"=>$categoryData,"productsparentCatData"=>$productsByparentCatData),
+            "viewData" => array("categoryData"=>$categoryData,"productList"=>$productsByparentCatData),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
@@ -177,6 +177,7 @@ class Product extends CI_Controller {
 	public function addProduct()
 	{
 		$this->load->model("product_model");
+		//$tag = $_POST["tag"].",".$_POST["product_name"];
 		$result=array(
 					"mc_id"=>$_POST["mc_id"],
 					"pc_id"=>$_POST["pc_id"],
@@ -187,7 +188,9 @@ class Product extends CI_Controller {
 					"discounted_price"=>$_POST["discounted_price"],
 					"price"=>$_POST["price"],	
 					"description"=>$_POST["description"],
-					"quantity"=>$_POST["quantity"]							
+
+					"quantity"=>$_POST["quantity"],
+					"tag"=>$_POST['tag'].",".$_POST["product_name"]					
 			);
 
 		$proID = $this->product_model->addProduct($result);
@@ -287,8 +290,6 @@ class Product extends CI_Controller {
 
 		$this->load->view('updateProduct',array('proData'=>$productData,"categoryList"=>$categoryList));
 	}
-	
-
 	public function getCartProducts(){
 		$this->load->model("product_model");
 		$output = array();
@@ -340,7 +341,7 @@ class Product extends CI_Controller {
 		$this->product_model->updateCategory($updateData,$proID);
 
 		//set configuration for the upload library
-		$config['upload_path'] = 'C:\wamp\www\craftkrazy\html\images\category';
+		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\category';
 	    $config['allowed_types'] = 'gif|jpg|png';
 	    $config['overwrite'] = TRUE;
 	    $config['encrypt_name'] = FALSE;
@@ -372,7 +373,7 @@ class Product extends CI_Controller {
 
 
 			//set configuration for the upload library
-		$config['upload_path'] = 'C:\wamp\www\craftkrazy\html\images\category';
+		$config['upload_path'] = 'C:\xampp\htdocs\craftkrazy\html\images\category';
 	    $config['allowed_types'] = 'gif|jpg|png';
 	    $config['overwrite'] = TRUE;
 	    $config['encrypt_name'] = FALSE;
@@ -381,8 +382,19 @@ class Product extends CI_Controller {
 	    //set name in the config file for the feature image
 	    $config['file_name'] = $catID."_product";
 	    $this->load->library('upload', $config);
-	    $this->upload->do_upload('mc_image');	
-
+	    $this->upload->do_upload('mc_image');
+	}
+	public function getTowishList(){
+		$data=$_POST["data"];
+		$this->load->model("product_model");
+		$result=$this->product_model->addTowishList($data);
+		echo json_encode($result);
+	}
+	public function getSearchData(){
+		$this->load->model("product_model");
+		$data=$_POST["data"];		
+		$search=$this->product_model->addSearchData($data);	
+		echo json_encode($search);
 
 	}
 

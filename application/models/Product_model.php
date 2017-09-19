@@ -184,4 +184,15 @@ class Product_model extends CI_Model{
         $this->db->where("mc_id",$catId);
         $this->db->delete("main_category");
     }
+    public function addTowishList($wishListID){
+        $query=$this->db->insert("wishlist",$wishListID);   
+    }
+    public function addSearchData($search_term){
+        $query=$this->db->query("select tag from product_details where tag like '%$search_term%'");
+        $result=$query->row_array();        
+       // $srch=implode("",$result); 
+       return $result;    
+        
+    }
+
 }

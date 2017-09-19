@@ -1,25 +1,6 @@
 
-<div class="container" style="width: 100% !important">
+<div class="container">
  <div class="row">
-
-<!--   <div class="col s3 m3" style="background: black;width: 15%;height: 967px;max-height: 100%;margin: 0 auto !important;
-    display: block;margin-top: 0.5rem !important">
-
-  <div class="col s3 m3" style="background: black;width: 15%;height: 967px;max-height: 100%;margin: 0 auto !important;
-    display: block;margin-top: 0.5rem !important">  
-
- <div>
-      <ul id="sidebar_menu" class="sidebar-nav">
-           <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
-      </ul>
-        <ul class="sidebar-nav" id="sidebar">     
-          <li><a href="#!">Products<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-          <li><a href="#!">link2<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-        </ul>
-      </div>
-  </div>
- -->
-<div class="col s12 m12">
 
  <div class="card-panel">
 
@@ -28,7 +9,7 @@
       <div class="page-button"><a class="waves-effect waves-light btn blue" id="addProductBtn">Add</a></div>
   </div>
    <div class="page-content">
-   	<table border="1" class="responsive-table">
+   	<table border="1" class="responsive-table centered">
     <thead>
    		<tr>
         <th>Category</th>
@@ -40,35 +21,34 @@
         <th>Price</th>
         <th>Discounted price</th>
         <th>Quantity</th>
+        <th>Tags</th>
         <th>Actions</th>
    		</tr>
-      </thead>
-      <tbody>
+    </thead>
+    <tbody>
       <?php foreach ($productsData as $key => $productRow) { ?>
-       <tr data-proid="<?php echo $productRow['product_id']; ?>">
+      <tr data-proid="<?php echo $productRow['product_id']; ?>">
         <td class="category-list"><?php echo $productRow['mc_name']; ?> > <?php echo $productRow['pc_name']; ?> > <?php echo $productRow['cc_name']; ?></td>
         <td><?php echo $productRow['product_name']; ?></td>
         <td><?php echo $productRow['product_code']; ?></td>
         <td><?php echo $productRow['price']; ?></td>
         <td><?php echo $productRow['discounted_price']; ?></td>
-         <td><?php echo $productRow['quantity']; ?></td>
-          
-           <td class="right-align blog-btn">
-            <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light blue-grey blog-view-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
-              <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light red product_delete_btn"><i class="material-icons">delete</i></a>
+        <td><?php echo $productRow['quantity']; ?></td>
+        <td><?php echo $productRow['tag']; ?></td>
+          <td class="right-align blog-btn">
+          <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light blue-grey blog-view-btn"><i class="fa fa-eye" aria-hidden="true"></i></a>
+          <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light red product_delete_btn"><i class="material-icons">delete</i></a>
               <a data-proid="<?php echo $productRow['product_id']; ?>" class="btn-floating waves-effect waves-light blue-grey product-edit-btn"><i class="material-icons">mode_edit</i></a>
             </td>
-          
-      </tr>
+          </tr>
 
       <?php } ?>
-      <tbody>
+      </tbody>
    	</table>
    </div>
-  </div>  
   </div>
-  </div>
-  </div>
+ </div>  
+</div>   
 
 <!-- Modal Structure -->
   <div id="addModal" class="modal">

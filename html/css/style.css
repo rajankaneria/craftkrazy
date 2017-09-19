@@ -2,6 +2,77 @@
 /*====================
 	Main Navigation 
 =====================*/
+
+.searchResult-area{
+    position: static;
+    line-height: 1rem;
+    background: #eee;
+    box-shadow: 0px 2px 3px rgba(75, 74, 74, 0.56);
+    color: #848688;
+    margin: 0 auto;
+    width: 90% !important;
+    line-height: 2rem;
+    padding-left: 20px;
+    height: auto;
+    
+    margin-top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.userProfile-area {
+    margin-top: 35px !important;
+    width: 150px !important;
+    box-shadow: 0px 1px 5px rgba(45, 45, 45, 0.38);
+}
+#profile-area{
+  display: none;
+}
+.userProfile-area{
+  float: right;
+  background: #fff;
+  padding-top: 0px !important;
+  top: 75px !important;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  border-bottom: 3px solid #2669b6; 
+}
+.userProfile-area:before,.userProfile-area::before
+{
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #eee;
+  content: "";
+  height: 0;
+  right: 60px;
+  position: absolute;
+  top: -6px;
+  width: 0;
+  text-align: center;
+}
+.UserName{
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+}
+.userProfile-area ul li{
+  display: block;
+  width: 100%;
+}
+.userProfile-area ul li a{
+  color: #666 !important;
+}
+.userProfile-area ul li{
+  line-height: 1.7 !important;
+  padding: 10px 0px;
+}
+
+.userProfile-area ul li:hover{
+  background: #eee !important;
+  line-height: 2.7rem;
+
+}
 .mobile-search-box {
     background: rgb(38, 105, 182) !important;
     color: #fff !important;
@@ -651,7 +722,6 @@ span.proce-strick {
 }
 .add-to-cart:hover{
     border-radius: 100px;
-    width: 50%;
     background: rgba(255,255,255,0.9) !important;
     color: #2669b6 !important;
     border: 1px solid #2669b6;
@@ -766,7 +836,7 @@ span.proce-strick {
 .product-frame {
     width: 25%;
     float: left;
-    padding: 25px;
+    padding: 20px;
     /* border: 1px solid #000; */
 }
 
@@ -791,6 +861,7 @@ span.proce-strick {
 
 .product-desc-container {
     color: #000;
+    text-align: center;
 }
 
 .product-image-container {
@@ -891,6 +962,12 @@ span.original-price i {
 /*=======================
     Products Page
 ======================*/
+
+.sticky {
+  position: relative;
+  top: 0;
+}
+
 .categories-area {
     padding: 0px;
     border: 1px solid #ddd;
@@ -1376,13 +1453,13 @@ i.fa.fa-chevron-down {
     text-transform: uppercase;
 }
 
-.sub-cat-name {
+.sub-cat-name a{
 	line-height: 22px;
     color: #7b7b7b;
     font-size: 13px;
 }
 
-.sub-cat-name:hover {
+.sub-cat-name a:hover {
     color: #2b2b2b;
     cursor: pointer;
 }
@@ -1443,7 +1520,7 @@ label.active{
 
 /*=================================== Mobile Responsive =============================================*/
 .wishlist-btn {background: #fff !important;box-shadow: none;}
-.wishlist-btn i{color: red;}
+.wishlist-btn i{color: rgb(182, 38, 38);}
 .wishlist-btn :hover{background: red;-webkit-transition: all 0.5s ease-in-out;
 -moz-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
@@ -1665,8 +1742,70 @@ a#login-user-Btn:hover{
  color: rgb(38, 105, 182)!important;
   text-transform: capitalize;
 }
+
+
+
+/*=========== ADMIN AREA ===================*/
+
+#tags{
+  float:left;
+  border:1px solid #ccc;
+  padding:5px;
+  font-family:Arial;
+}
+#tags > span{
+  cursor:pointer;
+  display:block;
+  float:left;
+  color:#fff;
+  background:#789;
+  padding:5px;
+  padding-right:25px;
+  margin:4px;
+}
+#tags > span:hover{
+  opacity:0.7;
+}
+#tags > span:after{
+ position:absolute;
+ content:"×";
+ border:1px solid;
+ padding:2px 5px;
+ margin-left:3px;
+ font-size:11px;
+}
+#tags > input{
+  background:#eee;
+  border:0;
+  margin:4px;
+  padding:7px;
+  width:auto;
+}
+
+/*========== AREA ADMIN OVERE HERE ====================*/
+
+
+/**============= SERACH AUTO COMPLETE ===============*/
+.autocomplete-content {
+    margin-top: 0PX;
+    margin-bottom: 20px;
+    display: block;
+    opacity: 1;
+    position: static;
+    margin-left: 20px;
+    z-index: 2;
+}
+
+
+
+
+
 /* ============  Mobile Responsive Navigations Area ====================== */
 @media(max-width: 768px){
+  .row.cat-img-box {
+    padding: 0px 5px;
+    margin-bottom: 10px;
+  }
   .drag-target{
     z-index: 990;
   }
@@ -1725,7 +1864,7 @@ a#login-user-Btn:hover{
     height: 56px;
     margin: 0 18px;
     top: 10px;
-    left: 10px;
+    left: 10px !important;
   }
   .user-view{
     z-index: 100;
@@ -1840,5 +1979,51 @@ a#login-user-Btn:hover{
   }
   .modal-40{
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .col.m3.logo-area {
+    width: 45%;
+  }
+  .add-to-cart{
+    margin: 5px;
+    width: 50%;
+    margin:0px 50px;
+  }
+}
+@media only screen and (min-device-width : 1022px) and (max-device-width : 1280px) {
+  .top-nav-container{
+    width: 90%;
+  }
+  .main-logo img{
+    width: 100%;
+  }
+  .col.m3.logo-area{
+    width: 25%;
+  }
+  .navigation-menu-area .nav-wrapper.container{
+    width: 90%;
+  }
+}
+@media(min-width: 1280px) and(max-width: 1680px){
+  .main-logo img {
+    height: auto;
+    padding: 0px 0px;
+    width: 60%;
+    max-width: 60%;
+    margin-top: 10px;
+  }
+}
+@media(min-width: 768px) and(max-width: 992px){
+
+}
+@media(min-width: 1920px){
+  .main-logo img {
+    height: auto;
+    padding: 0px 0px;
+    width: 60% !important;
+    max-width: 60% !important;
+    margin-top: 10px;
   }
 }

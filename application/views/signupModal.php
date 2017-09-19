@@ -5,24 +5,24 @@
       	<form class="from-signup">
       	<div class="row">
       		<div class="input-field col s12">
-	          <input id="full_name" type="text" class="validate">
-	          <label for="full_name">Full Name</label>
+	          <input id="name" type="text" class="validate" name="name">
+	          <label for="name">Full Name</label>
 	        </div>
 	        <div class="input-field col s12">
-	          <input id="mobile" type="text" class="validate">
+	          <input id="mobile" type="text" class="validate" name="mobile">
 	          <label for="mobile">Mobile</label>
 	        </div>
 	        <div class="input-field col s12">
-	          <input id="email" type="email" class="validate">
+	          <input id="email" type="email" class="validate" name="email">
 	          <label for="email">E-mail</label>
 	        </div>
 	        <div class="input-field col s12">
-	          <input id="password" type="password" class="validate">
+	          <input id="password" type="password" class="validate" name="password">
 	          <label for="password">Passwords</label>
 	        </div>
 
 	        <div class="input-field col s4">
-	          <input id="sign-up-btn" type="submit" class="validate waves-effect waves-light btn blue" value="Sign Up" class="btn btn blue">
+	          <input id="sign-up-btn" type="button" class="validate waves-effect waves-light btn blue" value="Sign Up" class="btn btn blue">
 	        </div>
 	        <div class="right input-field">
 	        	 <span class="new-user-link">Already Have an Account?</span><a href="#!" id="login-user-Btn" class="modal-action modal-close waves-effect waves-green btn-flat">Log In</a>
