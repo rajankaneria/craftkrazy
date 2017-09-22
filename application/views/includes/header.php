@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="msapplication-tap-highlight" content="no">
+    <link rel="icon" href="<?php base_url(); ?>html/images/favicon.png" type="image/png" />
     <title>Craftkrazy - <?php echo $pageTitle; ?></title>
     
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
