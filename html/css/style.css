@@ -1992,7 +1992,7 @@ a#login-user-Btn:hover{
     margin:0px 50px;
   }
 }
-@media only screen and (min-device-width : 1022px) and (max-device-width : 1366px) {
+@media only screen and (min-device-width : 1022px) and (max-device-width : 1280px) {
   .top-nav-container{
     width: 90%;
   }
@@ -2004,5 +2004,26 @@ a#login-user-Btn:hover{
   }
   .navigation-menu-area .nav-wrapper.container{
     width: 90%;
+  }
+}
+@media(min-width: 1280px) and(max-width: 1680px){
+  .main-logo img {
+    height: auto;
+    padding: 0px 0px;
+    width: 60%;
+    max-width: 60%;
+    margin-top: 10px;
+  }
+}
+@media(min-width: 768px) and(max-width: 992px){
+
+}
+@media(min-width: 1920px){
+  .main-logo img {
+    height: auto;
+    padding: 0px 0px;
+    width: 60% !important;
+    max-width: 60% !important;
+    margin-top: 10px;
   }
 }
