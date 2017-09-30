@@ -182,7 +182,7 @@ class Product extends CI_Controller {
 					"mc_id"=>$_POST["mc_id"],
 					"pc_id"=>$_POST["pc_id"],
 					"mc_id"=>$_POST["mc_id"],
-					"cc_id"=>$_POST["cc_id"],
+					"cc_id"=>$_POST["cc_id"],	
 					"sc_id"=>$_POST["sc_id"],
 					"product_name"=>$_POST["product_name"],									
 					"discounted_price"=>$_POST["discounted_price"],
