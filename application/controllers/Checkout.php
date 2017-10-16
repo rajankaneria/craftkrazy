@@ -10,6 +10,10 @@ class Checkout extends CI_Controller {
 		$this->load->model("category_model");
 		$this->load->model("product_model");
 		$categoryList = $this->category_model->generateNavBar(7);
+		$productList = $this->product_model->getCartProducts();
+		foreach($productList as $key=>$productRow){
+			$productList[$key]["productQuantity"] = 2;
+		}
 
 		$headerData = array(
 			"pageTitle" => "Checkout",
@@ -17,11 +21,11 @@ class Checkout extends CI_Controller {
 			"categoryList" =>$categoryList
 		);
 		$footerData = array(
-			"jsFiles" => array()
+			"jsFiles" => array('checkout.js')
 		);
 		$viewData = array(
 			"viewName" => "checkout",
-            "viewData" => array('checkout.js'),
+            "viewData" => array("productList" => $productList),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);

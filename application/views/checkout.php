@@ -244,7 +244,7 @@
             <div>
               <form>
                 <div class="row">
-                 
+                 <?php var_dump($productList); ?>
                     <table>
                       <thead>
                         <tr>
@@ -256,12 +256,15 @@
                       </thead>
 
                       <tbody>
-                        <tr>
-                          <td>Ready-TO-Glass-Paint Stencil - Fish</td>
-                          <td>1</td>
-                          <td>Rs. 550</td>
-                          <td>Rs. 550</td>
-                        </tr>
+                          <?php foreach ($productList as $key => $productRow) { ?>
+                          <tr>
+                            <td><?php echo $productRow["product_name"]; ?></td>
+                            <td><?php echo $productRow["productQuantity"]; ?></td>
+                            <td>Rs. <?php echo $productRow["discounted_price"]; ?></td>
+                            <td>Rs. <?php echo $productRow["productQuantity"]*$productRow["discounted_price"]; ?></td>
+                          </tr>
+                          <?php } ?>
+                        
                       </tbody>
                     </table>
                     <div class="grand-order-bg row" style="background: #eee;">

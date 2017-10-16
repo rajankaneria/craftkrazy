@@ -47,7 +47,7 @@
     </div>
 
     <div class="row checkout-btn-area">
-      <button class="btn waves-effect waves-light checkout-btn" type="submit" name="action"><i class="material-icons left">shopping_basket</i> Procced to Checkout
+      <button class="btn waves-effect waves-light checkout-btn" name="action" onclick="window.location.href='<?php echo base_url(); ?>checkout'"><i class="material-icons left">shopping_basket</i> Procced to Checkout
       <i class="material-icons right">shopping_basket</i>
       </button>
       
