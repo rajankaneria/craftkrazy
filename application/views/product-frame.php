@@ -53,7 +53,7 @@
                   <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 </button>
                 <button  data-product-id="<?php echo $product_id; ?>"  class="btn-floating waves-effect waves-light red wishlist-btn">
-                  <i class="fa fa fa-heart" aria-hidden="true"></i>
+                <i class="fa fa fa-heart" aria-hidden="true"></i>
                 </button></div>
     </div>
   </div>
