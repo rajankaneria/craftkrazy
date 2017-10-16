@@ -30,9 +30,7 @@ class Admin extends CI_Controller
     $this->load->view('admin-template',$viewData);
   }
 
-  public function login(){
- 
-      
+  public function login(){      
       $headerData = array(
         "pageTitle" => "Sign Up",
         "stylesheet" => array('seller.css','dashboard.css')     

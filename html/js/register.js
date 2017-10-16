@@ -42,6 +42,7 @@ var data={
 $.post(baseurl+"Seller/login",{data:data},function(data){
 	var data=$.parseJSON(data);
 	if(data.status=="ok"){
+		alert("Login Success...");
 		window.location.href=baseurl+"Seller/dashboard";
 	}
 	else if(data.status="fail"){
