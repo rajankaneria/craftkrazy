@@ -1,3 +1,6 @@
+      <script type="text/javascript">
+   $('.tooltipped').tooltip({delay: 50});
+</script>
       <?php /*
       <div class="item pro-item-new">
         <div class="product-item">

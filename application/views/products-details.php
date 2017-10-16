@@ -1,3 +1,6 @@
+<script type="text/javascript">
+   $('.tooltipped').tooltip({delay: 50});
+</script>
 <div class="main">
 <!-- <script type="text/javascript" src="https://cdn.rawgit.com/jackmoore/zoom/master/jquery.zoom.min.js"></script> -->
 

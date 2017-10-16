@@ -1,5 +1,17 @@
+<style type="text/css">
+ .filter-area > .fa{margin: 10px !important;
+  font-size: 18px !important;
+  }
+  .filter-img{
+    width: 27px !important;
+    position: relative;   
+    top: 9px;}
+    .filter-show{float: right !important;}
+</style>
+<script type="text/javascript">
+   $('select#filterCount').material_select();  
+</script>
 <div class="main">
-
 <!--  Slider starts here -->
 <div class="row">
   <div class="productBanner">
@@ -7,7 +19,6 @@
   </div>    
 </div>      
 <!--  Slider Over here -->
-
 <!--  categoriy starts here -->
 <!-- <div class="row cat-img-box">
 	<img src="<?php // echo base_url(); ?>html/images/m1.jpg" class="col s6 m3 home-cat-box">
@@ -46,18 +57,30 @@
 
   <div class="col m9">
     <div class="product-view">
-      <div class="filter-area">
-        this is for filter area.
+      <div class="filter-area">        
+       <i class="fa fa-th" aria-hidden="true"></i>     
+       <i class="fa fa-th-list" aria-hidden="true"></i>
+       <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>
+       <img  class="filter-img" src="<?php echo base_url(); ?>html/images/compare-icon-9.png">
+       <i class="fa fa-filter" aria-hidden="true"></i>
+       <div class="filter-show">
+       <select id="filterCount">
+          <option value="">15</option>
+          <option value="">20</option>
+          <option value="">25</option>          
+          <option value="">30</option>
+          <option value="">40</option>
+          <option value="">50</option>
+      </select>
+    </div>
       </div>
-      <div class="product-content-area">
-        
+  <div class="product-content-area">        
   <div class="uimax-block-section-26 pdt-80 pdb-80">
     <div class="row">
         <div class="product-list">
            <?php foreach ($productList as $productKey => $productRow) { ?>
               <?php $this->load->view("product-frame",$productRow); ?>
-              <?php } ?>        
-          
+              <?php } ?>          
         </div>
       </div>
     </div>
